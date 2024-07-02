@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="stm32f412HelloWorld" targetName="stm32f412HelloWorld.elf" />
+      <config projectName="stm32f412HelloWorld" targetName="STM32F4xx_HAL_Driver" />
+      <config projectName="stm32f412HelloWorld" targetName="SEGGER_Sysview" />
+      <config projectName="stm32f412HelloWorld" targetName="Segger_RTT" />
+      <config projectName="stm32f412HelloWorld" targetName="AlgemeenLib" />
+      <config projectName="stm32f412HelloWorld" targetName="ESEBasisLib" />
+      <config projectName="stm32f412HelloWorld" targetName="ESE_DigProcesAansturingLib" />
+      <config projectName="stm32f412HelloWorld" targetName="ESE_RGT+DSBBoardLib" />
+      <config projectName="stm32f412HelloWorld" targetName="ComponentsLib" />
+      <config projectName="stm32f412HelloWorld" targetName="STM32412G-Discovery" />
+      <config projectName="stm32f412HelloWorld" targetName="FatFs_vR0.13a" />
+      <config projectName="stm32f412HelloWorld" targetName="STM32412G-DiscoveryBasis" />
+      <config projectName="stm32f412HelloWorld" targetName="CMSISFIRMWARE" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91f66ab9-30ad-42f8-98a4-0dfe150c2d33" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/STM32412gDiscovery.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/STM32412gDiscovery.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/STM32412gDiscoveryGUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/STM32412gDiscoveryGUI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f401xc.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f401xe.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f405xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f407xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f410cx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f410rx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f410tx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f413xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f415xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f417xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f423xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f427xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f429xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f437xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f439xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f446xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f469xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f479xx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis/stm32f1" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis/stm32f3" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis/stm32l1" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/../../../algemeen/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../algemeen/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../algemeen/h/algdef.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../algemeen/h/algdef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../algemeen/h/dataPakket.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../algemeen/h/dataPakket.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1SehCyYAwoOrlW3iOCTsA8EftjS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ewout\home\vakken\algemeen\software\STM32\HAL\discoveryf412HelloWorld\h" />
+      <recent name="C:\Users\ewout\home\vakken\algemeen\software\STM32\HAL\discoveryf412HelloWorld" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.Build All">
+    <configuration name="AlgemeenLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="AlgemeenLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CMSISFIRMWARE" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="CMSISFIRMWARE" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComponentsLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="ComponentsLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEBasisLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="ESEBasisLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESE_DigProcesAansturingLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="ESE_DigProcesAansturingLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESE_RGT+DSBBoardLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="ESE_RGT+DSBBoardLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FatFs_vR0.13a" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="FatFs_vR0.13a" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SEGGER_Sysview" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="SEGGER_Sysview" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32412G-Discovery" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="STM32412G-Discovery" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32412G-DiscoveryBasis" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="STM32412G-DiscoveryBasis" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32F4xx_HAL_Driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="STM32F4xx_HAL_Driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Segger_RTT" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="Segger_RTT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="stm32f412HelloWorld.elf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="stm32f412HelloWorld" TARGET_NAME="stm32f412HelloWorld.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="stm32f412HelloWorld" RUN_TARGET_NAME="stm32f412HelloWorld.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Build All" />
+      <item itemvalue="CMake Application.STM32412G-Discovery" />
+      <item itemvalue="CMake Application.stm32f412HelloWorld.elf" />
+      <item itemvalue="CMake Application.AlgemeenLib" />
+      <item itemvalue="CMake Application.ESEBasisLib" />
+      <item itemvalue="CMake Application.ComponentsLib" />
+      <item itemvalue="CMake Application.STM32412G-DiscoveryBasis" />
+      <item itemvalue="CMake Application.CMSISFIRMWARE" />
+      <item itemvalue="CMake Application.STM32F4xx_HAL_Driver" />
+      <item itemvalue="CMake Application.ESE_DigProcesAansturingLib" />
+      <item itemvalue="CMake Application.ESE_RGT+DSBBoardLib" />
+      <item itemvalue="CMake Application.FatFs_vR0.13a" />
+      <item itemvalue="CMake Application.Segger_RTT" />
+      <item itemvalue="CMake Application.SEGGER_Sysview" />
+    </list>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../../algemeen" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../../algemeen" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/ESEPracticumboard_RGT+DSB" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/ESEPracticumboard_RGT+DSB" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../../algemeen" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../../algemeen" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/ESEPracticumboard_RGT+DSB" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/ESEPracticumboard_RGT+DSB" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91f66ab9-30ad-42f8-98a4-0dfe150c2d33" name="Default Changelist" comment="" />
+      <created>1540550277174</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540550277174</updated>
+      <workItem from="1540550280886" duration="29000" />
+      <workItem from="1540550442874" duration="4522000" />
+      <workItem from="1542989312778" duration="655000" />
+      <workItem from="1543505536119" duration="55000" />
+      <workItem from="1543505838899" duration="6409000" />
+      <workItem from="1544169023488" duration="60000" />
+      <workItem from="1571929847488" duration="1263000" />
+      <workItem from="1571931346637" duration="297000" />
+      <workItem from="1573832295544" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

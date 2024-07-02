@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/algdef.cpp
+algdef.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/algdef.h
+assert.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/h/algdef.h
+stdio.h
+-
+stdint.h
+-
+math.h
+-
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/ESEPracticumboard_RGT+DSB" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+      <file path="$PROJECT_DIR$/../../../algemeen" />
+    </sourceRoots>
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+</project>

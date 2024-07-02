@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/h/algdef.h
+stdio.h
+-
+stdint.h
+-
+math.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/h/dataPakket.h
+stdio.h
+-
+string.h
+-
+assert.h
+-
+algdef.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/rgtData/RGTData.cpp
+RGTData.h
+-
+assert.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/rgtData/h/RGTData.h
+algdef.h
+-
+dataPakket.h
+-
+

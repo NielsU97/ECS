@@ -1,0 +1,53 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\Practicum_STM32F412DiscoveryBoard"
+-- ARM Cortex M architectuur toolchain selektie.
+-- Windows platform gedetekteerd.
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/MinGW/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Taal/Language is : Nederlands
+====================================================================================
+HAN Elektrotechniek/Embedded Systems Engineering ECSL/RGTpr practicum.
+(c)2006-2022 HAN Elektrotechniek/Embedded Systems Engineering.
+Docenten : ir H.A Arends en ir drs E.J Boks
+====================================================================================
+-- Software wordt gebouwd met debugging opties
+-- The ASM-ATT compiler identification is GNU
+-- Found assembler: C:/MinGW/bin/as.exe
+-- StdPeriph/HAL bibliotheek USE_FULL_ASSERT staat AAN
+-- ARM Cortex M architectuur toolchain initialisatie.
+-- Microsoft Windows omgeving gedetecteerd.
+-- MingGW gevonden op : C:/MinGW/lib/gcc/mingw32/6.3.0
+-- GNU ARM Toolchain gevonden op C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10
+-- ====> GNU ARM Toolchain op C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10 wordt gebruikt.
+-- GNU ARM compiler gevonden op : C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10
+-- Build output dir is : C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/Executable/Debug
+-- Bouw HAL target voor STM32F412xG met 1 MByte Flash en 256K SRAM
+-- Basis bibliotheek wordt gecompileerd.
+-- ARM CMSIS support voor STM32F4 wordt toegevoegd.
+-- FreeRTOS ARM Cortex M4F Port gekozen.
+-- FreeRTOS bibliotheek wordt gecompileerd.
+-- FreeRTOS C++ Schil bibliotheek wordt gecompileerd.
+-- ESE FreeRTOS ondersteuning wordt toegevoegd.
+-- Bouw target voor STM32F412G-Discovery met LCD Scherm+Segger EmWin GUI support.
+-- STM32F4xx Utilities Driver wordt toegevoegd.
+-- ST emWin GUI toolkit wordt toegevoegd.
+-- ST (Segger) EmWin Bibliotheek (STemWin) toegevoegd.
+-- Algemeen bibliotheek wordt gecompileerd.
+-- ESE BSP Driver (boardversie BoardVersie11) wordt toegevoegd.
+-- ESE DigProces Aansturing API wordt toegevoegd.
+-- ESE RGT+DSB Board BSP Driver wordt toegevoegd.
+-- C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/CLion/Debug/gegenereerd/ozoneConfig.jdebug werd gegenereerd.
+-- Regeltechniek [PID controller] wordt gebouwd.
+-- Control Engineering [PID controller] assignment is being built.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/CLion/Debug

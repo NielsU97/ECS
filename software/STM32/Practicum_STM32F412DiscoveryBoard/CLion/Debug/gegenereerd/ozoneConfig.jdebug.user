@@ -1,0 +1,20 @@
+
+OpenDocument="ozoneConfig.jdebug", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/CLion/Debug/gegenereerd/ozoneConfig.jdebug", Line=0
+OpenDocument="syscalls.cpp", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/gemeenschappelijk/basis/syscalls.cpp", Line=211
+OpenDocument="main.cpp", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/toepassing/main.cpp", Line=0
+OpenDocument="stm32f4xx_hal_tim.c", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c", Line=4824
+OpenDocument="startup_stm32f412zx.s", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f412zx.s", Line=42
+OpenDocument="cmsis_gcc.h", FilePath="C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/CMSIS/Include/cmsis_gcc.h", Line=366
+OpenDocument="STM32412gDiscovery.cpp", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/STM32412gDiscovery.cpp", Line=930
+OpenDocument="stm32f4xx_hal.c", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c", Line=249
+OpenDocument="port.cpp", FilePath="C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.cpp", Line=272
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=0, w=454, h=1312, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Memory 1", DockArea=BOTTOM, x=1, y=0, w=961, h=326, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, EditorAddress=0x0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=300, h=1312, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=0, y=0, w=2238, h=326, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Class";"Source"], ColWidths=[1407;100;100;100;273;266]
+TableHeader="Power Sampling", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Task List", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Run Count";"Priority";"Status";"Timeout";"Stack Info (Free / Size)";"ID";"Mutex Count";"Notified Value";"Notify State"], ColWidths=[110;110;110;110;110;110;110;110;110;110]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[100;118;259]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]

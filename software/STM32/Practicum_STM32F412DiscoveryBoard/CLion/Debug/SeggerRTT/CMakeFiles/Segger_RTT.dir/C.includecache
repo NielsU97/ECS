@@ -1,0 +1,78 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT.c
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT.h
+string.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT.h
+SEGGER_RTT_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_Conf.h
+stdlib.h
+-
+stdarg.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_Conf.h
+intrinsics.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_printf.c
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT.h
+SEGGER_RTT_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_Conf.h
+stdlib.h
+-
+stdarg.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT_Syscalls_GCC.c
+reent.h
+-
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT_Syscalls_IAR.c
+LowLevelIOInterface.h
+-
+yfuns.h
+-
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT_Syscalls_KEIL.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+rt_sys.h
+-
+rt_misc.h
+-
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT_Syscalls_SES.c
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/SEGGER_RTT.h
+stdarg.h
+-
+stdio.h
+-
+limits.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/limits.h
+__libc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/__libc.h
+__vfprintf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/Syscalls/__vfprintf.h
+

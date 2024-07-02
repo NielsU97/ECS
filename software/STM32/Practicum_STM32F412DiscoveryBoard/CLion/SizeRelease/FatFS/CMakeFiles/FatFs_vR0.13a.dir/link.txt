@@ -1,0 +1,2 @@
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\ARM-NO~2.EXE qc libFatFs_vR0.13a.a CMakeFiles/FatFs_vR0.13a.dir/ff.c.obj CMakeFiles/FatFs_vR0.13a.dir/ffsystem.c.obj CMakeFiles/FatFs_vR0.13a.dir/ffunicode.c.obj
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR17F9~1.EXE libFatFs_vR0.13a.a

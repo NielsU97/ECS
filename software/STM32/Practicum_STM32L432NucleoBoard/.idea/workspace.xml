@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="RGTpracticum" targetName="studentspullen" />
+      <config projectName="RGTpracticum" targetName="FreeRTOSOOSchilLib" />
+      <config projectName="RGTpracticum" targetName="ESEFreeRTOSLib" />
+      <config projectName="RGTpracticum" targetName="ESEBasisLib" />
+      <config projectName="RGTpracticum" targetName="RGTData" />
+      <config projectName="RGTpracticum" targetName="SEGGER_Sysview" />
+      <config projectName="RGTpracticum" targetName="AlgemeenLib" />
+      <config projectName="RGTpracticum" targetName="RGTpracticum.elf" />
+      <config projectName="RGTpracticum" targetName="RTOSBasisRGT" />
+      <config projectName="RGTpracticum" targetName="Segger_RTT" />
+      <config projectName="RGTpracticum" targetName="STM32L4xx_HAL_Driver" />
+      <config projectName="RGTpracticum" targetName="STM32L4xxNucleo32Basis" />
+      <config projectName="RGTpracticum" targetName="CMSISFIRMWARE" />
+      <config projectName="RGTpracticum" targetName="STM32L4xxNucleo32" />
+      <config projectName="RGTpracticum" targetName="FreeRTOSLib" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Default" GENERATION_DIR="CLion/Debug" BUILD_OPTIONS="-j 3" ENABLED="true" />
+      <configuration PROFILE_NAME="SizeRelease" CONFIG_NAME="SizeRelease" TOOLCHAIN_NAME="Default" GENERATION_DIR="Clion/SizeRelease" BUILD_OPTIONS="-j 3" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3acef7b-687b-4231-90bb-24adf4ac93ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rtosBasisRGT/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rtosBasisRGT/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS/FreeRTOS.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS/FreeRTOS.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS/h/stdTaak.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS/h/stdTaak.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS/stdTaak.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS/stdTaak.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis/h/CortexMProcessor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis/h/CortexMProcessor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/InputResponsieSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/InputResponsieSessie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/PIDControllerSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/PIDControllerSessie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/aanUitControllerSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/aanUitControllerSessie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/debugSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/debugSessie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/fuzzyControllerSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/fuzzyControllerSessie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/InputResponsieSessie.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/InputResponsieSessie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/PIDControllerSessie.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/PIDControllerSessie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/aanUitControllerSessie.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/aanUitControllerSessie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/debugSessie.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/debugSessie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/debugTaak.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/debugTaak.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/h/fuzzyControllerSessie.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/h/fuzzyControllerSessie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/support/RGTBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/support/RGTBoard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/support/RGTTaak.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/support/RGTTaak.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/support/debugTaak.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/support/debugTaak.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/support/h/RGTBoard.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/support/h/RGTBoard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/support/h/RGTTaak.h" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/support/h/RGTTaak.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rgtData/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../rgtData/CMakeLists.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CommittedChangesCache">
+    <option name="refreshEnabled" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1RKnEKqyC7FoZlGeYSlkkvFML2L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager" selected="CMake Application.Alles">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlgemeenLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="AlgemeenLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Alles" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RGTpracticum" RUN_TARGET_NAME="RGTpracticum.elf" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CMSISFIRMWARE" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="CMSISFIRMWARE" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEBasisLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESEBasisLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEFreeRTOSLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESEFreeRTOSLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FreeRTOSLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="FreeRTOSLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FreeRTOSOOSchilLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="FreeRTOSOOSchilLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RGTData" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="RGTData" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RTOSBasisRGT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="RTOSBasisRGT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SEGGER_Sysview" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="SEGGER_Sysview" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32L4xxNucleo32" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32L4xxNucleo32" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32L4xxNucleo32Basis" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32L4xxNucleo32Basis" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32L4xx_HAL_Driver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32L4xx_HAL_Driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Segger_RTT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="Segger_RTT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="studentspullen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="studentspullen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.AlgemeenLib" />
+      <item itemvalue="CMake Application.Alles" />
+      <item itemvalue="CMake Application.CMSISFIRMWARE" />
+      <item itemvalue="CMake Application.ESEBasisLib" />
+      <item itemvalue="CMake Application.ESEFreeRTOSLib" />
+      <item itemvalue="CMake Application.FreeRTOSLib" />
+      <item itemvalue="CMake Application.FreeRTOSOOSchilLib" />
+      <item itemvalue="CMake Application.RGTData" />
+      <item itemvalue="CMake Application.RTOSBasisRGT" />
+      <item itemvalue="CMake Application.SEGGER_Sysview" />
+      <item itemvalue="CMake Application.STM32L4xxNucleo32Basis" />
+      <item itemvalue="CMake Application.STM32L4xxNucleo32" />
+      <item itemvalue="CMake Application.STM32L4xx_HAL_Driver" />
+      <item itemvalue="CMake Application.Segger_RTT" />
+      <item itemvalue="CMake Application.studentspullen" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../algemeen" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../algemeen" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../rgtData" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../rgtData" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STUDENT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STUDENT" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../algemeen" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../algemeen" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../../rgtData" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../../rgtData" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../STUDENT" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../STUDENT" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3acef7b-687b-4231-90bb-24adf4ac93ad" name="Default Changelist" comment="" />
+      <created>1569424542943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569424542943</updated>
+      <workItem from="1573832997299" duration="759000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1572943132961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572943132961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Negeer funktie toegevoegd aan uitvoering.">
+      <created>1572952423026</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572952423026</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ARM GCC compiler link verwijderd.">
+      <created>1573833193049</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573833193049</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Negeer funktie toegevoegd aan uitvoering." />
+    <MESSAGE value="ARM GCC compiler link verwijderd." />
+    <option name="LAST_COMMIT_MESSAGE" value="ARM GCC compiler link verwijderd." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="764" y="506" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605201744546">
+      <screen x="0" y="23" width="2560" height="1333" />
+    </state>
+    <state x="764" y="506" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1333@0.23.2560.1333" timestamp="1605201744546" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

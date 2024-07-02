@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing/DigProcesAansturing.cpp
+DigProcesAansturing.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/ESE_BSP/DigProcesAansturing/h/DigProcesAansturing.h
+algdef.h
+-
+dataPakket.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/h/algdef.h
+stdio.h
+-
+stdint.h
+-
+math.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/algemeen/h/dataPakket.h
+stdio.h
+-
+string.h
+-
+assert.h
+-
+algdef.h
+-
+

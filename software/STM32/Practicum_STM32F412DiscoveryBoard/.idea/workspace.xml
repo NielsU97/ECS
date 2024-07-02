@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="RGTpracticum" targetName="ESE_RGT+DSBBoardLib" />
+      <config projectName="RGTpracticum" targetName="ComponentsLib" />
+      <config projectName="RGTpracticum" targetName="STemWinOSLib" />
+      <config projectName="RGTpracticum" targetName="studentspullen" />
+      <config projectName="RGTpracticum" targetName="FreeRTOSOOSchilLib" />
+      <config projectName="RGTpracticum" targetName="ESEFreeRTOSLib" />
+      <config projectName="RGTpracticum" targetName="RGTData" />
+      <config projectName="RGTpracticum" targetName="ESEBasisLib" />
+      <config projectName="RGTpracticum" targetName="SEGGER_Sysview" />
+      <config projectName="RGTpracticum" targetName="AlgemeenLib" />
+      <config projectName="RGTpracticum" targetName="ESE_DigProcesAansturingLib" />
+      <config projectName="RGTpracticum" targetName="RGTpracticum.elf" />
+      <config projectName="RGTpracticum" targetName="RTOSBasisRGT" />
+      <config projectName="RGTpracticum" targetName="Segger_RTT" />
+      <config projectName="RGTpracticum" targetName="UtilitiesLib" />
+      <config projectName="RGTpracticum" targetName="CMSISFIRMWARE" />
+      <config projectName="RGTpracticum" targetName="FatFs_vR0.13a" />
+      <config projectName="RGTpracticum" targetName="STM32412G-Discovery" />
+      <config projectName="RGTpracticum" targetName="STM32412G-DiscoveryBasis" />
+      <config projectName="RGTpracticum" targetName="STM32F4xx_HAL_Driver" />
+      <config projectName="RGTpracticum" targetName="FreeRTOSLib" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" GENERATION_DIR="CLion/Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="SizeRelease" ENABLED="true" GENERATION_DIR="CLion/SizeRelease" CONFIG_NAME="SizeRelease" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a35994ea-d3b2-4a9d-bec5-8b9bd91053c0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../RGT.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../RGT.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/AlgemeenDir/libAlgemeenLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/AlgemeenDir/libAlgemeenLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/BasisDir/libESEBasisLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/BasisDir/libESEBasisLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/3.20.2/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/ESE_BSPProcessor/libESE_RGT+DSBBoardLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/ESE_BSPProcessor/libESE_RGT+DSBBoardLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/ESE_DigProcesAansturing/libESE_DigProcesAansturingLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/ESE_DigProcesAansturing/libESE_DigProcesAansturingLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/ESE_FreeRTOS/libESEFreeRTOSLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/ESE_FreeRTOS/libESEFreeRTOSLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/FatFS/libFatFs_vR0.13a.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/FatFS/libFatFs_vR0.13a.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/FreeRTOS/libFreeRTOSLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/FreeRTOS/libFreeRTOSLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/FreeRTOSOOSchil/libFreeRTOSOOSchilLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/FreeRTOSOOSchil/libFreeRTOSOOSchilLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/RGTData/libRGTData.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/RGTData/libRGTData.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/STM32CMSIS/libCMSISFIRMWARE.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/STM32CMSIS/libCMSISFIRMWARE.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/STM32CMSIS/startup_stm32f412zx.s.lst" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/STM32CMSIS/startup_stm32f412zx.s.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/STM32_HAL_Driver/libSTM32F4xx_HAL_Driver.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/STM32_HAL_Driver/libSTM32F4xx_HAL_Driver.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/STemWin/libSTemWinOSLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/STemWin/libSTemWinOSLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/SeggerRTT/libSegger_RTT.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/SeggerRTT/libSegger_RTT.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/SeggerSysview/libSEGGER_Sysview.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/SeggerSysview/libSEGGER_Sysview.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/Utilities/libUtilitiesLib.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/Utilities/libUtilitiesLib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/gegenereerd/ozoneConfig.jdebug.user" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/gegenereerd/ozoneConfig.jdebug.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/libSTM32412G-Discovery.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/libSTM32412G-Discovery.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/rtosBasisRGT/libRTOSBasisRGT.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/rtosBasisRGT/libRTOSBasisRGT.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/toepassing/RGTpracticum.map" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/toepassing/RGTpracticum.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/PIDControllerSessie.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/PIDControllerSessie.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/debugSessie.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/CMakeFiles/studentspullen.dir/debugSessie.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/libstudentspullen.a" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/Debug/toepassing/opdracht/libstudentspullen.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/3.20.2/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CLion/SizeRelease/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Executable/Debug/RGTpracticum.elf" beforeDir="false" afterPath="$PROJECT_DIR$/Executable/Debug/RGTpracticum.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Executable/Debug/RGTpracticum.map" beforeDir="false" afterPath="$PROJECT_DIR$/Executable/Debug/RGTpracticum.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STUDENT/PIDControllerSessie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STUDENT/PIDControllerSessie.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="RGTpracticum" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1TBn6Hqj8EzNH8Q2Ba4Djtp2Ptq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../STUDENT/PIDControllerSessie.cpp" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager" selected="CMake Application.Alles">
+    <configuration name="Alles" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CMSISFIRMWARE" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="CMSISFIRMWARE" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComponentsLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ComponentsLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEBasisLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESEBasisLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEFreeRTOSLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESEFreeRTOSLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESE_DigProcesAansturingLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESE_DigProcesAansturingLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESE_RGT+DSBBoardLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="ESE_RGT+DSBBoardLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FatFs_vR0.13a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="FatFs_vR0.13a" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FreeRTOSLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="FreeRTOSLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FreeRTOSOOSchilLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="FreeRTOSOOSchilLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RGTData" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="RGTData" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RGTpracticum.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="RGTpracticum.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RGTpracticum" RUN_TARGET_NAME="RGTpracticum.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RTOSBasisRGT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="RTOSBasisRGT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SEGGER_Sysview" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="SEGGER_Sysview" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32412G-Discovery" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32412G-Discovery" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32412G-DiscoveryBasis" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32412G-DiscoveryBasis" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32F4xx_HAL_Driver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STM32F4xx_HAL_Driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STemWinOSLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="STemWinOSLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Segger_RTT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="Segger_RTT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilitiesLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="UtilitiesLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="studentspullen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGTpracticum" TARGET_NAME="studentspullen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Alles" />
+      <item itemvalue="CMake Application.STM32412G-Discovery" />
+      <item itemvalue="CMake Application.RTOSBasisRGT" />
+      <item itemvalue="CMake Application.RGTpracticum.elf" />
+      <item itemvalue="CMake Application.RGTData" />
+      <item itemvalue="CMake Application.ESEBasisLib" />
+      <item itemvalue="CMake Application.ESEFreeRTOSLib" />
+      <item itemvalue="CMake Application.ComponentsLib" />
+      <item itemvalue="CMake Application.STM32412G-DiscoveryBasis" />
+      <item itemvalue="CMake Application.CMSISFIRMWARE" />
+      <item itemvalue="CMake Application.STemWinOSLib" />
+      <item itemvalue="CMake Application.STM32F4xx_HAL_Driver" />
+      <item itemvalue="CMake Application.UtilitiesLib" />
+      <item itemvalue="CMake Application.ESE_DigProcesAansturingLib" />
+      <item itemvalue="CMake Application.ESE_RGT+DSBBoardLib" />
+      <item itemvalue="CMake Application.FatFs_vR0.13a" />
+      <item itemvalue="CMake Application.FreeRTOSOOSchilLib" />
+      <item itemvalue="CMake Application.FreeRTOSLib" />
+      <item itemvalue="CMake Application.Segger_RTT" />
+      <item itemvalue="CMake Application.SEGGER_Sysview" />
+      <item itemvalue="CMake Application.studentspullen" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\niels\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a35994ea-d3b2-4a9d-bec5-8b9bd91053c0" name="Default Changelist" comment="" />
+      <created>1553069451457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553069451457</updated>
+      <workItem from="1553069452900" duration="13933000" />
+      <workItem from="1555485598690" duration="599000" />
+      <workItem from="1555933716429" duration="4000" />
+      <workItem from="1573832370612" duration="563000" />
+      <workItem from="1573832973097" duration="622000" />
+      <workItem from="1637914765926" duration="67000" />
+      <workItem from="1637917534675" duration="1032000" />
+      <workItem from="1638518570553" duration="5154000" />
+      <workItem from="1639123299193" duration="5246000" />
+      <workItem from="1639728228820" duration="5137000" />
+      <workItem from="1644413543238" duration="3389000" />
+      <workItem from="1644486730631" duration="213000" />
+      <workItem from="1644487375229" duration="23000" />
+      <workItem from="1644505061200" duration="212000" />
+      <workItem from="1644585589043" duration="6041000" />
+      <workItem from="1644594655045" duration="9071000" />
+      <workItem from="1644827454820" duration="17000" />
+      <workItem from="1644827482913" duration="185000" />
+      <workItem from="1644833446654" duration="886000" />
+      <workItem from="1644866785674" duration="185000" />
+      <workItem from="1648195511664" duration="636000" />
+      <workItem from="1650373812393" duration="11000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1572942599627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572942599627</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Negeer funktie in gebruik genomen, want dit had ik vergeten!">
+      <created>1572951206031</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572951206031</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Negeer funktie in gebruik genomen, want dit had ik vergeten!">
+      <created>1572951290024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572951290024</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Patch aangebracht om arm gcc link te verwijderen.">
+      <created>1573832894129</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573832894129</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Patch aangebracht om foute #ifdef te verwijderen.">
+      <created>1636734916030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636734916030</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Negeer funktie in gebruik genomen, want dit had ik vergeten!" />
+    <MESSAGE value="Patch aangebracht om arm gcc link te verwijderen." />
+    <MESSAGE value="Patch aangebracht om foute #ifdef te verwijderen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Patch aangebracht om foute #ifdef te verwijderen." />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

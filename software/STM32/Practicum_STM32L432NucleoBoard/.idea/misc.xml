@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+      <file path="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+      <file path="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+      <file path="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+      <file path="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+      <file path="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT" />
+      <file path="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview" />
+      <file path="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+      <file path="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis" />
+      <file path="$PROJECT_DIR$/../STUDENT" />
+      <file path="$PROJECT_DIR$/../debugpracticummodule" />
+      <file path="$PROJECT_DIR$/../rgtpracticummodule" />
+      <file path="$PROJECT_DIR$/../../algemeen" />
+      <file path="$PROJECT_DIR$/../../rgtData" />
+    </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/CLion" />
+      <file path="$PROJECT_DIR$/Executable" />
+    </excludeRoots>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>GeneralC/C++</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>ClangTidyInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/ti_cp/regeltechniek/practicum/rgtpracticum/software/STM32/Practicum_STM32L432NucleoBoard" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FreeRTOS" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/freertos-addons-1.1.0" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/Segger/Segger_RTT">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/Segger/Segger_RTT" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/Segger/Segger_Sysview">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/Segger/Segger_Sysview" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/ESEFreeRTOS">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/gemeenschappelijk/ESEFreeRTOS" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STM32Basis/gemeenschappelijk/basis">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/STM32/STM32Basis/gemeenschappelijk/basis" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../STUDENT">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://ese.han.nl/svn/rgtpracticum/branches" />
+                  <option value="https://ese.han.nl/svn/rgtpracticum/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://ese.han.nl/svn/rgtpracticum/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../algemeen">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/algemeen/software/algemeen" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../rgtData">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://svn.hanese.nl/docenten/svn/ewout/vakken/ti_cp/regeltechniek/practicum/rgtpracticum/software/rgtData" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

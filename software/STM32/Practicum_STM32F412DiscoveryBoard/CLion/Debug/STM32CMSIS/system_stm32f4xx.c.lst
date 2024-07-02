@@ -1,0 +1,2207 @@
+ARM GAS   			page 1
+
+
+   1              	 .cpu cortex-m4
+   2              	 .arch armv7e-m
+   3              	 .fpu fpv4-sp-d16
+   4              	 .eabi_attribute 27,1
+   5              	 .eabi_attribute 28,1
+   6              	 .eabi_attribute 20,1
+   7              	 .eabi_attribute 21,1
+   8              	 .eabi_attribute 23,3
+   9              	 .eabi_attribute 24,1
+  10              	 .eabi_attribute 25,1
+  11              	 .eabi_attribute 26,1
+  12              	 .eabi_attribute 30,6
+  13              	 .eabi_attribute 34,0
+  14              	 .eabi_attribute 18,4
+  15              	 .file "system_stm32f4xx.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global SystemCoreClock
+  20              	 .section .data.SystemCoreClock,"aw"
+  21              	 .align 2
+  22              	 .type SystemCoreClock,%object
+  23              	 .size SystemCoreClock,4
+  24              	SystemCoreClock:
+  25 0000 0024F400 	 .word 16000000
+  26              	 .global AHBPrescTable
+  27              	 .section .rodata.AHBPrescTable,"a"
+  28              	 .align 2
+  29              	 .type AHBPrescTable,%object
+  30              	 .size AHBPrescTable,16
+  31              	AHBPrescTable:
+  32 0000 00000000 	 .ascii "\000\000\000\000\000\000\000\000\001\002\003\004\006"
+  32      00000000 
+  32      01020304 
+  32      06
+  33 000d 070809   	 .ascii "\007\010\011"
+  34              	 .global APBPrescTable
+  35              	 .section .rodata.APBPrescTable,"a"
+  36              	 .align 2
+  37              	 .type APBPrescTable,%object
+  38              	 .size APBPrescTable,8
+  39              	APBPrescTable:
+  40 0000 00000000 	 .ascii "\000\000\000\000\001\002\003\004"
+  40      01020304 
+  41              	 .section .text.SystemInit,"ax",%progbits
+  42              	 .align 1
+  43              	 .global SystemInit
+  44              	 .syntax unified
+  45              	 .thumb
+  46              	 .thumb_func
+  47              	 .type SystemInit,%function
+  48              	SystemInit:
+  49              	 .fnstart
+  50              	.LFB123:
+  51              	 .file 1 "C:\\Users\\niels\\Documents\\Elektrotechniek\\Jaar 2\\ECS\\ECSL\\software\\STM32\\STM32Basis\\HAL\\gemeenschappelijk\\Libraries\\CMSIS\\Device\\ST\\STM32F4xx\\Source\\Templates\\system_stm32f4xx.c"
+   1:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+   2:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   ******************************************************************************
+ARM GAS   			page 2
+
+
+   3:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @file    system_stm32f4xx.c
+   4:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @author  MCD Application Team
+   5:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
+   6:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+   7:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *   This file provides two functions and one global variable to be called from 
+   8:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *   user application:
+   9:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *      - SystemInit(): This function is called at startup just after reset and 
+  10:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                      before branch to main program. This call is made inside
+  11:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                      the "startup_stm32f4xx.s" file.
+  12:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  13:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *      - SystemCoreClock variable: Contains the core clock (HCLK), it can be used
+  14:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                  by the user application to setup the SysTick 
+  15:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                  timer or configure other parameters.
+  16:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                     
+  17:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *      - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
+  18:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                 be called whenever the core clock is changed
+  19:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                 during program execution.
+  20:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  21:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  22:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   ******************************************************************************
+  23:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @attention
+  24:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  25:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics.
+  26:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * All rights reserved.</center></h2>
+  27:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  28:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  29:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * the "License"; You may not use this file except in compliance with the
+  30:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * License. You may obtain a copy of the License at:
+  31:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  32:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *
+  33:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   ******************************************************************************
+  34:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  35:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  36:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup CMSIS
+  37:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+  38:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  39:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  40:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup stm32f4xx_system
+  41:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+  42:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */  
+  43:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   
+  44:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_Includes
+  45:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+  46:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  47:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  48:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  49:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #include "stm32f4xx.h"
+  50:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  51:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if !defined  (HSE_VALUE) 
+  52:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   #define HSE_VALUE    ((uint32_t)25000000) /*!< Default value of the External oscillator in Hz */
+  53:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* HSE_VALUE */
+  54:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  55:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if !defined  (HSI_VALUE)
+  56:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   #define HSI_VALUE    ((uint32_t)16000000) /*!< Value of the Internal oscillator in Hz*/
+  57:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* HSI_VALUE */
+  58:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  59:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ARM GAS   			page 3
+
+
+  60:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+  61:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  62:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  63:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_TypesDefinitions
+  64:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+  65:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  66:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  67:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+  68:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+  69:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  70:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  71:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_Defines
+  72:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+  73:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+  74:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  75:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /************************* Miscellaneous Configuration ************************/
+  76:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /*!< Uncomment the following line if you need to use external SRAM or SDRAM as data memory  */
+  77:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\
+  78:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****  || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+  79:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****  || defined(STM32F469xx) || defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx)
+  80:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /* #define DATA_IN_ExtSRAM */
+  81:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* STM32F40xxx || STM32F41xxx || STM32F42xxx || STM32F43xxx || STM32F469xx || STM32F479xx ||
+  82:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****           STM32F412Zx || STM32F412Vx */
+  83:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****  
+  84:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
+  85:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****  || defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)
+  86:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /* #define DATA_IN_ExtSDRAM */
+  87:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx ||
+  88:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****           STM32F479xx */
+  89:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  90:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /*!< Uncomment the following line if you need to relocate your vector Table in
+  91:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****      Internal SRAM. */
+  92:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /* #define VECT_TAB_SRAM */
+  93:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #define VECT_TAB_OFFSET  0x00 /*!< Vector Table base offset field. 
+  94:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****                                    This value must be a multiple of 0x200. */
+  95:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /******************************************************************************/
+  96:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+  97:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+  98:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+  99:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 100:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 101:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_Macros
+ 102:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+ 103:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 104:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 105:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ 106:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+ 107:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 108:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 109:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_Variables
+ 110:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+ 111:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 112:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* This variable is updated in three ways:
+ 113:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       1) by calling CMSIS function SystemCoreClockUpdate()
+ 114:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       2) by calling HAL API function HAL_RCC_GetHCLKFreq()
+ 115:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       3) each time HAL_RCC_ClockConfig() is called to configure the system clock frequency 
+ 116:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****          Note: If you use this function to configure the system clock; then there
+ARM GAS   			page 4
+
+
+ 117:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****                is no need to call the 2 first functions listed above, since SystemCoreClock
+ 118:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****                variable is updated automatically.
+ 119:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 120:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** uint32_t SystemCoreClock = 16000000;
+ 121:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+ 122:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
+ 123:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ 124:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+ 125:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 126:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 127:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_FunctionPrototypes
+ 128:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+ 129:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 130:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 131:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
+ 132:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   static void SystemInit_ExtMemCtl(void); 
+ 133:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
+ 134:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 135:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ 136:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @}
+ 137:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 138:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 139:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /** @addtogroup STM32F4xx_System_Private_Functions
+ 140:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @{
+ 141:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 142:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 143:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ 144:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @brief  Setup the microcontroller system
+ 145:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         Initialize the FPU setting, vector table location and External memory 
+ 146:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         configuration.
+ 147:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @param  None
+ 148:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @retval None
+ 149:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 150:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** void SystemInit(void)
+ 151:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** {
+  52              	 .loc 1 151 1
+  53              	 .cfi_startproc
+  54              	 
+  55              	 
+  56              	 
+  57 0000 80B4     	 push {r7}
+  58              	 .cfi_def_cfa_offset 4
+  59              	 .cfi_offset 7,-4
+  60 0002 00AF     	 add r7,sp,#0
+  61              	 .cfi_def_cfa_register 7
+ 152:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* FPU settings ------------------------------------------------------------*/
+ 153:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+ 154:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
+  62              	 .loc 1 154 16
+  63 0004 084B     	 ldr r3,.L2
+  64 0006 D3F88830 	 ldr r3,[r3,#136]
+  65 000a 074A     	 ldr r2,.L2
+  66 000c 43F47003 	 orr r3,r3,#15728640
+  67 0010 C2F88830 	 str r3,[r2,#136]
+ 155:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   #endif
+ 156:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 157:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #if defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
+ARM GAS   			page 5
+
+
+ 158:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   SystemInit_ExtMemCtl(); 
+ 159:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
+ 160:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 161:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* Configure the Vector Table location add offset address ------------------*/
+ 162:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #ifdef VECT_TAB_SRAM
+ 163:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
+ 164:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #else
+ 165:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
+  68              	 .loc 1 165 8
+  69 0014 044B     	 ldr r3,.L2
+  70              	 .loc 1 165 13
+  71 0016 4FF00062 	 mov r2,#134217728
+  72 001a 9A60     	 str r2,[r3,#8]
+ 166:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** #endif
+ 167:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** }
+  73              	 .loc 1 167 1
+  74 001c 00BF     	 nop
+  75 001e BD46     	 mov sp,r7
+  76              	 .cfi_def_cfa_register 13
+  77              	 
+  78 0020 5DF8047B 	 ldr r7,[sp],#4
+  79              	 .cfi_restore 7
+  80              	 .cfi_def_cfa_offset 0
+  81 0024 7047     	 bx lr
+  82              	.L3:
+  83 0026 00BF     	 .align 2
+  84              	.L2:
+  85 0028 00ED00E0 	 .word -536810240
+  86              	 .cfi_endproc
+  87              	.LFE123:
+  88              	 .cantunwind
+  89              	 .fnend
+  90              	 .size SystemInit,.-SystemInit
+  91              	 .section .text.SystemCoreClockUpdate,"ax",%progbits
+  92              	 .align 1
+  93              	 .global SystemCoreClockUpdate
+  94              	 .syntax unified
+  95              	 .thumb
+  96              	 .thumb_func
+  97              	 .type SystemCoreClockUpdate,%function
+  98              	SystemCoreClockUpdate:
+  99              	 .fnstart
+ 100              	.LFB124:
+ 168:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 169:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** /**
+ 170:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****    * @brief  Update SystemCoreClock variable according to Clock Register Values.
+ 171:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         The SystemCoreClock variable contains the core clock (HCLK), it can
+ 172:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         be used by the user application to setup the SysTick timer or configure
+ 173:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         other parameters.
+ 174:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           
+ 175:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @note   Each time the core clock (HCLK) changes, this function must be called
+ 176:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         to update SystemCoreClock variable value. Otherwise, any configuration
+ 177:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         based on this variable will be incorrect.         
+ 178:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *     
+ 179:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @note   - The system frequency computed by this function is not the real 
+ 180:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           frequency in the chip. It is calculated based on the predefined 
+ 181:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           constant and the selected clock source:
+ARM GAS   			page 6
+
+
+ 182:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *             
+ 183:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
+ 184:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                                              
+ 185:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(**)
+ 186:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                          
+ 187:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           - If SYSCLK source is PLL, SystemCoreClock will contain the HSE_VALUE(**) 
+ 188:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *             or HSI_VALUE(*) multiplied/divided by the PLL factors.
+ 189:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         
+ 190:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         (*) HSI_VALUE is a constant defined in stm32f4xx_hal_conf.h file (default value
+ 191:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *             16 MHz) but the real value may vary depending on the variations
+ 192:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *             in voltage and temperature.   
+ 193:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *    
+ 194:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         (**) HSE_VALUE is a constant defined in stm32f4xx_hal_conf.h file (its value
+ 195:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *              depends on the application requirements), user has to ensure that HSE_VALUE
+ 196:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *              is same as the real frequency of the crystal used. Otherwise, this function
+ 197:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *              may have wrong result.
+ 198:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *                
+ 199:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *         - The result of this function could be not correct when using fractional
+ 200:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *           value for HSE crystal.
+ 201:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   *     
+ 202:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @param  None
+ 203:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   * @retval None
+ 204:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   */
+ 205:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** void SystemCoreClockUpdate(void)
+ 206:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** {
+ 101              	 .loc 1 206 1
+ 102              	 .cfi_startproc
+ 103              	 
+ 104              	 
+ 105              	 
+ 106 0000 80B4     	 push {r7}
+ 107              	 .cfi_def_cfa_offset 4
+ 108              	 .cfi_offset 7,-4
+ 109 0002 87B0     	 sub sp,sp,#28
+ 110              	 .cfi_def_cfa_offset 32
+ 111 0004 00AF     	 add r7,sp,#0
+ 112              	 .cfi_def_cfa_register 7
+ 207:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   uint32_t tmp = 0, pllvco = 0, pllp = 2, pllsource = 0, pllm = 2;
+ 113              	 .loc 1 207 12
+ 114 0006 0023     	 movs r3,#0
+ 115 0008 3B61     	 str r3,[r7,#16]
+ 116              	 .loc 1 207 21
+ 117 000a 0023     	 movs r3,#0
+ 118 000c 7B61     	 str r3,[r7,#20]
+ 119              	 .loc 1 207 33
+ 120 000e 0223     	 movs r3,#2
+ 121 0010 FB60     	 str r3,[r7,#12]
+ 122              	 .loc 1 207 43
+ 123 0012 0023     	 movs r3,#0
+ 124 0014 BB60     	 str r3,[r7,#8]
+ 125              	 .loc 1 207 58
+ 126 0016 0223     	 movs r3,#2
+ 127 0018 7B60     	 str r3,[r7,#4]
+ 208:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   
+ 209:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* Get SYSCLK source -------------------------------------------------------*/
+ 210:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   tmp = RCC->CFGR & RCC_CFGR_SWS;
+ 128              	 .loc 1 210 14
+ARM GAS   			page 7
+
+
+ 129 001a 344B     	 ldr r3,.L12
+ 130 001c 9B68     	 ldr r3,[r3,#8]
+ 131              	 .loc 1 210 7
+ 132 001e 03F00C03 	 and r3,r3,#12
+ 133 0022 3B61     	 str r3,[r7,#16]
+ 211:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 212:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   switch (tmp)
+ 134              	 .loc 1 212 3
+ 135 0024 3B69     	 ldr r3,[r7,#16]
+ 136 0026 082B     	 cmp r3,#8
+ 137 0028 11D0     	 beq .L5
+ 138 002a 3B69     	 ldr r3,[r7,#16]
+ 139 002c 082B     	 cmp r3,#8
+ 140 002e 44D8     	 bhi .L6
+ 141 0030 3B69     	 ldr r3,[r7,#16]
+ 142 0032 002B     	 cmp r3,#0
+ 143 0034 03D0     	 beq .L7
+ 144 0036 3B69     	 ldr r3,[r7,#16]
+ 145 0038 042B     	 cmp r3,#4
+ 146 003a 04D0     	 beq .L8
+ 147 003c 3DE0     	 b .L6
+ 148              	.L7:
+ 213:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   {
+ 214:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****     case 0x00:  /* HSI used as system clock source */
+ 215:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       SystemCoreClock = HSI_VALUE;
+ 149              	 .loc 1 215 23
+ 150 003e 2C4B     	 ldr r3,.L12+4
+ 151 0040 2C4A     	 ldr r2,.L12+8
+ 152 0042 1A60     	 str r2,[r3]
+ 216:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       break;
+ 153              	 .loc 1 216 7
+ 154 0044 3DE0     	 b .L9
+ 155              	.L8:
+ 217:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****     case 0x04:  /* HSE used as system clock source */
+ 218:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       SystemCoreClock = HSE_VALUE;
+ 156              	 .loc 1 218 23
+ 157 0046 2A4B     	 ldr r3,.L12+4
+ 158 0048 2B4A     	 ldr r2,.L12+12
+ 159 004a 1A60     	 str r2,[r3]
+ 219:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       break;
+ 160              	 .loc 1 219 7
+ 161 004c 39E0     	 b .L9
+ 162              	.L5:
+ 220:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****     case 0x08:  /* PLL used as system clock source */
+ 221:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 222:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N
+ 223:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****          SYSCLK = PLL_VCO / PLL_P
+ 224:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****          */    
+ 225:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       pllsource = (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) >> 22;
+ 163              	 .loc 1 225 25
+ 164 004e 274B     	 ldr r3,.L12
+ 165 0050 5B68     	 ldr r3,[r3,#4]
+ 166              	 .loc 1 225 55
+ 167 0052 9B0D     	 lsrs r3,r3,#22
+ 168              	 .loc 1 225 17
+ 169 0054 03F00103 	 and r3,r3,#1
+ 170 0058 BB60     	 str r3,[r7,#8]
+ARM GAS   			page 8
+
+
+ 226:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       pllm = RCC->PLLCFGR & RCC_PLLCFGR_PLLM;
+ 171              	 .loc 1 226 19
+ 172 005a 244B     	 ldr r3,.L12
+ 173 005c 5B68     	 ldr r3,[r3,#4]
+ 174              	 .loc 1 226 12
+ 175 005e 03F03F03 	 and r3,r3,#63
+ 176 0062 7B60     	 str r3,[r7,#4]
+ 227:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       
+ 228:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       if (pllsource != 0)
+ 177              	 .loc 1 228 7
+ 178 0064 BB68     	 ldr r3,[r7,#8]
+ 179 0066 002B     	 cmp r3,#0
+ 180 0068 0CD0     	 beq .L10
+ 229:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       {
+ 230:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****         /* HSE used as PLL clock source */
+ 231:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****         pllvco = (HSE_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+ 181              	 .loc 1 231 29
+ 182 006a 234A     	 ldr r2,.L12+12
+ 183 006c 7B68     	 ldr r3,[r7,#4]
+ 184 006e B2FBF3F3 	 udiv r3,r2,r3
+ 185              	 .loc 1 231 46
+ 186 0072 1E4A     	 ldr r2,.L12
+ 187 0074 5268     	 ldr r2,[r2,#4]
+ 188              	 .loc 1 231 74
+ 189 0076 9209     	 lsrs r2,r2,#6
+ 190 0078 C2F30802 	 ubfx r2,r2,#0,#9
+ 191              	 .loc 1 231 16
+ 192 007c 02FB03F3 	 mul r3,r2,r3
+ 193 0080 7B61     	 str r3,[r7,#20]
+ 194 0082 0BE0     	 b .L11
+ 195              	.L10:
+ 232:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       }
+ 233:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       else
+ 234:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       {
+ 235:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****         /* HSI used as PLL clock source */
+ 236:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****         pllvco = (HSI_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+ 196              	 .loc 1 236 29
+ 197 0084 1B4A     	 ldr r2,.L12+8
+ 198 0086 7B68     	 ldr r3,[r7,#4]
+ 199 0088 B2FBF3F3 	 udiv r3,r2,r3
+ 200              	 .loc 1 236 46
+ 201 008c 174A     	 ldr r2,.L12
+ 202 008e 5268     	 ldr r2,[r2,#4]
+ 203              	 .loc 1 236 74
+ 204 0090 9209     	 lsrs r2,r2,#6
+ 205 0092 C2F30802 	 ubfx r2,r2,#0,#9
+ 206              	 .loc 1 236 16
+ 207 0096 02FB03F3 	 mul r3,r2,r3
+ 208 009a 7B61     	 str r3,[r7,#20]
+ 209              	.L11:
+ 237:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       }
+ 238:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** 
+ 239:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       pllp = (((RCC->PLLCFGR & RCC_PLLCFGR_PLLP) >>16) + 1 ) *2;
+ 210              	 .loc 1 239 22
+ 211 009c 134B     	 ldr r3,.L12
+ 212 009e 5B68     	 ldr r3,[r3,#4]
+ 213              	 .loc 1 239 50
+ARM GAS   			page 9
+
+
+ 214 00a0 1B0C     	 lsrs r3,r3,#16
+ 215 00a2 03F00303 	 and r3,r3,#3
+ 216              	 .loc 1 239 56
+ 217 00a6 0133     	 adds r3,r3,#1
+ 218              	 .loc 1 239 12
+ 219 00a8 5B00     	 lsls r3,r3,#1
+ 220 00aa FB60     	 str r3,[r7,#12]
+ 240:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       SystemCoreClock = pllvco/pllp;
+ 221              	 .loc 1 240 31
+ 222 00ac 7A69     	 ldr r2,[r7,#20]
+ 223 00ae FB68     	 ldr r3,[r7,#12]
+ 224 00b0 B2FBF3F3 	 udiv r3,r2,r3
+ 225              	 .loc 1 240 23
+ 226 00b4 0E4A     	 ldr r2,.L12+4
+ 227 00b6 1360     	 str r3,[r2]
+ 241:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       break;
+ 228              	 .loc 1 241 7
+ 229 00b8 03E0     	 b .L9
+ 230              	.L6:
+ 242:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****     default:
+ 243:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       SystemCoreClock = HSI_VALUE;
+ 231              	 .loc 1 243 23
+ 232 00ba 0D4B     	 ldr r3,.L12+4
+ 233 00bc 0D4A     	 ldr r2,.L12+8
+ 234 00be 1A60     	 str r2,[r3]
+ 244:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****       break;
+ 235              	 .loc 1 244 7
+ 236 00c0 00BF     	 nop
+ 237              	.L9:
+ 245:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   }
+ 246:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* Compute HCLK frequency --------------------------------------------------*/
+ 247:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* Get HCLK prescaler */
+ 248:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+ 238              	 .loc 1 248 30
+ 239 00c2 0A4B     	 ldr r3,.L12
+ 240 00c4 9B68     	 ldr r3,[r3,#8]
+ 241              	 .loc 1 248 52
+ 242 00c6 1B09     	 lsrs r3,r3,#4
+ 243 00c8 03F00F03 	 and r3,r3,#15
+ 244              	 .loc 1 248 57
+ 245 00cc 0B4A     	 ldr r2,.L12+16
+ 246 00ce D35C     	 ldrb r3,[r2,r3]
+ 247              	 .loc 1 248 7
+ 248 00d0 3B61     	 str r3,[r7,#16]
+ 249:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   /* HCLK frequency */
+ 250:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c ****   SystemCoreClock >>= tmp;
+ 249              	 .loc 1 250 19
+ 250 00d2 074B     	 ldr r3,.L12+4
+ 251 00d4 1A68     	 ldr r2,[r3]
+ 252 00d6 3B69     	 ldr r3,[r7,#16]
+ 253 00d8 22FA03F3 	 lsr r3,r2,r3
+ 254 00dc 044A     	 ldr r2,.L12+4
+ 255 00de 1360     	 str r3,[r2]
+ 251:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c **** }
+ 256              	 .loc 1 251 1
+ 257 00e0 00BF     	 nop
+ 258 00e2 1C37     	 adds r7,r7,#28
+ARM GAS   			page 10
+
+
+ 259              	 .cfi_def_cfa_offset 4
+ 260 00e4 BD46     	 mov sp,r7
+ 261              	 .cfi_def_cfa_register 13
+ 262              	 
+ 263 00e6 5DF8047B 	 ldr r7,[sp],#4
+ 264              	 .cfi_restore 7
+ 265              	 .cfi_def_cfa_offset 0
+ 266 00ea 7047     	 bx lr
+ 267              	.L13:
+ 268              	 .align 2
+ 269              	.L12:
+ 270 00ec 00380240 	 .word 1073887232
+ 271 00f0 00000000 	 .word SystemCoreClock
+ 272 00f4 0024F400 	 .word 16000000
+ 273 00f8 00127A00 	 .word 8000000
+ 274 00fc 00000000 	 .word AHBPrescTable
+ 275              	 .cfi_endproc
+ 276              	.LFE124:
+ 277              	 .cantunwind
+ 278              	 .fnend
+ 279              	 .size SystemCoreClockUpdate,.-SystemCoreClockUpdate
+ 280              	 .text
+ 281              	.Letext0:
+ 282              	 .file 2 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 283              	 .file 3 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 284              	 .file 4 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/CMSIS/Include/core_cm4.h"
+ 285              	 .file 5 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/CMSIS/Device/ST/STM32F~1/Include/system_stm32f4xx.h"
+ 286              	 .file 6 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/CMSIS/Device/ST/STM32F~1/Include/stm32f412zx.h"
+ 287              	 .file 7 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/CMSIS/Device/ST/STM32F~1/Include/stm32f4xx.h"
+ 288              	 .file 8 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/LIBRAR~1/STM32F~1/Inc/stm32f4xx_hal.h"
+ 289              	 .section .debug_info,"",%progbits
+ 290              	.Ldebug_info0:
+ 291 0000 18060000 	 .4byte 0x618
+ 292 0004 0400     	 .2byte 0x4
+ 293 0006 00000000 	 .4byte .Ldebug_abbrev0
+ 294 000a 04       	 .byte 0x4
+ 295 000b 01       	 .uleb128 0x1
+ 296 000c C6000000 	 .4byte .LASF87
+ 297 0010 04       	 .byte 0x4
+ 298 0011 D3010000 	 .4byte .LASF88
+ 299 0015 20040000 	 .4byte .LASF89
+ 300 0019 00000000 	 .4byte .Ldebug_ranges0+0
+ 301 001d 00000000 	 .4byte 0
+ 302 0021 00000000 	 .4byte .Ldebug_line0
+ 303 0025 02       	 .uleb128 0x2
+ 304 0026 01       	 .byte 0x1
+ 305 0027 06       	 .byte 0x6
+ 306 0028 63030000 	 .4byte .LASF0
+ 307 002c 03       	 .uleb128 0x3
+ 308 002d E9020000 	 .4byte .LASF5
+ 309 0031 02       	 .byte 0x2
+ 310 0032 2B       	 .byte 0x2b
+ 311 0033 18       	 .byte 0x18
+ 312 0034 38000000 	 .4byte 0x38
+ 313 0038 02       	 .uleb128 0x2
+ 314 0039 01       	 .byte 0x1
+ 315 003a 08       	 .byte 0x8
+ARM GAS   			page 11
+
+
+ 316 003b 4D030000 	 .4byte .LASF1
+ 317 003f 02       	 .uleb128 0x2
+ 318 0040 02       	 .byte 0x2
+ 319 0041 05       	 .byte 0x5
+ 320 0042 D6020000 	 .4byte .LASF2
+ 321 0046 02       	 .uleb128 0x2
+ 322 0047 02       	 .byte 0x2
+ 323 0048 07       	 .byte 0x7
+ 324 0049 DC030000 	 .4byte .LASF3
+ 325 004d 02       	 .uleb128 0x2
+ 326 004e 04       	 .byte 0x4
+ 327 004f 05       	 .byte 0x5
+ 328 0050 AC020000 	 .4byte .LASF4
+ 329 0054 03       	 .uleb128 0x3
+ 330 0055 65000000 	 .4byte .LASF6
+ 331 0059 02       	 .byte 0x2
+ 332 005a 4F       	 .byte 0x4f
+ 333 005b 19       	 .byte 0x19
+ 334 005c 60000000 	 .4byte 0x60
+ 335 0060 02       	 .uleb128 0x2
+ 336 0061 04       	 .byte 0x4
+ 337 0062 07       	 .byte 0x7
+ 338 0063 99030000 	 .4byte .LASF7
+ 339 0067 02       	 .uleb128 0x2
+ 340 0068 08       	 .byte 0x8
+ 341 0069 05       	 .byte 0x5
+ 342 006a 99020000 	 .4byte .LASF8
+ 343 006e 02       	 .uleb128 0x2
+ 344 006f 08       	 .byte 0x8
+ 345 0070 07       	 .byte 0x7
+ 346 0071 6F030000 	 .4byte .LASF9
+ 347 0075 04       	 .uleb128 0x4
+ 348 0076 04       	 .byte 0x4
+ 349 0077 05       	 .byte 0x5
+ 350 0078 696E7400 	 .ascii "int\000"
+ 351 007c 02       	 .uleb128 0x2
+ 352 007d 04       	 .byte 0x4
+ 353 007e 07       	 .byte 0x7
+ 354 007f 8C030000 	 .4byte .LASF10
+ 355 0083 03       	 .uleb128 0x3
+ 356 0084 9F000000 	 .4byte .LASF11
+ 357 0088 03       	 .byte 0x3
+ 358 0089 18       	 .byte 0x18
+ 359 008a 13       	 .byte 0x13
+ 360 008b 2C000000 	 .4byte 0x2c
+ 361 008f 05       	 .uleb128 0x5
+ 362 0090 83000000 	 .4byte 0x83
+ 363 0094 06       	 .uleb128 0x6
+ 364 0095 83000000 	 .4byte 0x83
+ 365 0099 03       	 .uleb128 0x3
+ 366 009a CA010000 	 .4byte .LASF12
+ 367 009e 03       	 .byte 0x3
+ 368 009f 30       	 .byte 0x30
+ 369 00a0 14       	 .byte 0x14
+ 370 00a1 54000000 	 .4byte 0x54
+ 371 00a5 05       	 .uleb128 0x5
+ 372 00a6 99000000 	 .4byte 0x99
+ARM GAS   			page 12
+
+
+ 373 00aa 06       	 .uleb128 0x6
+ 374 00ab A5000000 	 .4byte 0xa5
+ 375 00af 07       	 .uleb128 0x7
+ 376 00b0 8C       	 .byte 0x8c
+ 377 00b1 04       	 .byte 0x4
+ 378 00b2 E601     	 .2byte 0x1e6
+ 379 00b4 01       	 .byte 0x1
+ 380 00b5 15030000 	 .4byte .LASF32
+ 381 00b9 E4010000 	 .4byte 0x1e4
+ 382 00bd 08       	 .uleb128 0x8
+ 383 00be 8A000000 	 .4byte .LASF13
+ 384 00c2 04       	 .byte 0x4
+ 385 00c3 E701     	 .2byte 0x1e7
+ 386 00c5 12       	 .byte 0x12
+ 387 00c6 AA000000 	 .4byte 0xaa
+ 388 00ca 00       	 .byte 0
+ 389 00cb 08       	 .uleb128 0x8
+ 390 00cc 94020000 	 .4byte .LASF14
+ 391 00d0 04       	 .byte 0x4
+ 392 00d1 E801     	 .2byte 0x1e8
+ 393 00d3 12       	 .byte 0x12
+ 394 00d4 A5000000 	 .4byte 0xa5
+ 395 00d8 04       	 .byte 0x4
+ 396 00d9 08       	 .uleb128 0x8
+ 397 00da 00040000 	 .4byte .LASF15
+ 398 00de 04       	 .byte 0x4
+ 399 00df E901     	 .2byte 0x1e9
+ 400 00e1 12       	 .byte 0x12
+ 401 00e2 A5000000 	 .4byte 0xa5
+ 402 00e6 08       	 .byte 0x8
+ 403 00e7 08       	 .uleb128 0x8
+ 404 00e8 47030000 	 .4byte .LASF16
+ 405 00ec 04       	 .byte 0x4
+ 406 00ed EA01     	 .2byte 0x1ea
+ 407 00ef 12       	 .byte 0x12
+ 408 00f0 A5000000 	 .4byte 0xa5
+ 409 00f4 0C       	 .byte 0xc
+ 410 00f5 09       	 .uleb128 0x9
+ 411 00f6 53435200 	 .ascii "SCR\000"
+ 412 00fa 04       	 .byte 0x4
+ 413 00fb EB01     	 .2byte 0x1eb
+ 414 00fd 12       	 .byte 0x12
+ 415 00fe A5000000 	 .4byte 0xa5
+ 416 0102 10       	 .byte 0x10
+ 417 0103 09       	 .uleb128 0x9
+ 418 0104 43435200 	 .ascii "CCR\000"
+ 419 0108 04       	 .byte 0x4
+ 420 0109 EC01     	 .2byte 0x1ec
+ 421 010b 12       	 .byte 0x12
+ 422 010c A5000000 	 .4byte 0xa5
+ 423 0110 14       	 .byte 0x14
+ 424 0111 09       	 .uleb128 0x9
+ 425 0112 53485000 	 .ascii "SHP\000"
+ 426 0116 04       	 .byte 0x4
+ 427 0117 ED01     	 .2byte 0x1ed
+ 428 0119 12       	 .byte 0x12
+ 429 011a F4010000 	 .4byte 0x1f4
+ARM GAS   			page 13
+
+
+ 430 011e 18       	 .byte 0x18
+ 431 011f 08       	 .uleb128 0x8
+ 432 0120 86030000 	 .4byte .LASF17
+ 433 0124 04       	 .byte 0x4
+ 434 0125 EE01     	 .2byte 0x1ee
+ 435 0127 12       	 .byte 0x12
+ 436 0128 A5000000 	 .4byte 0xa5
+ 437 012c 24       	 .byte 0x24
+ 438 012d 08       	 .uleb128 0x8
+ 439 012e F3020000 	 .4byte .LASF18
+ 440 0132 04       	 .byte 0x4
+ 441 0133 EF01     	 .2byte 0x1ef
+ 442 0135 12       	 .byte 0x12
+ 443 0136 A5000000 	 .4byte 0xa5
+ 444 013a 28       	 .byte 0x28
+ 445 013b 08       	 .uleb128 0x8
+ 446 013c C9040000 	 .4byte .LASF19
+ 447 0140 04       	 .byte 0x4
+ 448 0141 F001     	 .2byte 0x1f0
+ 449 0143 12       	 .byte 0x12
+ 450 0144 A5000000 	 .4byte 0xa5
+ 451 0148 2C       	 .byte 0x2c
+ 452 0149 08       	 .uleb128 0x8
+ 453 014a 8D040000 	 .4byte .LASF20
+ 454 014e 04       	 .byte 0x4
+ 455 014f F101     	 .2byte 0x1f1
+ 456 0151 12       	 .byte 0x12
+ 457 0152 A5000000 	 .4byte 0xa5
+ 458 0156 30       	 .byte 0x30
+ 459 0157 08       	 .uleb128 0x8
+ 460 0158 B8030000 	 .4byte .LASF21
+ 461 015c 04       	 .byte 0x4
+ 462 015d F201     	 .2byte 0x1f2
+ 463 015f 12       	 .byte 0x12
+ 464 0160 A5000000 	 .4byte 0xa5
+ 465 0164 34       	 .byte 0x34
+ 466 0165 08       	 .uleb128 0x8
+ 467 0166 A7020000 	 .4byte .LASF22
+ 468 016a 04       	 .byte 0x4
+ 469 016b F301     	 .2byte 0x1f3
+ 470 016d 12       	 .byte 0x12
+ 471 016e A5000000 	 .4byte 0xa5
+ 472 0172 38       	 .byte 0x38
+ 473 0173 08       	 .uleb128 0x8
+ 474 0174 9C050000 	 .4byte .LASF23
+ 475 0178 04       	 .byte 0x4
+ 476 0179 F401     	 .2byte 0x1f4
+ 477 017b 12       	 .byte 0x12
+ 478 017c A5000000 	 .4byte 0xa5
+ 479 0180 3C       	 .byte 0x3c
+ 480 0181 09       	 .uleb128 0x9
+ 481 0182 50465200 	 .ascii "PFR\000"
+ 482 0186 04       	 .byte 0x4
+ 483 0187 F501     	 .2byte 0x1f5
+ 484 0189 12       	 .byte 0x12
+ 485 018a 0E020000 	 .4byte 0x20e
+ 486 018e 40       	 .byte 0x40
+ARM GAS   			page 14
+
+
+ 487 018f 09       	 .uleb128 0x9
+ 488 0190 44465200 	 .ascii "DFR\000"
+ 489 0194 04       	 .byte 0x4
+ 490 0195 F601     	 .2byte 0x1f6
+ 491 0197 12       	 .byte 0x12
+ 492 0198 AA000000 	 .4byte 0xaa
+ 493 019c 48       	 .byte 0x48
+ 494 019d 09       	 .uleb128 0x9
+ 495 019e 41445200 	 .ascii "ADR\000"
+ 496 01a2 04       	 .byte 0x4
+ 497 01a3 F701     	 .2byte 0x1f7
+ 498 01a5 12       	 .byte 0x12
+ 499 01a6 AA000000 	 .4byte 0xaa
+ 500 01aa 4C       	 .byte 0x4c
+ 501 01ab 08       	 .uleb128 0x8
+ 502 01ac 86050000 	 .4byte .LASF24
+ 503 01b0 04       	 .byte 0x4
+ 504 01b1 F801     	 .2byte 0x1f8
+ 505 01b3 12       	 .byte 0x12
+ 506 01b4 28020000 	 .4byte 0x228
+ 507 01b8 50       	 .byte 0x50
+ 508 01b9 08       	 .uleb128 0x8
+ 509 01ba 1B040000 	 .4byte .LASF25
+ 510 01be 04       	 .byte 0x4
+ 511 01bf F901     	 .2byte 0x1f9
+ 512 01c1 12       	 .byte 0x12
+ 513 01c2 42020000 	 .4byte 0x242
+ 514 01c6 60       	 .byte 0x60
+ 515 01c7 08       	 .uleb128 0x8
+ 516 01c8 D8040000 	 .4byte .LASF26
+ 517 01cc 04       	 .byte 0x4
+ 518 01cd FA01     	 .2byte 0x1fa
+ 519 01cf 12       	 .byte 0x12
+ 520 01d0 47020000 	 .4byte 0x247
+ 521 01d4 74       	 .byte 0x74
+ 522 01d5 08       	 .uleb128 0x8
+ 523 01d6 AA050000 	 .4byte .LASF27
+ 524 01da 04       	 .byte 0x4
+ 525 01db FB01     	 .2byte 0x1fb
+ 526 01dd 12       	 .byte 0x12
+ 527 01de A5000000 	 .4byte 0xa5
+ 528 01e2 88       	 .byte 0x88
+ 529 01e3 00       	 .byte 0
+ 530 01e4 0A       	 .uleb128 0xa
+ 531 01e5 8F000000 	 .4byte 0x8f
+ 532 01e9 F4010000 	 .4byte 0x1f4
+ 533 01ed 0B       	 .uleb128 0xb
+ 534 01ee 7C000000 	 .4byte 0x7c
+ 535 01f2 0B       	 .byte 0xb
+ 536 01f3 00       	 .byte 0
+ 537 01f4 05       	 .uleb128 0x5
+ 538 01f5 E4010000 	 .4byte 0x1e4
+ 539 01f9 0A       	 .uleb128 0xa
+ 540 01fa AA000000 	 .4byte 0xaa
+ 541 01fe 09020000 	 .4byte 0x209
+ 542 0202 0B       	 .uleb128 0xb
+ 543 0203 7C000000 	 .4byte 0x7c
+ARM GAS   			page 15
+
+
+ 544 0207 01       	 .byte 0x1
+ 545 0208 00       	 .byte 0
+ 546 0209 06       	 .uleb128 0x6
+ 547 020a F9010000 	 .4byte 0x1f9
+ 548 020e 05       	 .uleb128 0x5
+ 549 020f 09020000 	 .4byte 0x209
+ 550 0213 0A       	 .uleb128 0xa
+ 551 0214 AA000000 	 .4byte 0xaa
+ 552 0218 23020000 	 .4byte 0x223
+ 553 021c 0B       	 .uleb128 0xb
+ 554 021d 7C000000 	 .4byte 0x7c
+ 555 0221 03       	 .byte 0x3
+ 556 0222 00       	 .byte 0
+ 557 0223 06       	 .uleb128 0x6
+ 558 0224 13020000 	 .4byte 0x213
+ 559 0228 05       	 .uleb128 0x5
+ 560 0229 23020000 	 .4byte 0x223
+ 561 022d 0A       	 .uleb128 0xa
+ 562 022e AA000000 	 .4byte 0xaa
+ 563 0232 3D020000 	 .4byte 0x23d
+ 564 0236 0B       	 .uleb128 0xb
+ 565 0237 7C000000 	 .4byte 0x7c
+ 566 023b 04       	 .byte 0x4
+ 567 023c 00       	 .byte 0
+ 568 023d 06       	 .uleb128 0x6
+ 569 023e 2D020000 	 .4byte 0x22d
+ 570 0242 05       	 .uleb128 0x5
+ 571 0243 3D020000 	 .4byte 0x23d
+ 572 0247 0A       	 .uleb128 0xa
+ 573 0248 99000000 	 .4byte 0x99
+ 574 024c 57020000 	 .4byte 0x257
+ 575 0250 0B       	 .uleb128 0xb
+ 576 0251 7C000000 	 .4byte 0x7c
+ 577 0255 04       	 .byte 0x4
+ 578 0256 00       	 .byte 0
+ 579 0257 0C       	 .uleb128 0xc
+ 580 0258 A7000000 	 .4byte .LASF28
+ 581 025c 04       	 .byte 0x4
+ 582 025d FC01     	 .2byte 0x1fc
+ 583 025f 03       	 .byte 0x3
+ 584 0260 AF000000 	 .4byte 0xaf
+ 585 0264 0A       	 .uleb128 0xa
+ 586 0265 99000000 	 .4byte 0x99
+ 587 0269 74020000 	 .4byte 0x274
+ 588 026d 0B       	 .uleb128 0xb
+ 589 026e 7C000000 	 .4byte 0x7c
+ 590 0272 01       	 .byte 0x1
+ 591 0273 00       	 .byte 0
+ 592 0274 0D       	 .uleb128 0xd
+ 593 0275 92040000 	 .4byte .LASF29
+ 594 0279 05       	 .byte 0x5
+ 595 027a 4A       	 .byte 0x4a
+ 596 027b 11       	 .byte 0x11
+ 597 027c 99000000 	 .4byte 0x99
+ 598 0280 0A       	 .uleb128 0xa
+ 599 0281 94000000 	 .4byte 0x94
+ 600 0285 90020000 	 .4byte 0x290
+ARM GAS   			page 16
+
+
+ 601 0289 0B       	 .uleb128 0xb
+ 602 028a 7C000000 	 .4byte 0x7c
+ 603 028e 0F       	 .byte 0xf
+ 604 028f 00       	 .byte 0
+ 605 0290 06       	 .uleb128 0x6
+ 606 0291 80020000 	 .4byte 0x280
+ 607 0295 0D       	 .uleb128 0xd
+ 608 0296 B8000000 	 .4byte .LASF30
+ 609 029a 05       	 .byte 0x5
+ 610 029b 4C       	 .byte 0x4c
+ 611 029c 17       	 .byte 0x17
+ 612 029d 90020000 	 .4byte 0x290
+ 613 02a1 0A       	 .uleb128 0xa
+ 614 02a2 94000000 	 .4byte 0x94
+ 615 02a6 B1020000 	 .4byte 0x2b1
+ 616 02aa 0B       	 .uleb128 0xb
+ 617 02ab 7C000000 	 .4byte 0x7c
+ 618 02af 07       	 .byte 0x7
+ 619 02b0 00       	 .byte 0
+ 620 02b1 06       	 .uleb128 0x6
+ 621 02b2 A1020000 	 .4byte 0x2a1
+ 622 02b6 0D       	 .uleb128 0xd
+ 623 02b7 FE020000 	 .4byte .LASF31
+ 624 02bb 05       	 .byte 0x5
+ 625 02bc 4D       	 .byte 0x4d
+ 626 02bd 17       	 .byte 0x17
+ 627 02be B1020000 	 .4byte 0x2b1
+ 628 02c2 07       	 .uleb128 0x7
+ 629 02c3 98       	 .byte 0x98
+ 630 02c4 06       	 .byte 0x6
+ 631 02c5 F301     	 .2byte 0x1f3
+ 632 02c7 01       	 .byte 0x1
+ 633 02c8 7F040000 	 .4byte .LASF33
+ 634 02cc AC040000 	 .4byte 0x4ac
+ 635 02d0 09       	 .uleb128 0x9
+ 636 02d1 435200   	 .ascii "CR\000"
+ 637 02d4 06       	 .byte 0x6
+ 638 02d5 F401     	 .2byte 0x1f4
+ 639 02d7 11       	 .byte 0x11
+ 640 02d8 A5000000 	 .4byte 0xa5
+ 641 02dc 00       	 .byte 0
+ 642 02dd 08       	 .uleb128 0x8
+ 643 02de 1C000000 	 .4byte .LASF34
+ 644 02e2 06       	 .byte 0x6
+ 645 02e3 F501     	 .2byte 0x1f5
+ 646 02e5 11       	 .byte 0x11
+ 647 02e6 A5000000 	 .4byte 0xa5
+ 648 02ea 04       	 .byte 0x4
+ 649 02eb 08       	 .uleb128 0x8
+ 650 02ec 9A000000 	 .4byte .LASF35
+ 651 02f0 06       	 .byte 0x6
+ 652 02f1 F601     	 .2byte 0x1f6
+ 653 02f3 11       	 .byte 0x11
+ 654 02f4 A5000000 	 .4byte 0xa5
+ 655 02f8 08       	 .byte 0x8
+ 656 02f9 09       	 .uleb128 0x9
+ 657 02fa 43495200 	 .ascii "CIR\000"
+ARM GAS   			page 17
+
+
+ 658 02fe 06       	 .byte 0x6
+ 659 02ff F701     	 .2byte 0x1f7
+ 660 0301 11       	 .byte 0x11
+ 661 0302 A5000000 	 .4byte 0xa5
+ 662 0306 0C       	 .byte 0xc
+ 663 0307 08       	 .uleb128 0x8
+ 664 0308 93050000 	 .4byte .LASF36
+ 665 030c 06       	 .byte 0x6
+ 666 030d F801     	 .2byte 0x1f8
+ 667 030f 11       	 .byte 0x11
+ 668 0310 A5000000 	 .4byte 0xa5
+ 669 0314 10       	 .byte 0x10
+ 670 0315 08       	 .uleb128 0x8
+ 671 0316 0C030000 	 .4byte .LASF37
+ 672 031a 06       	 .byte 0x6
+ 673 031b F901     	 .2byte 0x1f9
+ 674 031d 11       	 .byte 0x11
+ 675 031e A5000000 	 .4byte 0xa5
+ 676 0322 14       	 .byte 0x14
+ 677 0323 08       	 .uleb128 0x8
+ 678 0324 A1050000 	 .4byte .LASF38
+ 679 0328 06       	 .byte 0x6
+ 680 0329 FA01     	 .2byte 0x1fa
+ 681 032b 11       	 .byte 0x11
+ 682 032c A5000000 	 .4byte 0xa5
+ 683 0330 18       	 .byte 0x18
+ 684 0331 08       	 .uleb128 0x8
+ 685 0332 D8040000 	 .4byte .LASF26
+ 686 0336 06       	 .byte 0x6
+ 687 0337 FB01     	 .2byte 0x1fb
+ 688 0339 11       	 .byte 0x11
+ 689 033a 99000000 	 .4byte 0x99
+ 690 033e 1C       	 .byte 0x1c
+ 691 033f 08       	 .uleb128 0x8
+ 692 0340 70000000 	 .4byte .LASF39
+ 693 0344 06       	 .byte 0x6
+ 694 0345 FC01     	 .2byte 0x1fc
+ 695 0347 11       	 .byte 0x11
+ 696 0348 A5000000 	 .4byte 0xa5
+ 697 034c 20       	 .byte 0x20
+ 698 034d 08       	 .uleb128 0x8
+ 699 034e E0020000 	 .4byte .LASF40
+ 700 0352 06       	 .byte 0x6
+ 701 0353 FD01     	 .2byte 0x1fd
+ 702 0355 11       	 .byte 0x11
+ 703 0356 A5000000 	 .4byte 0xa5
+ 704 035a 24       	 .byte 0x24
+ 705 035b 08       	 .uleb128 0x8
+ 706 035c E2040000 	 .4byte .LASF41
+ 707 0360 06       	 .byte 0x6
+ 708 0361 FE01     	 .2byte 0x1fe
+ 709 0363 11       	 .byte 0x11
+ 710 0364 64020000 	 .4byte 0x264
+ 711 0368 28       	 .byte 0x28
+ 712 0369 08       	 .uleb128 0x8
+ 713 036a 62050000 	 .4byte .LASF42
+ 714 036e 06       	 .byte 0x6
+ARM GAS   			page 18
+
+
+ 715 036f FF01     	 .2byte 0x1ff
+ 716 0371 11       	 .byte 0x11
+ 717 0372 A5000000 	 .4byte 0xa5
+ 718 0376 30       	 .byte 0x30
+ 719 0377 08       	 .uleb128 0x8
+ 720 0378 36000000 	 .4byte .LASF43
+ 721 037c 06       	 .byte 0x6
+ 722 037d 0002     	 .2byte 0x200
+ 723 037f 11       	 .byte 0x11
+ 724 0380 A5000000 	 .4byte 0xa5
+ 725 0384 34       	 .byte 0x34
+ 726 0385 08       	 .uleb128 0x8
+ 727 0386 29030000 	 .4byte .LASF44
+ 728 038a 06       	 .byte 0x6
+ 729 038b 0102     	 .2byte 0x201
+ 730 038d 11       	 .byte 0x11
+ 731 038e A5000000 	 .4byte 0xa5
+ 732 0392 38       	 .byte 0x38
+ 733 0393 08       	 .uleb128 0x8
+ 734 0394 EC040000 	 .4byte .LASF45
+ 735 0398 06       	 .byte 0x6
+ 736 0399 0202     	 .2byte 0x202
+ 737 039b 11       	 .byte 0x11
+ 738 039c 99000000 	 .4byte 0x99
+ 739 03a0 3C       	 .byte 0x3c
+ 740 03a1 08       	 .uleb128 0x8
+ 741 03a2 B0000000 	 .4byte .LASF46
+ 742 03a6 06       	 .byte 0x6
+ 743 03a7 0302     	 .2byte 0x203
+ 744 03a9 11       	 .byte 0x11
+ 745 03aa A5000000 	 .4byte 0xa5
+ 746 03ae 40       	 .byte 0x40
+ 747 03af 08       	 .uleb128 0x8
+ 748 03b0 5B030000 	 .4byte .LASF47
+ 749 03b4 06       	 .byte 0x6
+ 750 03b5 0402     	 .2byte 0x204
+ 751 03b7 11       	 .byte 0x11
+ 752 03b8 A5000000 	 .4byte 0xa5
+ 753 03bc 44       	 .byte 0x44
+ 754 03bd 08       	 .uleb128 0x8
+ 755 03be F6040000 	 .4byte .LASF48
+ 756 03c2 06       	 .byte 0x6
+ 757 03c3 0502     	 .2byte 0x205
+ 758 03c5 11       	 .byte 0x11
+ 759 03c6 64020000 	 .4byte 0x264
+ 760 03ca 48       	 .byte 0x48
+ 761 03cb 08       	 .uleb128 0x8
+ 762 03cc 00000000 	 .4byte .LASF49
+ 763 03d0 06       	 .byte 0x6
+ 764 03d1 0602     	 .2byte 0x206
+ 765 03d3 11       	 .byte 0x11
+ 766 03d4 A5000000 	 .4byte 0xa5
+ 767 03d8 50       	 .byte 0x50
+ 768 03d9 08       	 .uleb128 0x8
+ 769 03da CE040000 	 .4byte .LASF50
+ 770 03de 06       	 .byte 0x6
+ 771 03df 0702     	 .2byte 0x207
+ARM GAS   			page 19
+
+
+ 772 03e1 11       	 .byte 0x11
+ 773 03e2 A5000000 	 .4byte 0xa5
+ 774 03e6 54       	 .byte 0x54
+ 775 03e7 08       	 .uleb128 0x8
+ 776 03e8 90000000 	 .4byte .LASF51
+ 777 03ec 06       	 .byte 0x6
+ 778 03ed 0802     	 .2byte 0x208
+ 779 03ef 11       	 .byte 0x11
+ 780 03f0 A5000000 	 .4byte 0xa5
+ 781 03f4 58       	 .byte 0x58
+ 782 03f5 08       	 .uleb128 0x8
+ 783 03f6 00050000 	 .4byte .LASF52
+ 784 03fa 06       	 .byte 0x6
+ 785 03fb 0902     	 .2byte 0x209
+ 786 03fd 11       	 .byte 0x11
+ 787 03fe 99000000 	 .4byte 0x99
+ 788 0402 5C       	 .byte 0x5c
+ 789 0403 08       	 .uleb128 0x8
+ 790 0404 EF030000 	 .4byte .LASF53
+ 791 0408 06       	 .byte 0x6
+ 792 0409 0A02     	 .2byte 0x20a
+ 793 040b 11       	 .byte 0x11
+ 794 040c A5000000 	 .4byte 0xa5
+ 795 0410 60       	 .byte 0x60
+ 796 0411 08       	 .uleb128 0x8
+ 797 0412 B0050000 	 .4byte .LASF54
+ 798 0416 06       	 .byte 0x6
+ 799 0417 0B02     	 .2byte 0x20b
+ 800 0419 11       	 .byte 0x11
+ 801 041a A5000000 	 .4byte 0xa5
+ 802 041e 64       	 .byte 0x64
+ 803 041f 08       	 .uleb128 0x8
+ 804 0420 0A050000 	 .4byte .LASF55
+ 805 0424 06       	 .byte 0x6
+ 806 0425 0C02     	 .2byte 0x20c
+ 807 0427 11       	 .byte 0x11
+ 808 0428 64020000 	 .4byte 0x264
+ 809 042c 68       	 .byte 0x68
+ 810 042d 08       	 .uleb128 0x8
+ 811 042e 3E000000 	 .4byte .LASF56
+ 812 0432 06       	 .byte 0x6
+ 813 0433 0D02     	 .2byte 0x20d
+ 814 0435 11       	 .byte 0x11
+ 815 0436 A5000000 	 .4byte 0xa5
+ 816 043a 70       	 .byte 0x70
+ 817 043b 09       	 .uleb128 0x9
+ 818 043c 43535200 	 .ascii "CSR\000"
+ 819 0440 06       	 .byte 0x6
+ 820 0441 0E02     	 .2byte 0x20e
+ 821 0443 11       	 .byte 0x11
+ 822 0444 A5000000 	 .4byte 0xa5
+ 823 0448 74       	 .byte 0x74
+ 824 0449 08       	 .uleb128 0x8
+ 825 044a 14050000 	 .4byte .LASF57
+ 826 044e 06       	 .byte 0x6
+ 827 044f 0F02     	 .2byte 0x20f
+ 828 0451 11       	 .byte 0x11
+ARM GAS   			page 20
+
+
+ 829 0452 64020000 	 .4byte 0x264
+ 830 0456 78       	 .byte 0x78
+ 831 0457 08       	 .uleb128 0x8
+ 832 0458 84000000 	 .4byte .LASF58
+ 833 045c 06       	 .byte 0x6
+ 834 045d 1002     	 .2byte 0x210
+ 835 045f 11       	 .byte 0x11
+ 836 0460 A5000000 	 .4byte 0xa5
+ 837 0464 80       	 .byte 0x80
+ 838 0465 08       	 .uleb128 0x8
+ 839 0466 4C000000 	 .4byte .LASF59
+ 840 046a 06       	 .byte 0x6
+ 841 046b 1102     	 .2byte 0x211
+ 842 046d 11       	 .byte 0x11
+ 843 046e A5000000 	 .4byte 0xa5
+ 844 0472 84       	 .byte 0x84
+ 845 0473 08       	 .uleb128 0x8
+ 846 0474 1E050000 	 .4byte .LASF60
+ 847 0478 06       	 .byte 0x6
+ 848 0479 1202     	 .2byte 0x212
+ 849 047b 11       	 .byte 0x11
+ 850 047c 99000000 	 .4byte 0x99
+ 851 0480 88       	 .byte 0x88
+ 852 0481 08       	 .uleb128 0x8
+ 853 0482 8C020000 	 .4byte .LASF61
+ 854 0486 06       	 .byte 0x6
+ 855 0487 1302     	 .2byte 0x213
+ 856 0489 11       	 .byte 0x11
+ 857 048a A5000000 	 .4byte 0xa5
+ 858 048e 8C       	 .byte 0x8c
+ 859 048f 08       	 .uleb128 0x8
+ 860 0490 43000000 	 .4byte .LASF62
+ 861 0494 06       	 .byte 0x6
+ 862 0495 1402     	 .2byte 0x214
+ 863 0497 11       	 .byte 0x11
+ 864 0498 A5000000 	 .4byte 0xa5
+ 865 049c 90       	 .byte 0x90
+ 866 049d 08       	 .uleb128 0x8
+ 867 049e CD020000 	 .4byte .LASF63
+ 868 04a2 06       	 .byte 0x6
+ 869 04a3 1502     	 .2byte 0x215
+ 870 04a5 11       	 .byte 0x11
+ 871 04a6 A5000000 	 .4byte 0xa5
+ 872 04aa 94       	 .byte 0x94
+ 873 04ab 00       	 .byte 0
+ 874 04ac 0C       	 .uleb128 0xc
+ 875 04ad C1020000 	 .4byte .LASF64
+ 876 04b1 06       	 .byte 0x6
+ 877 04b2 1602     	 .2byte 0x216
+ 878 04b4 03       	 .byte 0x3
+ 879 04b5 C2020000 	 .4byte 0x2c2
+ 880 04b9 0E       	 .uleb128 0xe
+ 881 04ba 07       	 .byte 0x7
+ 882 04bb 01       	 .byte 0x1
+ 883 04bc 38000000 	 .4byte 0x38
+ 884 04c0 07       	 .byte 0x7
+ 885 04c1 BA       	 .byte 0xba
+ARM GAS   			page 21
+
+
+ 886 04c2 01       	 .byte 0x1
+ 887 04c3 AB030000 	 .4byte .LASF67
+ 888 04c7 D8040000 	 .4byte 0x4d8
+ 889 04cb 0F       	 .uleb128 0xf
+ 890 04cc 6A050000 	 .4byte .LASF65
+ 891 04d0 00       	 .byte 0
+ 892 04d1 10       	 .uleb128 0x10
+ 893 04d2 53455400 	 .ascii "SET\000"
+ 894 04d6 01       	 .byte 0x1
+ 895 04d7 00       	 .byte 0
+ 896 04d8 03       	 .uleb128 0x3
+ 897 04d9 79000000 	 .4byte .LASF66
+ 898 04dd 07       	 .byte 0x7
+ 899 04de BD       	 .byte 0xbd
+ 900 04df 03       	 .byte 0x3
+ 901 04e0 B9040000 	 .4byte 0x4b9
+ 902 04e4 0E       	 .uleb128 0xe
+ 903 04e5 07       	 .byte 0x7
+ 904 04e6 01       	 .byte 0x1
+ 905 04e7 38000000 	 .4byte 0x38
+ 906 04eb 07       	 .byte 0x7
+ 907 04ec C0       	 .byte 0xc0
+ 908 04ed 01       	 .byte 0x1
+ 909 04ee 24000000 	 .4byte .LASF68
+ 910 04f2 03050000 	 .4byte 0x503
+ 911 04f6 0F       	 .uleb128 0xf
+ 912 04f7 84020000 	 .4byte .LASF69
+ 913 04fb 00       	 .byte 0
+ 914 04fc 0F       	 .uleb128 0xf
+ 915 04fd BA050000 	 .4byte .LASF70
+ 916 0501 01       	 .byte 0x1
+ 917 0502 00       	 .byte 0
+ 918 0503 03       	 .uleb128 0x3
+ 919 0504 28050000 	 .4byte .LASF71
+ 920 0508 07       	 .byte 0x7
+ 921 0509 C3       	 .byte 0xc3
+ 922 050a 03       	 .byte 0x3
+ 923 050b E4040000 	 .4byte 0x4e4
+ 924 050f 0E       	 .uleb128 0xe
+ 925 0510 07       	 .byte 0x7
+ 926 0511 01       	 .byte 0x1
+ 927 0512 38000000 	 .4byte 0x38
+ 928 0516 07       	 .byte 0x7
+ 929 0517 C7       	 .byte 0xc7
+ 930 0518 01       	 .byte 0x1
+ 931 0519 57000000 	 .4byte .LASF72
+ 932 051d 2E050000 	 .4byte 0x52e
+ 933 0521 0F       	 .uleb128 0xf
+ 934 0522 8B050000 	 .4byte .LASF73
+ 935 0526 00       	 .byte 0
+ 936 0527 0F       	 .uleb128 0xf
+ 937 0528 F8020000 	 .4byte .LASF74
+ 938 052c 01       	 .byte 0x1
+ 939 052d 00       	 .byte 0
+ 940 052e 03       	 .uleb128 0x3
+ 941 052f B5020000 	 .4byte .LASF75
+ 942 0533 07       	 .byte 0x7
+ARM GAS   			page 22
+
+
+ 943 0534 CA       	 .byte 0xca
+ 944 0535 03       	 .byte 0x3
+ 945 0536 0F050000 	 .4byte 0x50f
+ 946 053a 02       	 .uleb128 0x2
+ 947 053b 08       	 .byte 0x8
+ 948 053c 04       	 .byte 0x4
+ 949 053d 36030000 	 .4byte .LASF76
+ 950 0541 11       	 .uleb128 0x11
+ 951 0542 0A000000 	 .4byte .LASF90
+ 952 0546 0E       	 .uleb128 0xe
+ 953 0547 07       	 .byte 0x7
+ 954 0548 01       	 .byte 0x1
+ 955 0549 38000000 	 .4byte 0x38
+ 956 054d 08       	 .byte 0x8
+ 957 054e 33       	 .byte 0x33
+ 958 054f 01       	 .byte 0x1
+ 959 0550 38050000 	 .4byte .LASF77
+ 960 0554 71050000 	 .4byte 0x571
+ 961 0558 0F       	 .uleb128 0xf
+ 962 0559 B6040000 	 .4byte .LASF78
+ 963 055d 64       	 .byte 0x64
+ 964 055e 0F       	 .uleb128 0xf
+ 965 055f A2040000 	 .4byte .LASF79
+ 966 0563 0A       	 .byte 0xa
+ 967 0564 0F       	 .uleb128 0xf
+ 968 0565 BE030000 	 .4byte .LASF80
+ 969 0569 01       	 .byte 0x1
+ 970 056a 0F       	 .uleb128 0xf
+ 971 056b 70050000 	 .4byte .LASF81
+ 972 056f 01       	 .byte 0x1
+ 973 0570 00       	 .byte 0
+ 974 0571 03       	 .uleb128 0x3
+ 975 0572 4E050000 	 .4byte .LASF82
+ 976 0576 08       	 .byte 0x8
+ 977 0577 38       	 .byte 0x38
+ 978 0578 03       	 .byte 0x3
+ 979 0579 46050000 	 .4byte 0x546
+ 980 057d 12       	 .uleb128 0x12
+ 981 057e 74020000 	 .4byte 0x274
+ 982 0582 01       	 .byte 0x1
+ 983 0583 78       	 .byte 0x78
+ 984 0584 0A       	 .byte 0xa
+ 985 0585 05       	 .uleb128 0x5
+ 986 0586 03       	 .byte 0x3
+ 987 0587 00000000 	 .4byte SystemCoreClock
+ 988 058b 12       	 .uleb128 0x12
+ 989 058c 95020000 	 .4byte 0x295
+ 990 0590 01       	 .byte 0x1
+ 991 0591 79       	 .byte 0x79
+ 992 0592 0F       	 .byte 0xf
+ 993 0593 05       	 .uleb128 0x5
+ 994 0594 03       	 .byte 0x3
+ 995 0595 00000000 	 .4byte AHBPrescTable
+ 996 0599 12       	 .uleb128 0x12
+ 997 059a B6020000 	 .4byte 0x2b6
+ 998 059e 01       	 .byte 0x1
+ 999 059f 7A       	 .byte 0x7a
+ARM GAS   			page 23
+
+
+ 1000 05a0 0F       	 .byte 0xf
+ 1001 05a1 05       	 .uleb128 0x5
+ 1002 05a2 03       	 .byte 0x3
+ 1003 05a3 00000000 	 .4byte APBPrescTable
+ 1004 05a7 13       	 .uleb128 0x13
+ 1005 05a8 05040000 	 .4byte .LASF91
+ 1006 05ac 01       	 .byte 0x1
+ 1007 05ad CD       	 .byte 0xcd
+ 1008 05ae 06       	 .byte 0x6
+ 1009 05af 00000000 	 .4byte .LFB124
+ 1010 05b3 00010000 	 .4byte .LFE124-.LFB124
+ 1011 05b7 01       	 .uleb128 0x1
+ 1012 05b8 9C       	 .byte 0x9c
+ 1013 05b9 09060000 	 .4byte 0x609
+ 1014 05bd 14       	 .uleb128 0x14
+ 1015 05be 746D7000 	 .ascii "tmp\000"
+ 1016 05c2 01       	 .byte 0x1
+ 1017 05c3 CF       	 .byte 0xcf
+ 1018 05c4 0C       	 .byte 0xc
+ 1019 05c5 99000000 	 .4byte 0x99
+ 1020 05c9 02       	 .uleb128 0x2
+ 1021 05ca 91       	 .byte 0x91
+ 1022 05cb 70       	 .sleb128 -16
+ 1023 05cc 15       	 .uleb128 0x15
+ 1024 05cd F9030000 	 .4byte .LASF83
+ 1025 05d1 01       	 .byte 0x1
+ 1026 05d2 CF       	 .byte 0xcf
+ 1027 05d3 15       	 .byte 0x15
+ 1028 05d4 99000000 	 .4byte 0x99
+ 1029 05d8 02       	 .uleb128 0x2
+ 1030 05d9 91       	 .byte 0x91
+ 1031 05da 74       	 .sleb128 -12
+ 1032 05db 15       	 .uleb128 0x15
+ 1033 05dc 42030000 	 .4byte .LASF84
+ 1034 05e0 01       	 .byte 0x1
+ 1035 05e1 CF       	 .byte 0xcf
+ 1036 05e2 21       	 .byte 0x21
+ 1037 05e3 99000000 	 .4byte 0x99
+ 1038 05e7 02       	 .uleb128 0x2
+ 1039 05e8 91       	 .byte 0x91
+ 1040 05e9 6C       	 .sleb128 -20
+ 1041 05ea 15       	 .uleb128 0x15
+ 1042 05eb 1F030000 	 .4byte .LASF85
+ 1043 05ef 01       	 .byte 0x1
+ 1044 05f0 CF       	 .byte 0xcf
+ 1045 05f1 2B       	 .byte 0x2b
+ 1046 05f2 99000000 	 .4byte 0x99
+ 1047 05f6 02       	 .uleb128 0x2
+ 1048 05f7 91       	 .byte 0x91
+ 1049 05f8 68       	 .sleb128 -24
+ 1050 05f9 15       	 .uleb128 0x15
+ 1051 05fa 31030000 	 .4byte .LASF86
+ 1052 05fe 01       	 .byte 0x1
+ 1053 05ff CF       	 .byte 0xcf
+ 1054 0600 3A       	 .byte 0x3a
+ 1055 0601 99000000 	 .4byte 0x99
+ 1056 0605 02       	 .uleb128 0x2
+ARM GAS   			page 24
+
+
+ 1057 0606 91       	 .byte 0x91
+ 1058 0607 64       	 .sleb128 -28
+ 1059 0608 00       	 .byte 0
+ 1060 0609 16       	 .uleb128 0x16
+ 1061 060a D1030000 	 .4byte .LASF92
+ 1062 060e 01       	 .byte 0x1
+ 1063 060f 96       	 .byte 0x96
+ 1064 0610 06       	 .byte 0x6
+ 1065 0611 00000000 	 .4byte .LFB123
+ 1066 0615 2C000000 	 .4byte .LFE123-.LFB123
+ 1067 0619 01       	 .uleb128 0x1
+ 1068 061a 9C       	 .byte 0x9c
+ 1069 061b 00       	 .byte 0
+ 1070              	 .section .debug_abbrev,"",%progbits
+ 1071              	.Ldebug_abbrev0:
+ 1072 0000 01       	 .uleb128 0x1
+ 1073 0001 11       	 .uleb128 0x11
+ 1074 0002 01       	 .byte 0x1
+ 1075 0003 25       	 .uleb128 0x25
+ 1076 0004 0E       	 .uleb128 0xe
+ 1077 0005 13       	 .uleb128 0x13
+ 1078 0006 0B       	 .uleb128 0xb
+ 1079 0007 03       	 .uleb128 0x3
+ 1080 0008 0E       	 .uleb128 0xe
+ 1081 0009 1B       	 .uleb128 0x1b
+ 1082 000a 0E       	 .uleb128 0xe
+ 1083 000b 55       	 .uleb128 0x55
+ 1084 000c 17       	 .uleb128 0x17
+ 1085 000d 11       	 .uleb128 0x11
+ 1086 000e 01       	 .uleb128 0x1
+ 1087 000f 10       	 .uleb128 0x10
+ 1088 0010 17       	 .uleb128 0x17
+ 1089 0011 00       	 .byte 0
+ 1090 0012 00       	 .byte 0
+ 1091 0013 02       	 .uleb128 0x2
+ 1092 0014 24       	 .uleb128 0x24
+ 1093 0015 00       	 .byte 0
+ 1094 0016 0B       	 .uleb128 0xb
+ 1095 0017 0B       	 .uleb128 0xb
+ 1096 0018 3E       	 .uleb128 0x3e
+ 1097 0019 0B       	 .uleb128 0xb
+ 1098 001a 03       	 .uleb128 0x3
+ 1099 001b 0E       	 .uleb128 0xe
+ 1100 001c 00       	 .byte 0
+ 1101 001d 00       	 .byte 0
+ 1102 001e 03       	 .uleb128 0x3
+ 1103 001f 16       	 .uleb128 0x16
+ 1104 0020 00       	 .byte 0
+ 1105 0021 03       	 .uleb128 0x3
+ 1106 0022 0E       	 .uleb128 0xe
+ 1107 0023 3A       	 .uleb128 0x3a
+ 1108 0024 0B       	 .uleb128 0xb
+ 1109 0025 3B       	 .uleb128 0x3b
+ 1110 0026 0B       	 .uleb128 0xb
+ 1111 0027 39       	 .uleb128 0x39
+ 1112 0028 0B       	 .uleb128 0xb
+ 1113 0029 49       	 .uleb128 0x49
+ARM GAS   			page 25
+
+
+ 1114 002a 13       	 .uleb128 0x13
+ 1115 002b 00       	 .byte 0
+ 1116 002c 00       	 .byte 0
+ 1117 002d 04       	 .uleb128 0x4
+ 1118 002e 24       	 .uleb128 0x24
+ 1119 002f 00       	 .byte 0
+ 1120 0030 0B       	 .uleb128 0xb
+ 1121 0031 0B       	 .uleb128 0xb
+ 1122 0032 3E       	 .uleb128 0x3e
+ 1123 0033 0B       	 .uleb128 0xb
+ 1124 0034 03       	 .uleb128 0x3
+ 1125 0035 08       	 .uleb128 0x8
+ 1126 0036 00       	 .byte 0
+ 1127 0037 00       	 .byte 0
+ 1128 0038 05       	 .uleb128 0x5
+ 1129 0039 35       	 .uleb128 0x35
+ 1130 003a 00       	 .byte 0
+ 1131 003b 49       	 .uleb128 0x49
+ 1132 003c 13       	 .uleb128 0x13
+ 1133 003d 00       	 .byte 0
+ 1134 003e 00       	 .byte 0
+ 1135 003f 06       	 .uleb128 0x6
+ 1136 0040 26       	 .uleb128 0x26
+ 1137 0041 00       	 .byte 0
+ 1138 0042 49       	 .uleb128 0x49
+ 1139 0043 13       	 .uleb128 0x13
+ 1140 0044 00       	 .byte 0
+ 1141 0045 00       	 .byte 0
+ 1142 0046 07       	 .uleb128 0x7
+ 1143 0047 13       	 .uleb128 0x13
+ 1144 0048 01       	 .byte 0x1
+ 1145 0049 0B       	 .uleb128 0xb
+ 1146 004a 0B       	 .uleb128 0xb
+ 1147 004b 3A       	 .uleb128 0x3a
+ 1148 004c 0B       	 .uleb128 0xb
+ 1149 004d 3B       	 .uleb128 0x3b
+ 1150 004e 05       	 .uleb128 0x5
+ 1151 004f 39       	 .uleb128 0x39
+ 1152 0050 0B       	 .uleb128 0xb
+ 1153 0051 6E       	 .uleb128 0x6e
+ 1154 0052 0E       	 .uleb128 0xe
+ 1155 0053 01       	 .uleb128 0x1
+ 1156 0054 13       	 .uleb128 0x13
+ 1157 0055 00       	 .byte 0
+ 1158 0056 00       	 .byte 0
+ 1159 0057 08       	 .uleb128 0x8
+ 1160 0058 0D       	 .uleb128 0xd
+ 1161 0059 00       	 .byte 0
+ 1162 005a 03       	 .uleb128 0x3
+ 1163 005b 0E       	 .uleb128 0xe
+ 1164 005c 3A       	 .uleb128 0x3a
+ 1165 005d 0B       	 .uleb128 0xb
+ 1166 005e 3B       	 .uleb128 0x3b
+ 1167 005f 05       	 .uleb128 0x5
+ 1168 0060 39       	 .uleb128 0x39
+ 1169 0061 0B       	 .uleb128 0xb
+ 1170 0062 49       	 .uleb128 0x49
+ARM GAS   			page 26
+
+
+ 1171 0063 13       	 .uleb128 0x13
+ 1172 0064 38       	 .uleb128 0x38
+ 1173 0065 0B       	 .uleb128 0xb
+ 1174 0066 00       	 .byte 0
+ 1175 0067 00       	 .byte 0
+ 1176 0068 09       	 .uleb128 0x9
+ 1177 0069 0D       	 .uleb128 0xd
+ 1178 006a 00       	 .byte 0
+ 1179 006b 03       	 .uleb128 0x3
+ 1180 006c 08       	 .uleb128 0x8
+ 1181 006d 3A       	 .uleb128 0x3a
+ 1182 006e 0B       	 .uleb128 0xb
+ 1183 006f 3B       	 .uleb128 0x3b
+ 1184 0070 05       	 .uleb128 0x5
+ 1185 0071 39       	 .uleb128 0x39
+ 1186 0072 0B       	 .uleb128 0xb
+ 1187 0073 49       	 .uleb128 0x49
+ 1188 0074 13       	 .uleb128 0x13
+ 1189 0075 38       	 .uleb128 0x38
+ 1190 0076 0B       	 .uleb128 0xb
+ 1191 0077 00       	 .byte 0
+ 1192 0078 00       	 .byte 0
+ 1193 0079 0A       	 .uleb128 0xa
+ 1194 007a 01       	 .uleb128 0x1
+ 1195 007b 01       	 .byte 0x1
+ 1196 007c 49       	 .uleb128 0x49
+ 1197 007d 13       	 .uleb128 0x13
+ 1198 007e 01       	 .uleb128 0x1
+ 1199 007f 13       	 .uleb128 0x13
+ 1200 0080 00       	 .byte 0
+ 1201 0081 00       	 .byte 0
+ 1202 0082 0B       	 .uleb128 0xb
+ 1203 0083 21       	 .uleb128 0x21
+ 1204 0084 00       	 .byte 0
+ 1205 0085 49       	 .uleb128 0x49
+ 1206 0086 13       	 .uleb128 0x13
+ 1207 0087 2F       	 .uleb128 0x2f
+ 1208 0088 0B       	 .uleb128 0xb
+ 1209 0089 00       	 .byte 0
+ 1210 008a 00       	 .byte 0
+ 1211 008b 0C       	 .uleb128 0xc
+ 1212 008c 16       	 .uleb128 0x16
+ 1213 008d 00       	 .byte 0
+ 1214 008e 03       	 .uleb128 0x3
+ 1215 008f 0E       	 .uleb128 0xe
+ 1216 0090 3A       	 .uleb128 0x3a
+ 1217 0091 0B       	 .uleb128 0xb
+ 1218 0092 3B       	 .uleb128 0x3b
+ 1219 0093 05       	 .uleb128 0x5
+ 1220 0094 39       	 .uleb128 0x39
+ 1221 0095 0B       	 .uleb128 0xb
+ 1222 0096 49       	 .uleb128 0x49
+ 1223 0097 13       	 .uleb128 0x13
+ 1224 0098 00       	 .byte 0
+ 1225 0099 00       	 .byte 0
+ 1226 009a 0D       	 .uleb128 0xd
+ 1227 009b 34       	 .uleb128 0x34
+ARM GAS   			page 27
+
+
+ 1228 009c 00       	 .byte 0
+ 1229 009d 03       	 .uleb128 0x3
+ 1230 009e 0E       	 .uleb128 0xe
+ 1231 009f 3A       	 .uleb128 0x3a
+ 1232 00a0 0B       	 .uleb128 0xb
+ 1233 00a1 3B       	 .uleb128 0x3b
+ 1234 00a2 0B       	 .uleb128 0xb
+ 1235 00a3 39       	 .uleb128 0x39
+ 1236 00a4 0B       	 .uleb128 0xb
+ 1237 00a5 49       	 .uleb128 0x49
+ 1238 00a6 13       	 .uleb128 0x13
+ 1239 00a7 3F       	 .uleb128 0x3f
+ 1240 00a8 19       	 .uleb128 0x19
+ 1241 00a9 3C       	 .uleb128 0x3c
+ 1242 00aa 19       	 .uleb128 0x19
+ 1243 00ab 00       	 .byte 0
+ 1244 00ac 00       	 .byte 0
+ 1245 00ad 0E       	 .uleb128 0xe
+ 1246 00ae 04       	 .uleb128 0x4
+ 1247 00af 01       	 .byte 0x1
+ 1248 00b0 3E       	 .uleb128 0x3e
+ 1249 00b1 0B       	 .uleb128 0xb
+ 1250 00b2 0B       	 .uleb128 0xb
+ 1251 00b3 0B       	 .uleb128 0xb
+ 1252 00b4 49       	 .uleb128 0x49
+ 1253 00b5 13       	 .uleb128 0x13
+ 1254 00b6 3A       	 .uleb128 0x3a
+ 1255 00b7 0B       	 .uleb128 0xb
+ 1256 00b8 3B       	 .uleb128 0x3b
+ 1257 00b9 0B       	 .uleb128 0xb
+ 1258 00ba 39       	 .uleb128 0x39
+ 1259 00bb 0B       	 .uleb128 0xb
+ 1260 00bc 6E       	 .uleb128 0x6e
+ 1261 00bd 0E       	 .uleb128 0xe
+ 1262 00be 01       	 .uleb128 0x1
+ 1263 00bf 13       	 .uleb128 0x13
+ 1264 00c0 00       	 .byte 0
+ 1265 00c1 00       	 .byte 0
+ 1266 00c2 0F       	 .uleb128 0xf
+ 1267 00c3 28       	 .uleb128 0x28
+ 1268 00c4 00       	 .byte 0
+ 1269 00c5 03       	 .uleb128 0x3
+ 1270 00c6 0E       	 .uleb128 0xe
+ 1271 00c7 1C       	 .uleb128 0x1c
+ 1272 00c8 0B       	 .uleb128 0xb
+ 1273 00c9 00       	 .byte 0
+ 1274 00ca 00       	 .byte 0
+ 1275 00cb 10       	 .uleb128 0x10
+ 1276 00cc 28       	 .uleb128 0x28
+ 1277 00cd 00       	 .byte 0
+ 1278 00ce 03       	 .uleb128 0x3
+ 1279 00cf 08       	 .uleb128 0x8
+ 1280 00d0 1C       	 .uleb128 0x1c
+ 1281 00d1 0B       	 .uleb128 0xb
+ 1282 00d2 00       	 .byte 0
+ 1283 00d3 00       	 .byte 0
+ 1284 00d4 11       	 .uleb128 0x11
+ARM GAS   			page 28
+
+
+ 1285 00d5 3B       	 .uleb128 0x3b
+ 1286 00d6 00       	 .byte 0
+ 1287 00d7 03       	 .uleb128 0x3
+ 1288 00d8 0E       	 .uleb128 0xe
+ 1289 00d9 00       	 .byte 0
+ 1290 00da 00       	 .byte 0
+ 1291 00db 12       	 .uleb128 0x12
+ 1292 00dc 34       	 .uleb128 0x34
+ 1293 00dd 00       	 .byte 0
+ 1294 00de 47       	 .uleb128 0x47
+ 1295 00df 13       	 .uleb128 0x13
+ 1296 00e0 3A       	 .uleb128 0x3a
+ 1297 00e1 0B       	 .uleb128 0xb
+ 1298 00e2 3B       	 .uleb128 0x3b
+ 1299 00e3 0B       	 .uleb128 0xb
+ 1300 00e4 39       	 .uleb128 0x39
+ 1301 00e5 0B       	 .uleb128 0xb
+ 1302 00e6 02       	 .uleb128 0x2
+ 1303 00e7 18       	 .uleb128 0x18
+ 1304 00e8 00       	 .byte 0
+ 1305 00e9 00       	 .byte 0
+ 1306 00ea 13       	 .uleb128 0x13
+ 1307 00eb 2E       	 .uleb128 0x2e
+ 1308 00ec 01       	 .byte 0x1
+ 1309 00ed 3F       	 .uleb128 0x3f
+ 1310 00ee 19       	 .uleb128 0x19
+ 1311 00ef 03       	 .uleb128 0x3
+ 1312 00f0 0E       	 .uleb128 0xe
+ 1313 00f1 3A       	 .uleb128 0x3a
+ 1314 00f2 0B       	 .uleb128 0xb
+ 1315 00f3 3B       	 .uleb128 0x3b
+ 1316 00f4 0B       	 .uleb128 0xb
+ 1317 00f5 39       	 .uleb128 0x39
+ 1318 00f6 0B       	 .uleb128 0xb
+ 1319 00f7 11       	 .uleb128 0x11
+ 1320 00f8 01       	 .uleb128 0x1
+ 1321 00f9 12       	 .uleb128 0x12
+ 1322 00fa 06       	 .uleb128 0x6
+ 1323 00fb 40       	 .uleb128 0x40
+ 1324 00fc 18       	 .uleb128 0x18
+ 1325 00fd 9742     	 .uleb128 0x2117
+ 1326 00ff 19       	 .uleb128 0x19
+ 1327 0100 01       	 .uleb128 0x1
+ 1328 0101 13       	 .uleb128 0x13
+ 1329 0102 00       	 .byte 0
+ 1330 0103 00       	 .byte 0
+ 1331 0104 14       	 .uleb128 0x14
+ 1332 0105 34       	 .uleb128 0x34
+ 1333 0106 00       	 .byte 0
+ 1334 0107 03       	 .uleb128 0x3
+ 1335 0108 08       	 .uleb128 0x8
+ 1336 0109 3A       	 .uleb128 0x3a
+ 1337 010a 0B       	 .uleb128 0xb
+ 1338 010b 3B       	 .uleb128 0x3b
+ 1339 010c 0B       	 .uleb128 0xb
+ 1340 010d 39       	 .uleb128 0x39
+ 1341 010e 0B       	 .uleb128 0xb
+ARM GAS   			page 29
+
+
+ 1342 010f 49       	 .uleb128 0x49
+ 1343 0110 13       	 .uleb128 0x13
+ 1344 0111 02       	 .uleb128 0x2
+ 1345 0112 18       	 .uleb128 0x18
+ 1346 0113 00       	 .byte 0
+ 1347 0114 00       	 .byte 0
+ 1348 0115 15       	 .uleb128 0x15
+ 1349 0116 34       	 .uleb128 0x34
+ 1350 0117 00       	 .byte 0
+ 1351 0118 03       	 .uleb128 0x3
+ 1352 0119 0E       	 .uleb128 0xe
+ 1353 011a 3A       	 .uleb128 0x3a
+ 1354 011b 0B       	 .uleb128 0xb
+ 1355 011c 3B       	 .uleb128 0x3b
+ 1356 011d 0B       	 .uleb128 0xb
+ 1357 011e 39       	 .uleb128 0x39
+ 1358 011f 0B       	 .uleb128 0xb
+ 1359 0120 49       	 .uleb128 0x49
+ 1360 0121 13       	 .uleb128 0x13
+ 1361 0122 02       	 .uleb128 0x2
+ 1362 0123 18       	 .uleb128 0x18
+ 1363 0124 00       	 .byte 0
+ 1364 0125 00       	 .byte 0
+ 1365 0126 16       	 .uleb128 0x16
+ 1366 0127 2E       	 .uleb128 0x2e
+ 1367 0128 00       	 .byte 0
+ 1368 0129 3F       	 .uleb128 0x3f
+ 1369 012a 19       	 .uleb128 0x19
+ 1370 012b 03       	 .uleb128 0x3
+ 1371 012c 0E       	 .uleb128 0xe
+ 1372 012d 3A       	 .uleb128 0x3a
+ 1373 012e 0B       	 .uleb128 0xb
+ 1374 012f 3B       	 .uleb128 0x3b
+ 1375 0130 0B       	 .uleb128 0xb
+ 1376 0131 39       	 .uleb128 0x39
+ 1377 0132 0B       	 .uleb128 0xb
+ 1378 0133 11       	 .uleb128 0x11
+ 1379 0134 01       	 .uleb128 0x1
+ 1380 0135 12       	 .uleb128 0x12
+ 1381 0136 06       	 .uleb128 0x6
+ 1382 0137 40       	 .uleb128 0x40
+ 1383 0138 18       	 .uleb128 0x18
+ 1384 0139 9742     	 .uleb128 0x2117
+ 1385 013b 19       	 .uleb128 0x19
+ 1386 013c 00       	 .byte 0
+ 1387 013d 00       	 .byte 0
+ 1388 013e 00       	 .byte 0
+ 1389              	 .section .debug_aranges,"",%progbits
+ 1390 0000 24000000 	 .4byte 0x24
+ 1391 0004 0200     	 .2byte 0x2
+ 1392 0006 00000000 	 .4byte .Ldebug_info0
+ 1393 000a 04       	 .byte 0x4
+ 1394 000b 00       	 .byte 0
+ 1395 000c 0000     	 .2byte 0
+ 1396 000e 0000     	 .2byte 0
+ 1397 0010 00000000 	 .4byte .LFB123
+ 1398 0014 2C000000 	 .4byte .LFE123-.LFB123
+ARM GAS   			page 30
+
+
+ 1399 0018 00000000 	 .4byte .LFB124
+ 1400 001c 00010000 	 .4byte .LFE124-.LFB124
+ 1401 0020 00000000 	 .4byte 0
+ 1402 0024 00000000 	 .4byte 0
+ 1403              	 .section .debug_ranges,"",%progbits
+ 1404              	.Ldebug_ranges0:
+ 1405 0000 00000000 	 .4byte .LFB123
+ 1406 0004 2C000000 	 .4byte .LFE123
+ 1407 0008 00000000 	 .4byte .LFB124
+ 1408 000c 00010000 	 .4byte .LFE124
+ 1409 0010 00000000 	 .4byte 0
+ 1410 0014 00000000 	 .4byte 0
+ 1411              	 .section .debug_line,"",%progbits
+ 1412              	.Ldebug_line0:
+ 1413 0000 C8030000 	 .section .debug_str,"MS",%progbits,1
+ 1413      03001503 
+ 1413      00000201 
+ 1413      FB0E0D00 
+ 1413      01010101 
+ 1414              	.LASF49:
+ 1415 0000 41484231 	 .ascii "AHB1LPENR\000"
+ 1415      4C50454E 
+ 1415      5200
+ 1416              	.LASF90:
+ 1417 000a 6465636C 	 .ascii "decltype(nullptr)\000"
+ 1417      74797065 
+ 1417      286E756C 
+ 1417      6C707472 
+ 1417      2900
+ 1418              	.LASF34:
+ 1419 001c 504C4C43 	 .ascii "PLLCFGR\000"
+ 1419      46475200 
+ 1420              	.LASF68:
+ 1421 0024 31354675 	 .ascii "15FunctionalState\000"
+ 1421      6E637469 
+ 1421      6F6E616C 
+ 1421      53746174 
+ 1421      6500
+ 1422              	.LASF43:
+ 1423 0036 41484232 	 .ascii "AHB2ENR\000"
+ 1423      454E5200 
+ 1424              	.LASF56:
+ 1425 003e 42444352 	 .ascii "BDCR\000"
+ 1425      00
+ 1426              	.LASF62:
+ 1427 0043 434B4741 	 .ascii "CKGATENR\000"
+ 1427      54454E52 
+ 1427      00
+ 1428              	.LASF59:
+ 1429 004c 504C4C49 	 .ascii "PLLI2SCFGR\000"
+ 1429      32534346 
+ 1429      475200
+ 1430              	.LASF72:
+ 1431 0057 31314572 	 .ascii "11ErrorStatus\000"
+ 1431      726F7253 
+ 1431      74617475 
+ 1431      7300
+ARM GAS   			page 31
+
+
+ 1432              	.LASF6:
+ 1433 0065 5F5F7569 	 .ascii "__uint32_t\000"
+ 1433      6E743332 
+ 1433      5F7400
+ 1434              	.LASF39:
+ 1435 0070 41504231 	 .ascii "APB1RSTR\000"
+ 1435      52535452 
+ 1435      00
+ 1436              	.LASF66:
+ 1437 0079 466C6167 	 .ascii "FlagStatus\000"
+ 1437      53746174 
+ 1437      757300
+ 1438              	.LASF58:
+ 1439 0084 53534347 	 .ascii "SSCGR\000"
+ 1439      5200
+ 1440              	.LASF13:
+ 1441 008a 43505549 	 .ascii "CPUID\000"
+ 1441      4400
+ 1442              	.LASF51:
+ 1443 0090 41484233 	 .ascii "AHB3LPENR\000"
+ 1443      4C50454E 
+ 1443      5200
+ 1444              	.LASF35:
+ 1445 009a 43464752 	 .ascii "CFGR\000"
+ 1445      00
+ 1446              	.LASF11:
+ 1447 009f 75696E74 	 .ascii "uint8_t\000"
+ 1447      385F7400 
+ 1448              	.LASF28:
+ 1449 00a7 5343425F 	 .ascii "SCB_Type\000"
+ 1449      54797065 
+ 1449      00
+ 1450              	.LASF46:
+ 1451 00b0 41504231 	 .ascii "APB1ENR\000"
+ 1451      454E5200 
+ 1452              	.LASF30:
+ 1453 00b8 41484250 	 .ascii "AHBPrescTable\000"
+ 1453      72657363 
+ 1453      5461626C 
+ 1453      6500
+ 1454              	.LASF87:
+ 1455 00c6 474E5520 	 .ascii "GNU C++14 10.3.1 20210824 (release) -mcpu=cortex-m4"
+ 1455      432B2B31 
+ 1455      34203130 
+ 1455      2E332E31 
+ 1455      20323032 
+ 1456 00f9 202D6D66 	 .ascii " -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfix-cortex-m3"
+ 1456      6C6F6174 
+ 1456      2D616269 
+ 1456      3D686172 
+ 1456      64202D6D 
+ 1457 012c 2D6C6472 	 .ascii "-ldrd -mthumb -mno-unaligned-access -mapcs-frame -m"
+ 1457      64202D6D 
+ 1457      7468756D 
+ 1457      62202D6D 
+ 1457      6E6F2D75 
+ 1458 015f 61726368 	 .ascii "arch=armv7e-m+fp -g -g -O0 -fsingle-precision-const"
+ARM GAS   			page 32
+
+
+ 1458      3D61726D 
+ 1458      7637652D 
+ 1458      6D2B6670 
+ 1458      202D6720 
+ 1459 0192 616E7420 	 .ascii "ant -funsigned-char -ffunction-sections -fdata-sect"
+ 1459      2D66756E 
+ 1459      7369676E 
+ 1459      65642D63 
+ 1459      68617220 
+ 1460 01c5 696F6E73 	 .ascii "ions\000"
+ 1460      00
+ 1461              	.LASF12:
+ 1462 01ca 75696E74 	 .ascii "uint32_t\000"
+ 1462      33325F74 
+ 1462      00
+ 1463              	.LASF88:
+ 1464 01d3 433A5C55 	 .ascii "C:\\Users\\niels\\Documents\\Elektrotechniek\\Jaar "
+ 1464      73657273 
+ 1464      5C6E6965 
+ 1464      6C735C44 
+ 1464      6F63756D 
+ 1465 0201 325C4543 	 .ascii "2\\ECS\\ECSL\\software\\STM32\\STM32Basis\\HAL\\gem"
+ 1465      535C4543 
+ 1465      534C5C73 
+ 1465      6F667477 
+ 1465      6172655C 
+ 1466 022d 65656E73 	 .ascii "eenschappelijk\\Libraries\\CMSIS\\Device\\ST\\STM32"
+ 1466      63686170 
+ 1466      70656C69 
+ 1466      6A6B5C4C 
+ 1466      69627261 
+ 1467 025b 46347878 	 .ascii "F4xx\\Source\\Templates\\system_stm32f4xx.c\000"
+ 1467      5C536F75 
+ 1467      7263655C 
+ 1467      54656D70 
+ 1467      6C617465 
+ 1468              	.LASF69:
+ 1469 0284 44495341 	 .ascii "DISABLE\000"
+ 1469      424C4500 
+ 1470              	.LASF61:
+ 1471 028c 44434B43 	 .ascii "DCKCFGR\000"
+ 1471      46475200 
+ 1472              	.LASF14:
+ 1473 0294 49435352 	 .ascii "ICSR\000"
+ 1473      00
+ 1474              	.LASF8:
+ 1475 0299 6C6F6E67 	 .ascii "long long int\000"
+ 1475      206C6F6E 
+ 1475      6720696E 
+ 1475      7400
+ 1476              	.LASF22:
+ 1477 02a7 42464152 	 .ascii "BFAR\000"
+ 1477      00
+ 1478              	.LASF4:
+ 1479 02ac 6C6F6E67 	 .ascii "long int\000"
+ 1479      20696E74 
+ 1479      00
+ARM GAS   			page 33
+
+
+ 1480              	.LASF75:
+ 1481 02b5 4572726F 	 .ascii "ErrorStatus\000"
+ 1481      72537461 
+ 1481      74757300 
+ 1482              	.LASF64:
+ 1483 02c1 5243435F 	 .ascii "RCC_TypeDef\000"
+ 1483      54797065 
+ 1483      44656600 
+ 1484              	.LASF63:
+ 1485 02cd 44434B43 	 .ascii "DCKCFGR2\000"
+ 1485      46475232 
+ 1485      00
+ 1486              	.LASF2:
+ 1487 02d6 73686F72 	 .ascii "short int\000"
+ 1487      7420696E 
+ 1487      7400
+ 1488              	.LASF40:
+ 1489 02e0 41504232 	 .ascii "APB2RSTR\000"
+ 1489      52535452 
+ 1489      00
+ 1490              	.LASF5:
+ 1491 02e9 5F5F7569 	 .ascii "__uint8_t\000"
+ 1491      6E74385F 
+ 1491      7400
+ 1492              	.LASF18:
+ 1493 02f3 43465352 	 .ascii "CFSR\000"
+ 1493      00
+ 1494              	.LASF74:
+ 1495 02f8 4552524F 	 .ascii "ERROR\000"
+ 1495      5200
+ 1496              	.LASF31:
+ 1497 02fe 41504250 	 .ascii "APBPrescTable\000"
+ 1497      72657363 
+ 1497      5461626C 
+ 1497      6500
+ 1498              	.LASF37:
+ 1499 030c 41484232 	 .ascii "AHB2RSTR\000"
+ 1499      52535452 
+ 1499      00
+ 1500              	.LASF32:
+ 1501 0315 38534342 	 .ascii "8SCB_Type\000"
+ 1501      5F547970 
+ 1501      6500
+ 1502              	.LASF85:
+ 1503 031f 706C6C73 	 .ascii "pllsource\000"
+ 1503      6F757263 
+ 1503      6500
+ 1504              	.LASF44:
+ 1505 0329 41484233 	 .ascii "AHB3ENR\000"
+ 1505      454E5200 
+ 1506              	.LASF86:
+ 1507 0331 706C6C6D 	 .ascii "pllm\000"
+ 1507      00
+ 1508              	.LASF76:
+ 1509 0336 6C6F6E67 	 .ascii "long double\000"
+ 1509      20646F75 
+ 1509      626C6500 
+ARM GAS   			page 34
+
+
+ 1510              	.LASF84:
+ 1511 0342 706C6C70 	 .ascii "pllp\000"
+ 1511      00
+ 1512              	.LASF16:
+ 1513 0347 41495243 	 .ascii "AIRCR\000"
+ 1513      5200
+ 1514              	.LASF1:
+ 1515 034d 756E7369 	 .ascii "unsigned char\000"
+ 1515      676E6564 
+ 1515      20636861 
+ 1515      7200
+ 1516              	.LASF47:
+ 1517 035b 41504232 	 .ascii "APB2ENR\000"
+ 1517      454E5200 
+ 1518              	.LASF0:
+ 1519 0363 7369676E 	 .ascii "signed char\000"
+ 1519      65642063 
+ 1519      68617200 
+ 1520              	.LASF9:
+ 1521 036f 6C6F6E67 	 .ascii "long long unsigned int\000"
+ 1521      206C6F6E 
+ 1521      6720756E 
+ 1521      7369676E 
+ 1521      65642069 
+ 1522              	.LASF17:
+ 1523 0386 53484353 	 .ascii "SHCSR\000"
+ 1523      5200
+ 1524              	.LASF10:
+ 1525 038c 756E7369 	 .ascii "unsigned int\000"
+ 1525      676E6564 
+ 1525      20696E74 
+ 1525      00
+ 1526              	.LASF7:
+ 1527 0399 6C6F6E67 	 .ascii "long unsigned int\000"
+ 1527      20756E73 
+ 1527      69676E65 
+ 1527      6420696E 
+ 1527      7400
+ 1528              	.LASF67:
+ 1529 03ab 3130466C 	 .ascii "10FlagStatus\000"
+ 1529      61675374 
+ 1529      61747573 
+ 1529      00
+ 1530              	.LASF21:
+ 1531 03b8 4D4D4641 	 .ascii "MMFAR\000"
+ 1531      5200
+ 1532              	.LASF80:
+ 1533 03be 48414C5F 	 .ascii "HAL_TICK_FREQ_1KHZ\000"
+ 1533      5449434B 
+ 1533      5F465245 
+ 1533      515F314B 
+ 1533      485A00
+ 1534              	.LASF92:
+ 1535 03d1 53797374 	 .ascii "SystemInit\000"
+ 1535      656D496E 
+ 1535      697400
+ 1536              	.LASF3:
+ARM GAS   			page 35
+
+
+ 1537 03dc 73686F72 	 .ascii "short unsigned int\000"
+ 1537      7420756E 
+ 1537      7369676E 
+ 1537      65642069 
+ 1537      6E7400
+ 1538              	.LASF53:
+ 1539 03ef 41504231 	 .ascii "APB1LPENR\000"
+ 1539      4C50454E 
+ 1539      5200
+ 1540              	.LASF83:
+ 1541 03f9 706C6C76 	 .ascii "pllvco\000"
+ 1541      636F00
+ 1542              	.LASF15:
+ 1543 0400 56544F52 	 .ascii "VTOR\000"
+ 1543      00
+ 1544              	.LASF91:
+ 1545 0405 53797374 	 .ascii "SystemCoreClockUpdate\000"
+ 1545      656D436F 
+ 1545      7265436C 
+ 1545      6F636B55 
+ 1545      70646174 
+ 1546              	.LASF25:
+ 1547 041b 49534152 	 .ascii "ISAR\000"
+ 1547      00
+ 1548              	.LASF89:
+ 1549 0420 433A5C55 	 .ascii "C:\\Users\\niels\\DOCUME~1\\ELEKTR~1\\JAAR2~1\\ECS\\"
+ 1549      73657273 
+ 1549      5C6E6965 
+ 1549      6C735C44 
+ 1549      4F43554D 
+ 1550 044d 4543534C 	 .ascii "ECSL\\software\\STM32\\PRACTI~1\\CLion\\Debug\\STM3"
+ 1550      5C736F66 
+ 1550      74776172 
+ 1550      655C5354 
+ 1550      4D33325C 
+ 1551 047a 32437E31 	 .ascii "2C~1\000"
+ 1551      00
+ 1552              	.LASF33:
+ 1553 047f 31315243 	 .ascii "11RCC_TypeDef\000"
+ 1553      435F5479 
+ 1553      70654465 
+ 1553      6600
+ 1554              	.LASF20:
+ 1555 048d 44465352 	 .ascii "DFSR\000"
+ 1555      00
+ 1556              	.LASF29:
+ 1557 0492 53797374 	 .ascii "SystemCoreClock\000"
+ 1557      656D436F 
+ 1557      7265436C 
+ 1557      6F636B00 
+ 1558              	.LASF79:
+ 1559 04a2 48414C5F 	 .ascii "HAL_TICK_FREQ_100HZ\000"
+ 1559      5449434B 
+ 1559      5F465245 
+ 1559      515F3130 
+ 1559      30485A00 
+ 1560              	.LASF78:
+ARM GAS   			page 36
+
+
+ 1561 04b6 48414C5F 	 .ascii "HAL_TICK_FREQ_10HZ\000"
+ 1561      5449434B 
+ 1561      5F465245 
+ 1561      515F3130 
+ 1561      485A00
+ 1562              	.LASF19:
+ 1563 04c9 48465352 	 .ascii "HFSR\000"
+ 1563      00
+ 1564              	.LASF50:
+ 1565 04ce 41484232 	 .ascii "AHB2LPENR\000"
+ 1565      4C50454E 
+ 1565      5200
+ 1566              	.LASF26:
+ 1567 04d8 52455345 	 .ascii "RESERVED0\000"
+ 1567      52564544 
+ 1567      3000
+ 1568              	.LASF41:
+ 1569 04e2 52455345 	 .ascii "RESERVED1\000"
+ 1569      52564544 
+ 1569      3100
+ 1570              	.LASF45:
+ 1571 04ec 52455345 	 .ascii "RESERVED2\000"
+ 1571      52564544 
+ 1571      3200
+ 1572              	.LASF48:
+ 1573 04f6 52455345 	 .ascii "RESERVED3\000"
+ 1573      52564544 
+ 1573      3300
+ 1574              	.LASF52:
+ 1575 0500 52455345 	 .ascii "RESERVED4\000"
+ 1575      52564544 
+ 1575      3400
+ 1576              	.LASF55:
+ 1577 050a 52455345 	 .ascii "RESERVED5\000"
+ 1577      52564544 
+ 1577      3500
+ 1578              	.LASF57:
+ 1579 0514 52455345 	 .ascii "RESERVED6\000"
+ 1579      52564544 
+ 1579      3600
+ 1580              	.LASF60:
+ 1581 051e 52455345 	 .ascii "RESERVED7\000"
+ 1581      52564544 
+ 1581      3700
+ 1582              	.LASF71:
+ 1583 0528 46756E63 	 .ascii "FunctionalState\000"
+ 1583      74696F6E 
+ 1583      616C5374 
+ 1583      61746500 
+ 1584              	.LASF77:
+ 1585 0538 31394841 	 .ascii "19HAL_TickFreqTypeDef\000"
+ 1585      4C5F5469 
+ 1585      636B4672 
+ 1585      65715479 
+ 1585      70654465 
+ 1586              	.LASF82:
+ 1587 054e 48414C5F 	 .ascii "HAL_TickFreqTypeDef\000"
+ARM GAS   			page 37
+
+
+ 1587      5469636B 
+ 1587      46726571 
+ 1587      54797065 
+ 1587      44656600 
+ 1588              	.LASF42:
+ 1589 0562 41484231 	 .ascii "AHB1ENR\000"
+ 1589      454E5200 
+ 1590              	.LASF65:
+ 1591 056a 52455345 	 .ascii "RESET\000"
+ 1591      5400
+ 1592              	.LASF81:
+ 1593 0570 48414C5F 	 .ascii "HAL_TICK_FREQ_DEFAULT\000"
+ 1593      5449434B 
+ 1593      5F465245 
+ 1593      515F4445 
+ 1593      4641554C 
+ 1594              	.LASF24:
+ 1595 0586 4D4D4652 	 .ascii "MMFR\000"
+ 1595      00
+ 1596              	.LASF73:
+ 1597 058b 53554343 	 .ascii "SUCCESS\000"
+ 1597      45535300 
+ 1598              	.LASF36:
+ 1599 0593 41484231 	 .ascii "AHB1RSTR\000"
+ 1599      52535452 
+ 1599      00
+ 1600              	.LASF23:
+ 1601 059c 41465352 	 .ascii "AFSR\000"
+ 1601      00
+ 1602              	.LASF38:
+ 1603 05a1 41484233 	 .ascii "AHB3RSTR\000"
+ 1603      52535452 
+ 1603      00
+ 1604              	.LASF27:
+ 1605 05aa 43504143 	 .ascii "CPACR\000"
+ 1605      5200
+ 1606              	.LASF54:
+ 1607 05b0 41504232 	 .ascii "APB2LPENR\000"
+ 1607      4C50454E 
+ 1607      5200
+ 1608              	.LASF70:
+ 1609 05ba 454E4142 	 .ascii "ENABLE\000"
+ 1609      4C4500
+ 1610              	 .ident "GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"

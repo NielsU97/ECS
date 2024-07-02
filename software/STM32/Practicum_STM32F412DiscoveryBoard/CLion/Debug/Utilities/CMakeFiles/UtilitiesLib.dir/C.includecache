@@ -1,0 +1,634 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/lcd_log_conf.h
+stm32412g_discovery.h
+-
+stm32412g_discovery_lcd.h
+-
+stdio.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_conf.h
+stm32f4xx_hal_rcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_rcc.h
+stm32f4xx_hal_gpio.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_gpio.h
+stm32f4xx_hal_dma.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dma.h
+stm32f4xx_hal_cortex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_cortex.h
+stm32f4xx_hal_adc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_adc.h
+stm32f4xx_hal_can.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_can.h
+stm32f4xx_hal_crc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_crc.h
+stm32f4xx_hal_cryp.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_cryp.h
+stm32f4xx_hal_dma2d.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dma2d.h
+stm32f4xx_hal_dac.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dac.h
+stm32f4xx_hal_dcmi.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dcmi.h
+stm32f4xx_hal_eth.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_eth.h
+stm32f4xx_hal_flash.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_flash.h
+stm32f4xx_hal_sram.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_sram.h
+stm32f4xx_hal_nor.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_nor.h
+stm32f4xx_hal_nand.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_nand.h
+stm32f4xx_hal_pccard.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_pccard.h
+stm32f4xx_hal_sdram.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_sdram.h
+stm32f4xx_hal_hash.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_hash.h
+stm32f4xx_hal_i2c.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_i2c.h
+stm32f4xx_hal_i2s.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_i2s.h
+stm32f4xx_hal_iwdg.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_iwdg.h
+stm32f4xx_hal_ltdc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_ltdc.h
+stm32f4xx_hal_pwr.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_pwr.h
+stm32f4xx_hal_rng.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_rng.h
+stm32f4xx_hal_rtc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_rtc.h
+stm32f4xx_hal_sai.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_sai.h
+stm32f4xx_hal_sd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_sd.h
+stm32f4xx_hal_spi.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_spi.h
+stm32f4xx_hal_tim.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_tim.h
+stm32f4xx_hal_uart.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_uart.h
+stm32f4xx_hal_usart.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_usart.h
+stm32f4xx_hal_irda.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_irda.h
+stm32f4xx_hal_smartcard.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_smartcard.h
+stm32f4xx_hal_wwdg.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_wwdg.h
+stm32f4xx_hal_pcd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_pcd.h
+stm32f4xx_hal_hcd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_hcd.h
+stm32f4xx_hal_dsi.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dsi.h
+stm32f4xx_hal_qspi.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_qspi.h
+stm32f4xx_hal_cec.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_cec.h
+stm32f4xx_hal_fmpi2c.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_fmpi2c.h
+stm32f4xx_hal_spdifrx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_spdifrx.h
+stm32f4xx_hal_dfsdm.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_dfsdm.h
+stm32f4xx_hal_lptim.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/Practicum_STM32F412DiscoveryBoard/config/stm32f4xx_hal_lptim.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/Common/lcd.h
+stdint.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/ls016b8uy/ls016b8uy.h
+stdio.h
+-
+../Common/lcd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/Common/lcd.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/st7789h2/st7789h2.h
+stdio.h
+-
+../Common/lcd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/Common/lcd.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/stm32412g_discovery.h
+stm32f4xx_hal.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/stm32f4xx_hal.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/stm32412g_discovery_lcd.h
+../Components/ls016b8uy/ls016b8uy.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/ls016b8uy/ls016b8uy.h
+../Components/st7789h2/st7789h2.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/Components/st7789h2/st7789h2.h
+../../../Utilities/Fonts/fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Utilities/Fonts/fonts.h
+stm32412g_discovery.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32412G-Discovery/stm32412g_discovery.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+core_cm4.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/core_cm4.h
+system_stm32f4xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+stdint.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f412zx.h
+core_cm4.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/core_cm4.h
+system_stm32f4xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+stdint.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+stm32f405xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h
+stm32f415xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f415xx.h
+stm32f407xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+stm32f417xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f417xx.h
+stm32f427xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h
+stm32f437xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f437xx.h
+stm32f429xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h
+stm32f439xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f439xx.h
+stm32f401xc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xc.h
+stm32f401xe.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
+stm32f410tx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f410tx.h
+stm32f410cx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h
+stm32f410rx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f410rx.h
+stm32f411xe.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+stm32f446xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h
+stm32f469xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f469xx.h
+stm32f479xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f479xx.h
+stm32f412cx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f412cx.h
+stm32f412zx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f412zx.h
+stm32f412rx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f412rx.h
+stm32f412vx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f412vx.h
+stm32f413xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f413xx.h
+stm32f423xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f423xx.h
+stm32f4xx_hal.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx_hal.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc_V6.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_gcc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cm4.h
+stdint.h
+-
+core_cmInstr.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmInstr.h
+core_cmFunc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmFunc.h
+core_cmSimd.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmSimd.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmFunc.h
+cmsis_armcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc.h
+cmsis_armcc_V6.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc_V6.h
+cmsis_gcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_gcc.h
+cmsis_iar.h
+-
+cmsis_ccs.h
+-
+cmsis_csm.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmInstr.h
+cmsis_armcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc.h
+cmsis_armcc_V6.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc_V6.h
+cmsis_gcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_gcc.h
+cmsis_iar.h
+-
+cmsis_ccs.h
+-
+cmsis_csm.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/core_cmSimd.h
+cmsis_armcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc.h
+cmsis_armcc_V6.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_armcc_V6.h
+cmsis_gcc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Include/cmsis_gcc.h
+cmsis_iar.h
+-
+cmsis_ccs.h
+-
+cmsis_csm.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+stm32f4xx_hal_conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_conf.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_adc_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cec.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_cryp_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_dac_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_dcmi_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx.h
+Legacy/stm32_hal_legacy.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+stddef.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_dma_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_flash_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+stm32f4xx_hal_flash_ramfunc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_fmpi2c_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_gpio_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_hash_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h
+stm32f4xx_ll_usb.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_i2c_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_i2s_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_irda.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_ltdc_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_dsi.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nand.h
+stm32f4xx_ll_fsmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+stm32f4xx_ll_fmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nor.h
+stm32f4xx_ll_fsmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+stm32f4xx_ll_fmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pccard.h
+stm32f4xx_ll_fsmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+stm32f4xx_ll_fmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+stm32f4xx_ll_usb.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+stm32f4xx_hal_pcd_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_pwr_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_rcc_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_rtc_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_sai_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h
+stm32f4xx_ll_sdmmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h
+stm32f4xx_ll_fmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_smartcard.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
+stm32f4xx_ll_fsmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+stm32f4xx_ll_fmc.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+stm32f4xx_hal_tim_ex.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_wwdg.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+stm32f4xx_hal_def.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/CPU/cpu_utils.c
+cpu_utils.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/CPU/cpu_utils.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/CPU/cpu_utils.h
+main.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/CPU/main.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/font12.c
+fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/font16.c
+fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/font20.c
+fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/font24.c
+fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/font8.c
+fonts.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Fonts/fonts.h
+stdint.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Log/lcd_log.c
+stdio.h
+-
+lcd_log.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Log/lcd_log.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Log/lcd_log.h
+lcd_log_conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Utilities/Log/lcd_log_conf.h
+

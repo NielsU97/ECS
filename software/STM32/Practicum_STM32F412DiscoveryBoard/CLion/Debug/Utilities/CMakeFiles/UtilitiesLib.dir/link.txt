@@ -1,0 +1,2 @@
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\ARM-NO~2.EXE qc libUtilitiesLib.a CMakeFiles/UtilitiesLib.dir/CPU/cpu_utils.c.obj CMakeFiles/UtilitiesLib.dir/Fonts/font12.c.obj CMakeFiles/UtilitiesLib.dir/Fonts/font16.c.obj CMakeFiles/UtilitiesLib.dir/Fonts/font20.c.obj CMakeFiles/UtilitiesLib.dir/Fonts/font24.c.obj CMakeFiles/UtilitiesLib.dir/Fonts/font8.c.obj CMakeFiles/UtilitiesLib.dir/Log/lcd_log.c.obj
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR17F9~1.EXE libUtilitiesLib.a

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="STM32F051DiscoveryDemo" targetName="STM32F0308-Discovery" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="Segger_RTT" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="AlgemeenLib" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="SEGGER_Sysview" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="ESEBasisLib" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="STM32F051DiscoveryDemo.elf" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="DiscoverySTM32F0308" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="CMSISFIRMWARE" />
+      <config projectName="STM32F051DiscoveryDemo" targetName="STM32F0xx_HAL_Driver" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9edd8b7c-ebb4-4b42-886a-9c0356bd7872" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1Svh2KkbHZGcQJRe4Ss7K6XlrFx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager" selected="CMake Application.STM32F051DiscoveryDemo.elf">
+    <configuration name="AlgemeenLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="AlgemeenLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CMSISFIRMWARE" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="CMSISFIRMWARE" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoverySTM32F0308" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="DiscoverySTM32F0308" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESEBasisLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="ESEBasisLib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SEGGER_Sysview" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="SEGGER_Sysview" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32F0308-Discovery" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="STM32F0308-Discovery" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32F051DiscoveryDemo.elf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="STM32F051DiscoveryDemo.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="STM32F051DiscoveryDemo" RUN_TARGET_NAME="STM32F051DiscoveryDemo.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32F0xx_HAL_Driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="STM32F0xx_HAL_Driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Segger_RTT" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F051DiscoveryDemo" TARGET_NAME="Segger_RTT" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.DiscoverySTM32F0308" />
+      <item itemvalue="CMake Application.STM32F051DiscoveryDemo.elf" />
+      <item itemvalue="CMake Application.AlgemeenLib" />
+      <item itemvalue="CMake Application.ESEBasisLib" />
+      <item itemvalue="CMake Application.STM32F0308-Discovery" />
+      <item itemvalue="CMake Application.CMSISFIRMWARE" />
+      <item itemvalue="CMake Application.STM32F0xx_HAL_Driver" />
+      <item itemvalue="CMake Application.Segger_RTT" />
+      <item itemvalue="CMake Application.SEGGER_Sysview" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9edd8b7c-ebb4-4b42-886a-9c0356bd7872" name="Default Changelist" comment="" />
+      <created>1572449768306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572449768306</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="324" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605193929985">
+      <screen x="0" y="23" width="2560" height="1333" />
+    </state>
+    <state x="794" y="324" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1333@0.23.2560.1333" timestamp="1605193929985" />
+  </component>
+</project>

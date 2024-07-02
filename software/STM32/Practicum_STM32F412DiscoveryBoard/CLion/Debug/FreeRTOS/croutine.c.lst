@@ -1,0 +1,279 @@
+ARM GAS   			page 1
+
+
+   1              	 .cpu cortex-m4
+   2              	 .arch armv7e-m
+   3              	 .fpu fpv4-sp-d16
+   4              	 .eabi_attribute 27,1
+   5              	 .eabi_attribute 28,1
+   6              	 .eabi_attribute 20,1
+   7              	 .eabi_attribute 21,1
+   8              	 .eabi_attribute 23,3
+   9              	 .eabi_attribute 24,1
+  10              	 .eabi_attribute 25,1
+  11              	 .eabi_attribute 26,1
+  12              	 .eabi_attribute 30,6
+  13              	 .eabi_attribute 34,0
+  14              	 .eabi_attribute 18,4
+  15              	 .file "croutine.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	.Letext0:
+  20              	 .section .debug_info,"",%progbits
+  21              	.Ldebug_info0:
+  22 0000 73000000 	 .4byte 0x73
+  23 0004 0400     	 .2byte 0x4
+  24 0006 00000000 	 .4byte .Ldebug_abbrev0
+  25 000a 04       	 .byte 0x4
+  26 000b 01       	 .uleb128 0x1
+  27 000c 45010000 	 .4byte .LASF11
+  28 0010 04       	 .byte 0x4
+  29 0011 2D000000 	 .4byte .LASF12
+  30 0015 E6000000 	 .4byte .LASF13
+  31 0019 00000000 	 .4byte .Ldebug_line0
+  32 001d 02       	 .uleb128 0x2
+  33 001e 04       	 .byte 0x4
+  34 001f 05       	 .byte 0x5
+  35 0020 696E7400 	 .ascii "int\000"
+  36 0024 03       	 .uleb128 0x3
+  37 0025 04       	 .byte 0x4
+  38 0026 07       	 .byte 0x7
+  39 0027 0E000000 	 .4byte .LASF0
+  40 002b 03       	 .uleb128 0x3
+  41 002c 08       	 .byte 0x8
+  42 002d 05       	 .byte 0x5
+  43 002e 00000000 	 .4byte .LASF1
+  44 0032 03       	 .uleb128 0x3
+  45 0033 08       	 .byte 0x8
+  46 0034 04       	 .byte 0x4
+  47 0035 84020000 	 .4byte .LASF2
+  48 0039 04       	 .uleb128 0x4
+  49 003a 1B000000 	 .4byte .LASF14
+  50 003e 03       	 .uleb128 0x3
+  51 003f 01       	 .byte 0x1
+  52 0040 06       	 .byte 0x6
+  53 0041 78020000 	 .4byte .LASF3
+  54 0045 03       	 .uleb128 0x3
+  55 0046 01       	 .byte 0x1
+  56 0047 08       	 .byte 0x8
+  57 0048 49020000 	 .4byte .LASF4
+ARM GAS   			page 2
+
+
+  58 004c 03       	 .uleb128 0x3
+  59 004d 02       	 .byte 0x2
+  60 004e 05       	 .byte 0x5
+  61 004f 90020000 	 .4byte .LASF5
+  62 0053 03       	 .uleb128 0x3
+  63 0054 02       	 .byte 0x2
+  64 0055 07       	 .byte 0x7
+  65 0056 65020000 	 .4byte .LASF6
+  66 005a 03       	 .uleb128 0x3
+  67 005b 04       	 .byte 0x4
+  68 005c 05       	 .byte 0x5
+  69 005d 5C020000 	 .4byte .LASF7
+  70 0061 03       	 .uleb128 0x3
+  71 0062 04       	 .byte 0x4
+  72 0063 07       	 .byte 0x7
+  73 0064 BD000000 	 .4byte .LASF8
+  74 0068 03       	 .uleb128 0x3
+  75 0069 08       	 .byte 0x8
+  76 006a 07       	 .byte 0x7
+  77 006b CF000000 	 .4byte .LASF9
+  78 006f 03       	 .uleb128 0x3
+  79 0070 01       	 .byte 0x1
+  80 0071 08       	 .byte 0x8
+  81 0072 57020000 	 .4byte .LASF10
+  82 0076 00       	 .byte 0
+  83              	 .section .debug_abbrev,"",%progbits
+  84              	.Ldebug_abbrev0:
+  85 0000 01       	 .uleb128 0x1
+  86 0001 11       	 .uleb128 0x11
+  87 0002 01       	 .byte 0x1
+  88 0003 25       	 .uleb128 0x25
+  89 0004 0E       	 .uleb128 0xe
+  90 0005 13       	 .uleb128 0x13
+  91 0006 0B       	 .uleb128 0xb
+  92 0007 03       	 .uleb128 0x3
+  93 0008 0E       	 .uleb128 0xe
+  94 0009 1B       	 .uleb128 0x1b
+  95 000a 0E       	 .uleb128 0xe
+  96 000b 10       	 .uleb128 0x10
+  97 000c 17       	 .uleb128 0x17
+  98 000d 00       	 .byte 0
+  99 000e 00       	 .byte 0
+ 100 000f 02       	 .uleb128 0x2
+ 101 0010 24       	 .uleb128 0x24
+ 102 0011 00       	 .byte 0
+ 103 0012 0B       	 .uleb128 0xb
+ 104 0013 0B       	 .uleb128 0xb
+ 105 0014 3E       	 .uleb128 0x3e
+ 106 0015 0B       	 .uleb128 0xb
+ 107 0016 03       	 .uleb128 0x3
+ 108 0017 08       	 .uleb128 0x8
+ 109 0018 00       	 .byte 0
+ 110 0019 00       	 .byte 0
+ 111 001a 03       	 .uleb128 0x3
+ 112 001b 24       	 .uleb128 0x24
+ 113 001c 00       	 .byte 0
+ 114 001d 0B       	 .uleb128 0xb
+ARM GAS   			page 3
+
+
+ 115 001e 0B       	 .uleb128 0xb
+ 116 001f 3E       	 .uleb128 0x3e
+ 117 0020 0B       	 .uleb128 0xb
+ 118 0021 03       	 .uleb128 0x3
+ 119 0022 0E       	 .uleb128 0xe
+ 120 0023 00       	 .byte 0
+ 121 0024 00       	 .byte 0
+ 122 0025 04       	 .uleb128 0x4
+ 123 0026 3B       	 .uleb128 0x3b
+ 124 0027 00       	 .byte 0
+ 125 0028 03       	 .uleb128 0x3
+ 126 0029 0E       	 .uleb128 0xe
+ 127 002a 00       	 .byte 0
+ 128 002b 00       	 .byte 0
+ 129 002c 00       	 .byte 0
+ 130              	 .section .debug_aranges,"",%progbits
+ 131 0000 14000000 	 .4byte 0x14
+ 132 0004 0200     	 .2byte 0x2
+ 133 0006 00000000 	 .4byte .Ldebug_info0
+ 134 000a 04       	 .byte 0x4
+ 135 000b 00       	 .byte 0
+ 136 000c 0000     	 .2byte 0
+ 137 000e 0000     	 .2byte 0
+ 138 0010 00000000 	 .4byte 0
+ 139 0014 00000000 	 .4byte 0
+ 140              	 .section .debug_line,"",%progbits
+ 141              	.Ldebug_line0:
+ 142 0000 19000000 	 .section .debug_str,"MS",%progbits,1
+ 142      03001300 
+ 142      00000201 
+ 142      FB0E0D00 
+ 142      01010101 
+ 143              	.LASF1:
+ 144 0000 6C6F6E67 	 .ascii "long long int\000"
+ 144      206C6F6E 
+ 144      6720696E 
+ 144      7400
+ 145              	.LASF0:
+ 146 000e 756E7369 	 .ascii "unsigned int\000"
+ 146      676E6564 
+ 146      20696E74 
+ 146      00
+ 147              	.LASF14:
+ 148 001b 6465636C 	 .ascii "decltype(nullptr)\000"
+ 148      74797065 
+ 148      286E756C 
+ 148      6C707472 
+ 148      2900
+ 149              	.LASF12:
+ 150 002d 433A5C55 	 .ascii "C:\\Users\\niels\\Documents\\Elektrotechniek\\Jaar "
+ 150      73657273 
+ 150      5C6E6965 
+ 150      6C735C44 
+ 150      6F63756D 
+ 151 005b 325C4543 	 .ascii "2\\ECS\\ECSL\\software\\STM32\\STM32Basis\\HAL\\gem"
+ 151      535C4543 
+ 151      534C5C73 
+ARM GAS   			page 4
+
+
+ 151      6F667477 
+ 151      6172655C 
+ 152 0087 65656E73 	 .ascii "eenschappelijk\\Third_Party\\FreeRTOS\\Source\\crou"
+ 152      63686170 
+ 152      70656C69 
+ 152      6A6B5C54 
+ 152      68697264 
+ 153 00b6 74696E65 	 .ascii "tine.c\000"
+ 153      2E6300
+ 154              	.LASF8:
+ 155 00bd 6C6F6E67 	 .ascii "long unsigned int\000"
+ 155      20756E73 
+ 155      69676E65 
+ 155      6420696E 
+ 155      7400
+ 156              	.LASF9:
+ 157 00cf 6C6F6E67 	 .ascii "long long unsigned int\000"
+ 157      206C6F6E 
+ 157      6720756E 
+ 157      7369676E 
+ 157      65642069 
+ 158              	.LASF13:
+ 159 00e6 433A5C55 	 .ascii "C:\\Users\\niels\\DOCUME~1\\ELEKTR~1\\JAAR2~1\\ECS\\"
+ 159      73657273 
+ 159      5C6E6965 
+ 159      6C735C44 
+ 159      4F43554D 
+ 160 0113 4543534C 	 .ascii "ECSL\\software\\STM32\\PRACTI~1\\CLion\\Debug\\Free"
+ 160      5C736F66 
+ 160      74776172 
+ 160      655C5354 
+ 160      4D33325C 
+ 161 0140 52544F53 	 .ascii "RTOS\000"
+ 161      00
+ 162              	.LASF11:
+ 163 0145 474E5520 	 .ascii "GNU C++14 10.3.1 20210824 (release) -mcpu=cortex-m4"
+ 163      432B2B31 
+ 163      34203130 
+ 163      2E332E31 
+ 163      20323032 
+ 164 0178 202D6D66 	 .ascii " -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfix-cortex-m3"
+ 164      6C6F6174 
+ 164      2D616269 
+ 164      3D686172 
+ 164      64202D6D 
+ 165 01ab 2D6C6472 	 .ascii "-ldrd -mthumb -mno-unaligned-access -mapcs-frame -m"
+ 165      64202D6D 
+ 165      7468756D 
+ 165      62202D6D 
+ 165      6E6F2D75 
+ 166 01de 61726368 	 .ascii "arch=armv7e-m+fp -g -g -O0 -fsingle-precision-const"
+ 166      3D61726D 
+ 166      7637652D 
+ 166      6D2B6670 
+ 166      202D6720 
+ 167 0211 616E7420 	 .ascii "ant -funsigned-char -ffunction-sections -fdata-sect"
+ 167      2D66756E 
+ARM GAS   			page 5
+
+
+ 167      7369676E 
+ 167      65642D63 
+ 167      68617220 
+ 168 0244 696F6E73 	 .ascii "ions\000"
+ 168      00
+ 169              	.LASF4:
+ 170 0249 756E7369 	 .ascii "unsigned char\000"
+ 170      676E6564 
+ 170      20636861 
+ 170      7200
+ 171              	.LASF10:
+ 172 0257 63686172 	 .ascii "char\000"
+ 172      00
+ 173              	.LASF7:
+ 174 025c 6C6F6E67 	 .ascii "long int\000"
+ 174      20696E74 
+ 174      00
+ 175              	.LASF6:
+ 176 0265 73686F72 	 .ascii "short unsigned int\000"
+ 176      7420756E 
+ 176      7369676E 
+ 176      65642069 
+ 176      6E7400
+ 177              	.LASF3:
+ 178 0278 7369676E 	 .ascii "signed char\000"
+ 178      65642063 
+ 178      68617200 
+ 179              	.LASF2:
+ 180 0284 6C6F6E67 	 .ascii "long double\000"
+ 180      20646F75 
+ 180      626C6500 
+ 181              	.LASF5:
+ 182 0290 73686F72 	 .ascii "short int\000"
+ 182      7420696E 
+ 182      7400
+ 183              	 .ident "GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"

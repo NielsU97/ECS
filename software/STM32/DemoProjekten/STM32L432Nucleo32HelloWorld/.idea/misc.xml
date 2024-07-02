@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/BSP/STM32L4xx_Nucleo_32" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/CMSIS/Device/ST/STM32L4xx" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/HAL/gemeenschappelijk/Libraries/STM32L4xx_HAL_Driver" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_RTT" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/Segger/Segger_Sysview" />
+      <file path="$PROJECT_DIR$/../../STM32Basis/gemeenschappelijk/basis" />
+      <file path="$PROJECT_DIR$/../../../algemeen" />
+    </sourceRoots>
+  </component>
+</project>

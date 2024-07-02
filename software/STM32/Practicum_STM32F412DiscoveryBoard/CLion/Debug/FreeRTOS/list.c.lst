@@ -1,0 +1,3017 @@
+ARM GAS   			page 1
+
+
+   1              	 .cpu cortex-m4
+   2              	 .arch armv7e-m
+   3              	 .fpu fpv4-sp-d16
+   4              	 .eabi_attribute 27,1
+   5              	 .eabi_attribute 28,1
+   6              	 .eabi_attribute 20,1
+   7              	 .eabi_attribute 21,1
+   8              	 .eabi_attribute 23,3
+   9              	 .eabi_attribute 24,1
+  10              	 .eabi_attribute 25,1
+  11              	 .eabi_attribute 26,1
+  12              	 .eabi_attribute 30,6
+  13              	 .eabi_attribute 34,0
+  14              	 .eabi_attribute 18,4
+  15              	 .file "list.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .section .text.vListInitialise,"ax",%progbits
+  20              	 .align 1
+  21              	 .global vListInitialise
+  22              	 .syntax unified
+  23              	 .thumb
+  24              	 .thumb_func
+  25              	 .type vListInitialise,%function
+  26              	vListInitialise:
+  27              	 .fnstart
+  28              	.LFB11:
+  29              	 .file 1 "C:\\Users\\niels\\Documents\\Elektrotechniek\\Jaar 2\\ECS\\ECSL\\software\\STM32\\STM32Basis\\HAL\\gemeenschappelijk\\Third_Party\\FreeRTOS\\Source\\list.c"
+   1:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*
+   2:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     FreeRTOS V8.2.3 - Copyright (C) 2015 Real Time Engineers Ltd.
+   3:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     All rights reserved
+   4:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+   5:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
+   6:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+   7:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     This file is part of the FreeRTOS distribution.
+   8:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+   9:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     FreeRTOS is free software; you can redistribute it and/or modify it under
+  10:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     the terms of the GNU General Public License (version 2) as published by the
+  11:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     Free Software Foundation >>>> AND MODIFIED BY <<<< the FreeRTOS exception.
+  12:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  13:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     ***************************************************************************
+  14:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     >>!   NOTE: The modification to the GPL is included to allow you to     !<<
+  15:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     >>!   distribute a combined work that includes FreeRTOS without being   !<<
+  16:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     >>!   obliged to provide the source code for proprietary components     !<<
+  17:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     >>!   outside of the FreeRTOS kernel.                                   !<<
+  18:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     ***************************************************************************
+  19:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  20:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     FreeRTOS is distributed in the hope that it will be useful, but WITHOUT ANY
+  21:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  22:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     FOR A PARTICULAR PURPOSE.  Full license text is available on the following
+  23:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     link: http://www.freertos.org/a00114.html
+  24:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  25:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     ***************************************************************************
+  26:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *                                                                       *
+  27:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    FreeRTOS provides completely free yet professionally developed,    *
+  28:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    robust, strictly quality controlled, supported, and cross          *
+ARM GAS   			page 2
+
+
+  29:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    platform software that is more than just the market leader, it     *
+  30:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    is the industry's de facto standard.                               *
+  31:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *                                                                       *
+  32:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    Help yourself get started quickly while simultaneously helping     *
+  33:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    to support the FreeRTOS project by purchasing a FreeRTOS           *
+  34:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    tutorial book, reference manual, or both:                          *
+  35:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *    http://www.FreeRTOS.org/Documentation                              *
+  36:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****      *                                                                       *
+  37:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     ***************************************************************************
+  38:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  39:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.FreeRTOS.org/FAQHelp.html - Having a problem?  Start by reading
+  40:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     the FAQ page "My application does not run, what could be wrong?".  Have you
+  41:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     defined configASSERT()?
+  42:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  43:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.FreeRTOS.org/support - In return for receiving this top quality
+  44:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     embedded software for free we request you assist our global community by
+  45:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     participating in the support forum.
+  46:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  47:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.FreeRTOS.org/training - Investing in training allows your team to
+  48:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     be as productive as possible as early as possible.  Now you can receive
+  49:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     FreeRTOS training directly from Richard Barry, CEO of Real Time Engineers
+  50:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     Ltd, and the world's leading authority on the world's leading RTOS.
+  51:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  52:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.FreeRTOS.org/plus - A selection of FreeRTOS ecosystem products,
+  53:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     including FreeRTOS+Trace - an indispensable productivity tool, a DOS
+  54:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     compatible FAT file system, and our tiny thread aware UDP/IP stack.
+  55:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  56:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.FreeRTOS.org/labs - Where new FreeRTOS products go to incubate.
+  57:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     Come and try FreeRTOS+TCP, our new open source TCP/IP stack for FreeRTOS.
+  58:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  59:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.OpenRTOS.com - Real Time Engineers ltd. license FreeRTOS to High
+  60:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     Integrity Systems ltd. to sell under the OpenRTOS brand.  Low cost OpenRTOS
+  61:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     licenses offer ticketed support, indemnification and commercial middleware.
+  62:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  63:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     http://www.SafeRTOS.com - High Integrity Systems also provide a safety
+  64:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     engineered and independently SIL3 certified version for use in safety and
+  65:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     mission critical applications that require provable dependability.
+  66:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  67:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****     1 tab == 4 spaces!
+  68:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** */
+  69:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  70:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  71:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** #include <stdlib.h>
+  72:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** #include "FreeRTOS.h"
+  73:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** #include "list.h"
+  74:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  75:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*-----------------------------------------------------------
+  76:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****  * PUBLIC LIST API documented in list.h
+  77:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c ****  *----------------------------------------------------------*/
+  78:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  79:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** void vListInitialise( List_t * const pxList )
+  80:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** {
+  30              	 .loc 1 80 1
+  31              	 .cfi_startproc
+  32              	 
+  33              	 
+  34              	 
+ARM GAS   			page 3
+
+
+  35 0000 80B4     	 push {r7}
+  36              	 .cfi_def_cfa_offset 4
+  37              	 .cfi_offset 7,-4
+  38 0002 83B0     	 sub sp,sp,#12
+  39              	 .cfi_def_cfa_offset 16
+  40 0004 00AF     	 add r7,sp,#0
+  41              	 .cfi_def_cfa_register 7
+  42 0006 7860     	 str r0,[r7,#4]
+  81:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* The list structure contains a list item which is used to mark the
+  82:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	end of the list.  To initialise the list the list end is inserted
+  83:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	as the only list entry. */
+  84:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxList->pxIndex = ( ListItem_t * ) &( pxList->xListEnd );			/*lint !e826 !e740 The mini list struc
+  43              	 .loc 1 84 37
+  44 0008 7B68     	 ldr r3,[r7,#4]
+  45 000a 03F10802 	 add r2,r3,#8
+  46              	 .loc 1 84 18
+  47 000e 7B68     	 ldr r3,[r7,#4]
+  48 0010 5A60     	 str r2,[r3,#4]
+  85:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  86:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* The list end value is the highest possible value in the list to
+  87:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	ensure it remains at the end of the list. */
+  88:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxList->xListEnd.xItemValue = portMAX_DELAY;
+  49              	 .loc 1 88 30
+  50 0012 7B68     	 ldr r3,[r7,#4]
+  51 0014 4FF0FF32 	 mov r2,#-1
+  52 0018 9A60     	 str r2,[r3,#8]
+  89:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  90:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* The list end next and previous pointers point to itself so we know
+  91:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	when the list is empty. */
+  92:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxList->xListEnd.pxNext = ( ListItem_t * ) &( pxList->xListEnd );	/*lint !e826 !e740 The mini list
+  53              	 .loc 1 92 45
+  54 001a 7B68     	 ldr r3,[r7,#4]
+  55 001c 03F10802 	 add r2,r3,#8
+  56              	 .loc 1 92 26
+  57 0020 7B68     	 ldr r3,[r7,#4]
+  58 0022 DA60     	 str r2,[r3,#12]
+  93:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxList->xListEnd.pxPrevious = ( ListItem_t * ) &( pxList->xListEnd );/*lint !e826 !e740 The mini l
+  59              	 .loc 1 93 49
+  60 0024 7B68     	 ldr r3,[r7,#4]
+  61 0026 03F10802 	 add r2,r3,#8
+  62              	 .loc 1 93 30
+  63 002a 7B68     	 ldr r3,[r7,#4]
+  64 002c 1A61     	 str r2,[r3,#16]
+  94:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  95:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxList->uxNumberOfItems = ( UBaseType_t ) 0U;
+  65              	 .loc 1 95 26
+  66 002e 7B68     	 ldr r3,[r7,#4]
+  67 0030 0022     	 movs r2,#0
+  68 0032 1A60     	 str r2,[r3]
+  96:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+  97:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Write known values into the list if
+  98:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+  99:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listSET_LIST_INTEGRITY_CHECK_1_VALUE( pxList );
+ 100:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listSET_LIST_INTEGRITY_CHECK_2_VALUE( pxList );
+ 101:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** }
+  69              	 .loc 1 101 1
+  70 0034 00BF     	 nop
+ARM GAS   			page 4
+
+
+  71 0036 0C37     	 adds r7,r7,#12
+  72              	 .cfi_def_cfa_offset 4
+  73 0038 BD46     	 mov sp,r7
+  74              	 .cfi_def_cfa_register 13
+  75              	 
+  76 003a 5DF8047B 	 ldr r7,[sp],#4
+  77              	 .cfi_restore 7
+  78              	 .cfi_def_cfa_offset 0
+  79 003e 7047     	 bx lr
+  80              	 .cfi_endproc
+  81              	.LFE11:
+  82              	 .cantunwind
+  83              	 .fnend
+  84              	 .size vListInitialise,.-vListInitialise
+  85              	 .section .text.vListInitialiseItem,"ax",%progbits
+  86              	 .align 1
+  87              	 .global vListInitialiseItem
+  88              	 .syntax unified
+  89              	 .thumb
+  90              	 .thumb_func
+  91              	 .type vListInitialiseItem,%function
+  92              	vListInitialiseItem:
+  93              	 .fnstart
+  94              	.LFB12:
+ 102:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*-----------------------------------------------------------*/
+ 103:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 104:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** void vListInitialiseItem( ListItem_t * const pxItem )
+ 105:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** {
+  95              	 .loc 1 105 1
+  96              	 .cfi_startproc
+  97              	 
+  98              	 
+  99              	 
+ 100 0000 80B4     	 push {r7}
+ 101              	 .cfi_def_cfa_offset 4
+ 102              	 .cfi_offset 7,-4
+ 103 0002 83B0     	 sub sp,sp,#12
+ 104              	 .cfi_def_cfa_offset 16
+ 105 0004 00AF     	 add r7,sp,#0
+ 106              	 .cfi_def_cfa_register 7
+ 107 0006 7860     	 str r0,[r7,#4]
+ 106:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Make sure the list item is not recorded as being on a list. */
+ 107:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxItem->pvContainer = NULL;
+ 108              	 .loc 1 107 22
+ 109 0008 7B68     	 ldr r3,[r7,#4]
+ 110 000a 0022     	 movs r2,#0
+ 111 000c 1A61     	 str r2,[r3,#16]
+ 108:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 109:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Write known values into the list item if
+ 110:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+ 111:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listSET_FIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+ 112:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listSET_SECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+ 113:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** }
+ 112              	 .loc 1 113 1
+ 113 000e 00BF     	 nop
+ 114 0010 0C37     	 adds r7,r7,#12
+ 115              	 .cfi_def_cfa_offset 4
+ARM GAS   			page 5
+
+
+ 116 0012 BD46     	 mov sp,r7
+ 117              	 .cfi_def_cfa_register 13
+ 118              	 
+ 119 0014 5DF8047B 	 ldr r7,[sp],#4
+ 120              	 .cfi_restore 7
+ 121              	 .cfi_def_cfa_offset 0
+ 122 0018 7047     	 bx lr
+ 123              	 .cfi_endproc
+ 124              	.LFE12:
+ 125              	 .cantunwind
+ 126              	 .fnend
+ 127              	 .size vListInitialiseItem,.-vListInitialiseItem
+ 128              	 .section .text.vListInsertEnd,"ax",%progbits
+ 129              	 .align 1
+ 130              	 .global vListInsertEnd
+ 131              	 .syntax unified
+ 132              	 .thumb
+ 133              	 .thumb_func
+ 134              	 .type vListInsertEnd,%function
+ 135              	vListInsertEnd:
+ 136              	 .fnstart
+ 137              	.LFB13:
+ 114:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*-----------------------------------------------------------*/
+ 115:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 116:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem )
+ 117:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** {
+ 138              	 .loc 1 117 1
+ 139              	 .cfi_startproc
+ 140              	 
+ 141              	 
+ 142              	 
+ 143 0000 80B4     	 push {r7}
+ 144              	 .cfi_def_cfa_offset 4
+ 145              	 .cfi_offset 7,-4
+ 146 0002 85B0     	 sub sp,sp,#20
+ 147              	 .cfi_def_cfa_offset 24
+ 148 0004 00AF     	 add r7,sp,#0
+ 149              	 .cfi_def_cfa_register 7
+ 150 0006 7860     	 str r0,[r7,#4]
+ 151 0008 3960     	 str r1,[r7]
+ 118:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** ListItem_t * const pxIndex = pxList->pxIndex;
+ 152              	 .loc 1 118 20
+ 153 000a 7B68     	 ldr r3,[r7,#4]
+ 154 000c 5B68     	 ldr r3,[r3,#4]
+ 155 000e FB60     	 str r3,[r7,#12]
+ 119:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 120:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Only effective when configASSERT() is also defined, these tests may catch
+ 121:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	the list data structures being overwritten in memory.  They will not catch
+ 122:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	data errors caused by incorrect configuration or use of FreeRTOS. */
+ 123:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listTEST_LIST_INTEGRITY( pxList );
+ 124:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 125:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 126:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Insert a new list item into pxList, but rather than sort the list,
+ 127:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	makes the new list item the last item to be removed by a call to
+ 128:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listGET_OWNER_OF_NEXT_ENTRY(). */
+ 129:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pxNext = pxIndex;
+ 156              	 .loc 1 129 24
+ARM GAS   			page 6
+
+
+ 157 0010 3B68     	 ldr r3,[r7]
+ 158 0012 FA68     	 ldr r2,[r7,#12]
+ 159 0014 5A60     	 str r2,[r3,#4]
+ 130:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pxPrevious = pxIndex->pxPrevious;
+ 160              	 .loc 1 130 39
+ 161 0016 FB68     	 ldr r3,[r7,#12]
+ 162 0018 9A68     	 ldr r2,[r3,#8]
+ 163              	 .loc 1 130 28
+ 164 001a 3B68     	 ldr r3,[r7]
+ 165 001c 9A60     	 str r2,[r3,#8]
+ 131:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 132:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Only used during decision coverage testing. */
+ 133:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	mtCOVERAGE_TEST_DELAY();
+ 134:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 135:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxIndex->pxPrevious->pxNext = pxNewListItem;
+ 166              	 .loc 1 135 11
+ 167 001e FB68     	 ldr r3,[r7,#12]
+ 168 0020 9B68     	 ldr r3,[r3,#8]
+ 169              	 .loc 1 135 30
+ 170 0022 3A68     	 ldr r2,[r7]
+ 171 0024 5A60     	 str r2,[r3,#4]
+ 136:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxIndex->pxPrevious = pxNewListItem;
+ 172              	 .loc 1 136 22
+ 173 0026 FB68     	 ldr r3,[r7,#12]
+ 174 0028 3A68     	 ldr r2,[r7]
+ 175 002a 9A60     	 str r2,[r3,#8]
+ 137:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 138:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Remember which list the item is in. */
+ 139:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pvContainer = ( void * ) pxList;
+ 176              	 .loc 1 139 29
+ 177 002c 3B68     	 ldr r3,[r7]
+ 178 002e 7A68     	 ldr r2,[r7,#4]
+ 179 0030 1A61     	 str r2,[r3,#16]
+ 140:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 141:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	( pxList->uxNumberOfItems )++;
+ 180              	 .loc 1 141 12
+ 181 0032 7B68     	 ldr r3,[r7,#4]
+ 182 0034 1B68     	 ldr r3,[r3]
+ 183              	 .loc 1 141 29
+ 184 0036 5A1C     	 adds r2,r3,#1
+ 185 0038 7B68     	 ldr r3,[r7,#4]
+ 186 003a 1A60     	 str r2,[r3]
+ 142:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** }
+ 187              	 .loc 1 142 1
+ 188 003c 00BF     	 nop
+ 189 003e 1437     	 adds r7,r7,#20
+ 190              	 .cfi_def_cfa_offset 4
+ 191 0040 BD46     	 mov sp,r7
+ 192              	 .cfi_def_cfa_register 13
+ 193              	 
+ 194 0042 5DF8047B 	 ldr r7,[sp],#4
+ 195              	 .cfi_restore 7
+ 196              	 .cfi_def_cfa_offset 0
+ 197 0046 7047     	 bx lr
+ 198              	 .cfi_endproc
+ 199              	.LFE13:
+ 200              	 .cantunwind
+ARM GAS   			page 7
+
+
+ 201              	 .fnend
+ 202              	 .size vListInsertEnd,.-vListInsertEnd
+ 203              	 .section .text.vListInsert,"ax",%progbits
+ 204              	 .align 1
+ 205              	 .global vListInsert
+ 206              	 .syntax unified
+ 207              	 .thumb
+ 208              	 .thumb_func
+ 209              	 .type vListInsert,%function
+ 210              	vListInsert:
+ 211              	 .fnstart
+ 212              	.LFB14:
+ 143:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*-----------------------------------------------------------*/
+ 144:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 145:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem )
+ 146:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** {
+ 213              	 .loc 1 146 1
+ 214              	 .cfi_startproc
+ 215              	 
+ 216              	 
+ 217              	 
+ 218 0000 80B4     	 push {r7}
+ 219              	 .cfi_def_cfa_offset 4
+ 220              	 .cfi_offset 7,-4
+ 221 0002 85B0     	 sub sp,sp,#20
+ 222              	 .cfi_def_cfa_offset 24
+ 223 0004 00AF     	 add r7,sp,#0
+ 224              	 .cfi_def_cfa_register 7
+ 225 0006 7860     	 str r0,[r7,#4]
+ 226 0008 3960     	 str r1,[r7]
+ 147:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** ListItem_t *pxIterator;
+ 148:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
+ 227              	 .loc 1 148 18
+ 228 000a 3B68     	 ldr r3,[r7]
+ 229 000c 1B68     	 ldr r3,[r3]
+ 230 000e BB60     	 str r3,[r7,#8]
+ 149:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 150:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Only effective when configASSERT() is also defined, these tests may catch
+ 151:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	the list data structures being overwritten in memory.  They will not catch
+ 152:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	data errors caused by incorrect configuration or use of FreeRTOS. */
+ 153:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listTEST_LIST_INTEGRITY( pxList );
+ 154:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 155:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 156:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Insert the new list item into the list, sorted in xItemValue order.
+ 157:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 158:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	If the list already contains a list item with the same item value then the
+ 159:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	new list item should be placed after it.  This ensures that TCB's which are
+ 160:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	stored in ready lists (all of which have the same xItemValue value) get a
+ 161:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	share of the CPU.  However, if the xItemValue is the same as the back marker
+ 162:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	the iteration loop below will not end.  Therefore the value is checked
+ 163:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	first, and the algorithm slightly modified if necessary. */
+ 164:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	if( xValueOfInsertion == portMAX_DELAY )
+ 231              	 .loc 1 164 2
+ 232 0010 BB68     	 ldr r3,[r7,#8]
+ 233 0012 B3F1FF3F 	 cmp r3,#-1
+ 234 0016 03D1     	 bne .L5
+ 165:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	{
+ARM GAS   			page 8
+
+
+ 166:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		pxIterator = pxList->xListEnd.pxPrevious;
+ 235              	 .loc 1 166 14
+ 236 0018 7B68     	 ldr r3,[r7,#4]
+ 237 001a 1B69     	 ldr r3,[r3,#16]
+ 238 001c FB60     	 str r3,[r7,#12]
+ 239 001e 0CE0     	 b .L6
+ 240              	.L5:
+ 167:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	}
+ 168:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	else
+ 169:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	{
+ 170:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		/* *** NOTE ***********************************************************
+ 171:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		If you find your application is crashing here then likely causes are
+ 172:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		listed below.  In addition see http://www.freertos.org/FAQHelp.html for
+ 173:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		more tips, and ensure configASSERT() is defined!
+ 174:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		http://www.freertos.org/a00110.html#configASSERT
+ 175:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 176:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			1) Stack overflow -
+ 177:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   see http://www.freertos.org/Stacks-and-stack-overflow-checking.html
+ 178:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			2) Incorrect interrupt priority assignment, especially on Cortex-M
+ 179:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   parts where numerically high priority values denote low actual
+ 180:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   interrupt priorities, which can seem counter intuitive.  See
+ 181:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   http://www.freertos.org/RTOS-Cortex-M3-M4.html and the definition
+ 182:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   of configMAX_SYSCALL_INTERRUPT_PRIORITY on
+ 183:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   http://www.freertos.org/a00110.html
+ 184:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			3) Calling an API function from within a critical section or when
+ 185:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   the scheduler is suspended, or calling an API function that does
+ 186:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   not end in "FromISR" from an interrupt.
+ 187:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			4) Using a queue or semaphore before it has been initialised or
+ 188:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   before the scheduler has been started (are interrupts firing
+ 189:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			   before vTaskStartScheduler() has been called?).
+ 190:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		**********************************************************************/
+ 191:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 192:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		for( pxIterator = ( ListItem_t * ) &( pxList->xListEnd ); pxIterator->pxNext->xItemValue <= xValu
+ 241              	 .loc 1 192 19
+ 242 0020 7B68     	 ldr r3,[r7,#4]
+ 243 0022 0833     	 adds r3,r3,#8
+ 244 0024 FB60     	 str r3,[r7,#12]
+ 245              	.L7:
+ 246              	 .loc 1 192 73 discriminator 3
+ 247 0026 FB68     	 ldr r3,[r7,#12]
+ 248 0028 5B68     	 ldr r3,[r3,#4]
+ 249              	 .loc 1 192 81 discriminator 3
+ 250 002a 1B68     	 ldr r3,[r3]
+ 251              	 .loc 1 192 92 discriminator 3
+ 252 002c BA68     	 ldr r2,[r7,#8]
+ 253 002e 9A42     	 cmp r2,r3
+ 254 0030 03D3     	 bcc .L6
+ 255              	 .loc 1 192 125 discriminator 2
+ 256 0032 FB68     	 ldr r3,[r7,#12]
+ 257 0034 5B68     	 ldr r3,[r3,#4]
+ 258 0036 FB60     	 str r3,[r7,#12]
+ 259              	 .loc 1 192 3 discriminator 2
+ 260 0038 F5E7     	 b .L7
+ 261              	.L6:
+ 193:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		{
+ 194:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			/* There is nothing to do here, just iterating to the wanted
+ 195:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 			insertion position. */
+ARM GAS   			page 9
+
+
+ 196:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		}
+ 197:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	}
+ 198:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 199:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pxNext = pxIterator->pxNext;
+ 262              	 .loc 1 199 38
+ 263 003a FB68     	 ldr r3,[r7,#12]
+ 264 003c 5A68     	 ldr r2,[r3,#4]
+ 265              	 .loc 1 199 24
+ 266 003e 3B68     	 ldr r3,[r7]
+ 267 0040 5A60     	 str r2,[r3,#4]
+ 200:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pxNext->pxPrevious = pxNewListItem;
+ 268              	 .loc 1 200 17
+ 269 0042 3B68     	 ldr r3,[r7]
+ 270 0044 5B68     	 ldr r3,[r3,#4]
+ 271              	 .loc 1 200 36
+ 272 0046 3A68     	 ldr r2,[r7]
+ 273 0048 9A60     	 str r2,[r3,#8]
+ 201:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pxPrevious = pxIterator;
+ 274              	 .loc 1 201 28
+ 275 004a 3B68     	 ldr r3,[r7]
+ 276 004c FA68     	 ldr r2,[r7,#12]
+ 277 004e 9A60     	 str r2,[r3,#8]
+ 202:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxIterator->pxNext = pxNewListItem;
+ 278              	 .loc 1 202 21
+ 279 0050 FB68     	 ldr r3,[r7,#12]
+ 280 0052 3A68     	 ldr r2,[r7]
+ 281 0054 5A60     	 str r2,[r3,#4]
+ 203:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 204:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Remember which list the item is in.  This allows fast removal of the
+ 205:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	item later. */
+ 206:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxNewListItem->pvContainer = ( void * ) pxList;
+ 282              	 .loc 1 206 29
+ 283 0056 3B68     	 ldr r3,[r7]
+ 284 0058 7A68     	 ldr r2,[r7,#4]
+ 285 005a 1A61     	 str r2,[r3,#16]
+ 207:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 208:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	( pxList->uxNumberOfItems )++;
+ 286              	 .loc 1 208 12
+ 287 005c 7B68     	 ldr r3,[r7,#4]
+ 288 005e 1B68     	 ldr r3,[r3]
+ 289              	 .loc 1 208 29
+ 290 0060 5A1C     	 adds r2,r3,#1
+ 291 0062 7B68     	 ldr r3,[r7,#4]
+ 292 0064 1A60     	 str r2,[r3]
+ 209:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** }
+ 293              	 .loc 1 209 1
+ 294 0066 00BF     	 nop
+ 295 0068 1437     	 adds r7,r7,#20
+ 296              	 .cfi_def_cfa_offset 4
+ 297 006a BD46     	 mov sp,r7
+ 298              	 .cfi_def_cfa_register 13
+ 299              	 
+ 300 006c 5DF8047B 	 ldr r7,[sp],#4
+ 301              	 .cfi_restore 7
+ 302              	 .cfi_def_cfa_offset 0
+ 303 0070 7047     	 bx lr
+ 304              	 .cfi_endproc
+ARM GAS   			page 10
+
+
+ 305              	.LFE14:
+ 306              	 .cantunwind
+ 307              	 .fnend
+ 308              	 .size vListInsert,.-vListInsert
+ 309              	 .section .text.uxListRemove,"ax",%progbits
+ 310              	 .align 1
+ 311              	 .global uxListRemove
+ 312              	 .syntax unified
+ 313              	 .thumb
+ 314              	 .thumb_func
+ 315              	 .type uxListRemove,%function
+ 316              	uxListRemove:
+ 317              	 .fnstart
+ 318              	.LFB15:
+ 210:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /*-----------------------------------------------------------*/
+ 211:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 212:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove )
+ 213:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** {
+ 319              	 .loc 1 213 1
+ 320              	 .cfi_startproc
+ 321              	 
+ 322              	 
+ 323              	 
+ 324 0000 80B4     	 push {r7}
+ 325              	 .cfi_def_cfa_offset 4
+ 326              	 .cfi_offset 7,-4
+ 327 0002 85B0     	 sub sp,sp,#20
+ 328              	 .cfi_def_cfa_offset 24
+ 329 0004 00AF     	 add r7,sp,#0
+ 330              	 .cfi_def_cfa_register 7
+ 331 0006 7860     	 str r0,[r7,#4]
+ 214:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** /* The list item knows which list it is in.  Obtain the list from the list
+ 215:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** item. */
+ 216:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** List_t * const pxList = ( List_t * ) pxItemToRemove->pvContainer;
+ 332              	 .loc 1 216 16
+ 333 0008 7B68     	 ldr r3,[r7,#4]
+ 334 000a 1B69     	 ldr r3,[r3,#16]
+ 335 000c FB60     	 str r3,[r7,#12]
+ 217:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 218:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxItemToRemove->pxNext->pxPrevious = pxItemToRemove->pxPrevious;
+ 336              	 .loc 1 218 18
+ 337 000e 7B68     	 ldr r3,[r7,#4]
+ 338 0010 5B68     	 ldr r3,[r3,#4]
+ 339              	 .loc 1 218 55
+ 340 0012 7A68     	 ldr r2,[r7,#4]
+ 341 0014 9268     	 ldr r2,[r2,#8]
+ 342              	 .loc 1 218 37
+ 343 0016 9A60     	 str r2,[r3,#8]
+ 219:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
+ 344              	 .loc 1 219 18
+ 345 0018 7B68     	 ldr r3,[r7,#4]
+ 346 001a 9B68     	 ldr r3,[r3,#8]
+ 347              	 .loc 1 219 55
+ 348 001c 7A68     	 ldr r2,[r7,#4]
+ 349 001e 5268     	 ldr r2,[r2,#4]
+ 350              	 .loc 1 219 37
+ 351 0020 5A60     	 str r2,[r3,#4]
+ARM GAS   			page 11
+
+
+ 220:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 221:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Only used during decision coverage testing. */
+ 222:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	mtCOVERAGE_TEST_DELAY();
+ 223:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 224:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	/* Make sure the index is left pointing to a valid item. */
+ 225:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	if( pxList->pxIndex == pxItemToRemove )
+ 352              	 .loc 1 225 14
+ 353 0022 FB68     	 ldr r3,[r7,#12]
+ 354 0024 5B68     	 ldr r3,[r3,#4]
+ 355              	 .loc 1 225 2
+ 356 0026 7A68     	 ldr r2,[r7,#4]
+ 357 0028 9A42     	 cmp r2,r3
+ 358 002a 03D1     	 bne .L9
+ 226:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	{
+ 227:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		pxList->pxIndex = pxItemToRemove->pxPrevious;
+ 359              	 .loc 1 227 37
+ 360 002c 7B68     	 ldr r3,[r7,#4]
+ 361 002e 9A68     	 ldr r2,[r3,#8]
+ 362              	 .loc 1 227 19
+ 363 0030 FB68     	 ldr r3,[r7,#12]
+ 364 0032 5A60     	 str r2,[r3,#4]
+ 365              	.L9:
+ 228:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	}
+ 229:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	else
+ 230:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	{
+ 231:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 		mtCOVERAGE_TEST_MARKER();
+ 232:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	}
+ 233:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 234:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	pxItemToRemove->pvContainer = NULL;
+ 366              	 .loc 1 234 30
+ 367 0034 7B68     	 ldr r3,[r7,#4]
+ 368 0036 0022     	 movs r2,#0
+ 369 0038 1A61     	 str r2,[r3,#16]
+ 235:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	( pxList->uxNumberOfItems )--;
+ 370              	 .loc 1 235 12
+ 371 003a FB68     	 ldr r3,[r7,#12]
+ 372 003c 1B68     	 ldr r3,[r3]
+ 373              	 .loc 1 235 29
+ 374 003e 5A1E     	 subs r2,r3,#1
+ 375 0040 FB68     	 ldr r3,[r7,#12]
+ 376 0042 1A60     	 str r2,[r3]
+ 236:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 
+ 237:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** 	return pxList->uxNumberOfItems;
+ 377              	 .loc 1 237 17
+ 378 0044 FB68     	 ldr r3,[r7,#12]
+ 379 0046 1B68     	 ldr r3,[r3]
+ 238:C:\Users\niels\Documents\Elektrotechniek\Jaar 2\ECS\ECSL\software\STM32\STM32Basis\HAL\gemeenschappelijk\Third_Party\FreeRTOS\Source\list.c **** }
+ 380              	 .loc 1 238 1
+ 381 0048 1846     	 mov r0,r3
+ 382 004a 1437     	 adds r7,r7,#20
+ 383              	 .cfi_def_cfa_offset 4
+ 384 004c BD46     	 mov sp,r7
+ 385              	 .cfi_def_cfa_register 13
+ 386              	 
+ 387 004e 5DF8047B 	 ldr r7,[sp],#4
+ 388              	 .cfi_restore 7
+ 389              	 .cfi_def_cfa_offset 0
+ARM GAS   			page 12
+
+
+ 390 0052 7047     	 bx lr
+ 391              	 .cfi_endproc
+ 392              	.LFE15:
+ 393              	 .cantunwind
+ 394              	 .fnend
+ 395              	 .size uxListRemove,.-uxListRemove
+ 396              	 .text
+ 397              	.Letext0:
+ 398              	 .file 2 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\c++\\10.3.1\\cstdlib"
+ 399              	 .file 3 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\c++\\10.3.1\\bits\\std_abs.h"
+ 400              	 .file 4 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\c++\\10.3.1\\arm-none-eabi\\thumb\\v7e-m+fp\\hard\\bits\\c++config.h"
+ 401              	 .file 5 "c:\\progra~2\\gnuarm~1\\102021~1.10\\lib\\gcc\\arm-none-eabi\\10.3.1\\include\\stddef.h"
+ 402              	 .file 6 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 403              	 .file 7 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\stdlib.h"
+ 404              	 .file 8 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\c++\\10.3.1\\stdlib.h"
+ 405              	 .file 9 "c:\\progra~2\\gnuarm~1\\102021~1.10\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 406              	 .file 10 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/THIRD_~1/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h"
+ 407              	 .file 11 "C:/Users/niels/DOCUME~1/ELEKTR~1/JAAR2~1/ECS/ECSL/software/STM32/STM32B~1/HAL/GEMEEN~1/THIRD_~1/FreeRTOS/Source/include/list.h"
+ 408              	 .file 12 "<built-in>"
+ 409              	 .section .debug_info,"",%progbits
+ 410              	.Ldebug_info0:
+ 411 0000 A2090000 	 .4byte 0x9a2
+ 412 0004 0400     	 .2byte 0x4
+ 413 0006 00000000 	 .4byte .Ldebug_abbrev0
+ 414 000a 04       	 .byte 0x4
+ 415 000b 01       	 .uleb128 0x1
+ 416 000c 4F030000 	 .4byte .LASF83
+ 417 0010 04       	 .byte 0x4
+ 418 0011 B6000000 	 .4byte .LASF84
+ 419 0015 9E040000 	 .4byte .LASF85
+ 420 0019 00000000 	 .4byte .Ldebug_ranges0+0
+ 421 001d 00000000 	 .4byte 0
+ 422 0021 00000000 	 .4byte .Ldebug_line0
+ 423 0025 02       	 .uleb128 0x2
+ 424 0026 73746400 	 .ascii "std\000"
+ 425 002a 0C       	 .byte 0xc
+ 426 002b 00       	 .byte 0
+ 427 002c D0010000 	 .4byte 0x1d0
+ 428 0030 03       	 .uleb128 0x3
+ 429 0031 21000000 	 .4byte .LASF5
+ 430 0035 04       	 .byte 0x4
+ 431 0036 1E01     	 .2byte 0x11e
+ 432 0038 41       	 .byte 0x41
+ 433 0039 04       	 .uleb128 0x4
+ 434 003a 04       	 .byte 0x4
+ 435 003b 1E01     	 .2byte 0x11e
+ 436 003d 41       	 .byte 0x41
+ 437 003e 30000000 	 .4byte 0x30
+ 438 0042 05       	 .uleb128 0x5
+ 439 0043 02       	 .byte 0x2
+ 440 0044 7F       	 .byte 0x7f
+ 441 0045 0B       	 .byte 0xb
+ 442 0046 F6020000 	 .4byte 0x2f6
+ 443 004a 05       	 .uleb128 0x5
+ 444 004b 02       	 .byte 0x2
+ 445 004c 80       	 .byte 0x80
+ 446 004d 0B       	 .byte 0xb
+ARM GAS   			page 13
+
+
+ 447 004e 2A030000 	 .4byte 0x32a
+ 448 0052 05       	 .uleb128 0x5
+ 449 0053 02       	 .byte 0x2
+ 450 0054 86       	 .byte 0x86
+ 451 0055 0B       	 .byte 0xb
+ 452 0056 97030000 	 .4byte 0x397
+ 453 005a 05       	 .uleb128 0x5
+ 454 005b 02       	 .byte 0x2
+ 455 005c 8C       	 .byte 0x8c
+ 456 005d 0B       	 .byte 0xb
+ 457 005e AD030000 	 .4byte 0x3ad
+ 458 0062 05       	 .uleb128 0x5
+ 459 0063 02       	 .byte 0x2
+ 460 0064 8D       	 .byte 0x8d
+ 461 0065 0B       	 .byte 0xb
+ 462 0066 CA030000 	 .4byte 0x3ca
+ 463 006a 05       	 .uleb128 0x5
+ 464 006b 02       	 .byte 0x2
+ 465 006c 8E       	 .byte 0x8e
+ 466 006d 0B       	 .byte 0xb
+ 467 006e E0030000 	 .4byte 0x3e0
+ 468 0072 05       	 .uleb128 0x5
+ 469 0073 02       	 .byte 0x2
+ 470 0074 8F       	 .byte 0x8f
+ 471 0075 0B       	 .byte 0xb
+ 472 0076 F6030000 	 .4byte 0x3f6
+ 473 007a 05       	 .uleb128 0x5
+ 474 007b 02       	 .byte 0x2
+ 475 007c 91       	 .byte 0x91
+ 476 007d 0B       	 .byte 0xb
+ 477 007e 20040000 	 .4byte 0x420
+ 478 0082 05       	 .uleb128 0x5
+ 479 0083 02       	 .byte 0x2
+ 480 0084 94       	 .byte 0x94
+ 481 0085 0B       	 .byte 0xb
+ 482 0086 3B040000 	 .4byte 0x43b
+ 483 008a 05       	 .uleb128 0x5
+ 484 008b 02       	 .byte 0x2
+ 485 008c 96       	 .byte 0x96
+ 486 008d 0B       	 .byte 0xb
+ 487 008e 51040000 	 .4byte 0x451
+ 488 0092 05       	 .uleb128 0x5
+ 489 0093 02       	 .byte 0x2
+ 490 0094 99       	 .byte 0x99
+ 491 0095 0B       	 .byte 0xb
+ 492 0096 6C040000 	 .4byte 0x46c
+ 493 009a 05       	 .uleb128 0x5
+ 494 009b 02       	 .byte 0x2
+ 495 009c 9A       	 .byte 0x9a
+ 496 009d 0B       	 .byte 0xb
+ 497 009e 87040000 	 .4byte 0x487
+ 498 00a2 05       	 .uleb128 0x5
+ 499 00a3 02       	 .byte 0x2
+ 500 00a4 9B       	 .byte 0x9b
+ 501 00a5 0B       	 .byte 0xb
+ 502 00a6 B9040000 	 .4byte 0x4b9
+ 503 00aa 05       	 .uleb128 0x5
+ARM GAS   			page 14
+
+
+ 504 00ab 02       	 .byte 0x2
+ 505 00ac 9D       	 .byte 0x9d
+ 506 00ad 0B       	 .byte 0xb
+ 507 00ae D9040000 	 .4byte 0x4d9
+ 508 00b2 05       	 .uleb128 0x5
+ 509 00b3 02       	 .byte 0x2
+ 510 00b4 A3       	 .byte 0xa3
+ 511 00b5 0B       	 .byte 0xb
+ 512 00b6 FA040000 	 .4byte 0x4fa
+ 513 00ba 05       	 .uleb128 0x5
+ 514 00bb 02       	 .byte 0x2
+ 515 00bc A5       	 .byte 0xa5
+ 516 00bd 0B       	 .byte 0xb
+ 517 00be 06050000 	 .4byte 0x506
+ 518 00c2 05       	 .uleb128 0x5
+ 519 00c3 02       	 .byte 0x2
+ 520 00c4 A6       	 .byte 0xa6
+ 521 00c5 0B       	 .byte 0xb
+ 522 00c6 18050000 	 .4byte 0x518
+ 523 00ca 05       	 .uleb128 0x5
+ 524 00cb 02       	 .byte 0x2
+ 525 00cc A7       	 .byte 0xa7
+ 526 00cd 0B       	 .byte 0xb
+ 527 00ce 39050000 	 .4byte 0x539
+ 528 00d2 05       	 .uleb128 0x5
+ 529 00d3 02       	 .byte 0x2
+ 530 00d4 A8       	 .byte 0xa8
+ 531 00d5 0B       	 .byte 0xb
+ 532 00d6 59050000 	 .4byte 0x559
+ 533 00da 05       	 .uleb128 0x5
+ 534 00db 02       	 .byte 0x2
+ 535 00dc A9       	 .byte 0xa9
+ 536 00dd 0B       	 .byte 0xb
+ 537 00de 79050000 	 .4byte 0x579
+ 538 00e2 05       	 .uleb128 0x5
+ 539 00e3 02       	 .byte 0x2
+ 540 00e4 AB       	 .byte 0xab
+ 541 00e5 0B       	 .byte 0xb
+ 542 00e6 8F050000 	 .4byte 0x58f
+ 543 00ea 05       	 .uleb128 0x5
+ 544 00eb 02       	 .byte 0x2
+ 545 00ec AC       	 .byte 0xac
+ 546 00ed 0B       	 .byte 0xb
+ 547 00ee B5050000 	 .4byte 0x5b5
+ 548 00f2 05       	 .uleb128 0x5
+ 549 00f3 02       	 .byte 0x2
+ 550 00f4 F0       	 .byte 0xf0
+ 551 00f5 16       	 .byte 0x16
+ 552 00f6 5E030000 	 .4byte 0x35e
+ 553 00fa 05       	 .uleb128 0x5
+ 554 00fb 02       	 .byte 0x2
+ 555 00fc F5       	 .byte 0xf5
+ 556 00fd 16       	 .byte 0x16
+ 557 00fe 27020000 	 .4byte 0x227
+ 558 0102 05       	 .uleb128 0x5
+ 559 0103 02       	 .byte 0x2
+ 560 0104 F6       	 .byte 0xf6
+ARM GAS   			page 15
+
+
+ 561 0105 16       	 .byte 0x16
+ 562 0106 D0050000 	 .4byte 0x5d0
+ 563 010a 05       	 .uleb128 0x5
+ 564 010b 02       	 .byte 0x2
+ 565 010c F8       	 .byte 0xf8
+ 566 010d 16       	 .byte 0x16
+ 567 010e EC050000 	 .4byte 0x5ec
+ 568 0112 05       	 .uleb128 0x5
+ 569 0113 02       	 .byte 0x2
+ 570 0114 F9       	 .byte 0xf9
+ 571 0115 16       	 .byte 0x16
+ 572 0116 45060000 	 .4byte 0x645
+ 573 011a 05       	 .uleb128 0x5
+ 574 011b 02       	 .byte 0x2
+ 575 011c FA       	 .byte 0xfa
+ 576 011d 16       	 .byte 0x16
+ 577 011e 03060000 	 .4byte 0x603
+ 578 0122 05       	 .uleb128 0x5
+ 579 0123 02       	 .byte 0x2
+ 580 0124 FB       	 .byte 0xfb
+ 581 0125 16       	 .byte 0x16
+ 582 0126 24060000 	 .4byte 0x624
+ 583 012a 05       	 .uleb128 0x5
+ 584 012b 02       	 .byte 0x2
+ 585 012c FC       	 .byte 0xfc
+ 586 012d 16       	 .byte 0x16
+ 587 012e 67060000 	 .4byte 0x667
+ 588 0132 06       	 .uleb128 0x6
+ 589 0133 61627300 	 .ascii "abs\000"
+ 590 0137 03       	 .byte 0x3
+ 591 0138 4F       	 .byte 0x4f
+ 592 0139 03       	 .byte 0x3
+ 593 013a FD020000 	 .4byte .LASF0
+ 594 013e 64020000 	 .4byte 0x264
+ 595 0142 4C010000 	 .4byte 0x14c
+ 596 0146 07       	 .uleb128 0x7
+ 597 0147 64020000 	 .4byte 0x264
+ 598 014b 00       	 .byte 0
+ 599 014c 06       	 .uleb128 0x6
+ 600 014d 61627300 	 .ascii "abs\000"
+ 601 0151 03       	 .byte 0x3
+ 602 0152 4B       	 .byte 0x4b
+ 603 0153 03       	 .byte 0x3
+ 604 0154 07030000 	 .4byte .LASF1
+ 605 0158 60060000 	 .4byte 0x660
+ 606 015c 66010000 	 .4byte 0x166
+ 607 0160 07       	 .uleb128 0x7
+ 608 0161 60060000 	 .4byte 0x660
+ 609 0165 00       	 .byte 0
+ 610 0166 06       	 .uleb128 0x6
+ 611 0167 61627300 	 .ascii "abs\000"
+ 612 016b 03       	 .byte 0x3
+ 613 016c 47       	 .byte 0x47
+ 614 016d 03       	 .byte 0x3
+ 615 016e F3020000 	 .4byte .LASF2
+ 616 0172 C3030000 	 .4byte 0x3c3
+ 617 0176 80010000 	 .4byte 0x180
+ARM GAS   			page 16
+
+
+ 618 017a 07       	 .uleb128 0x7
+ 619 017b C3030000 	 .4byte 0x3c3
+ 620 017f 00       	 .byte 0
+ 621 0180 06       	 .uleb128 0x6
+ 622 0181 61627300 	 .ascii "abs\000"
+ 623 0185 03       	 .byte 0x3
+ 624 0186 3D       	 .byte 0x3d
+ 625 0187 03       	 .byte 0x3
+ 626 0188 45030000 	 .4byte .LASF3
+ 627 018c 5D020000 	 .4byte 0x25d
+ 628 0190 9A010000 	 .4byte 0x19a
+ 629 0194 07       	 .uleb128 0x7
+ 630 0195 5D020000 	 .4byte 0x25d
+ 631 0199 00       	 .byte 0
+ 632 019a 06       	 .uleb128 0x6
+ 633 019b 61627300 	 .ascii "abs\000"
+ 634 019f 03       	 .byte 0x3
+ 635 01a0 38       	 .byte 0x38
+ 636 01a1 03       	 .byte 0x3
+ 637 01a2 26030000 	 .4byte .LASF4
+ 638 01a6 8C020000 	 .4byte 0x28c
+ 639 01aa B4010000 	 .4byte 0x1b4
+ 640 01ae 07       	 .uleb128 0x7
+ 641 01af 8C020000 	 .4byte 0x28c
+ 642 01b3 00       	 .byte 0
+ 643 01b4 08       	 .uleb128 0x8
+ 644 01b5 64697600 	 .ascii "div\000"
+ 645 01b9 02       	 .byte 0x2
+ 646 01ba B1       	 .byte 0xb1
+ 647 01bb 03       	 .byte 0x3
+ 648 01bc 29000000 	 .4byte .LASF6
+ 649 01c0 2A030000 	 .4byte 0x32a
+ 650 01c4 07       	 .uleb128 0x7
+ 651 01c5 8C020000 	 .4byte 0x28c
+ 652 01c9 07       	 .uleb128 0x7
+ 653 01ca 8C020000 	 .4byte 0x28c
+ 654 01ce 00       	 .byte 0
+ 655 01cf 00       	 .byte 0
+ 656 01d0 09       	 .uleb128 0x9
+ 657 01d1 49050000 	 .4byte .LASF86
+ 658 01d5 04       	 .byte 0x4
+ 659 01d6 2001     	 .2byte 0x120
+ 660 01d8 0B       	 .byte 0xb
+ 661 01d9 43020000 	 .4byte 0x243
+ 662 01dd 03       	 .uleb128 0x3
+ 663 01de 21000000 	 .4byte .LASF5
+ 664 01e2 04       	 .byte 0x4
+ 665 01e3 2201     	 .2byte 0x122
+ 666 01e5 41       	 .byte 0x41
+ 667 01e6 04       	 .uleb128 0x4
+ 668 01e7 04       	 .byte 0x4
+ 669 01e8 2201     	 .2byte 0x122
+ 670 01ea 41       	 .byte 0x41
+ 671 01eb DD010000 	 .4byte 0x1dd
+ 672 01ef 05       	 .uleb128 0x5
+ 673 01f0 02       	 .byte 0x2
+ 674 01f1 C8       	 .byte 0xc8
+ARM GAS   			page 17
+
+
+ 675 01f2 0B       	 .byte 0xb
+ 676 01f3 5E030000 	 .4byte 0x35e
+ 677 01f7 05       	 .uleb128 0x5
+ 678 01f8 02       	 .byte 0x2
+ 679 01f9 D8       	 .byte 0xd8
+ 680 01fa 0B       	 .byte 0xb
+ 681 01fb D0050000 	 .4byte 0x5d0
+ 682 01ff 05       	 .uleb128 0x5
+ 683 0200 02       	 .byte 0x2
+ 684 0201 E3       	 .byte 0xe3
+ 685 0202 0B       	 .byte 0xb
+ 686 0203 EC050000 	 .4byte 0x5ec
+ 687 0207 05       	 .uleb128 0x5
+ 688 0208 02       	 .byte 0x2
+ 689 0209 E4       	 .byte 0xe4
+ 690 020a 0B       	 .byte 0xb
+ 691 020b 03060000 	 .4byte 0x603
+ 692 020f 05       	 .uleb128 0x5
+ 693 0210 02       	 .byte 0x2
+ 694 0211 E5       	 .byte 0xe5
+ 695 0212 0B       	 .byte 0xb
+ 696 0213 24060000 	 .4byte 0x624
+ 697 0217 05       	 .uleb128 0x5
+ 698 0218 02       	 .byte 0x2
+ 699 0219 E7       	 .byte 0xe7
+ 700 021a 0B       	 .byte 0xb
+ 701 021b 45060000 	 .4byte 0x645
+ 702 021f 05       	 .uleb128 0x5
+ 703 0220 02       	 .byte 0x2
+ 704 0221 E8       	 .byte 0xe8
+ 705 0222 0B       	 .byte 0xb
+ 706 0223 67060000 	 .4byte 0x667
+ 707 0227 08       	 .uleb128 0x8
+ 708 0228 64697600 	 .ascii "div\000"
+ 709 022c 02       	 .byte 0x2
+ 710 022d D5       	 .byte 0xd5
+ 711 022e 03       	 .byte 0x3
+ 712 022f 11030000 	 .4byte .LASF7
+ 713 0233 5E030000 	 .4byte 0x35e
+ 714 0237 07       	 .uleb128 0x7
+ 715 0238 5D020000 	 .4byte 0x25d
+ 716 023c 07       	 .uleb128 0x7
+ 717 023d 5D020000 	 .4byte 0x25d
+ 718 0241 00       	 .byte 0
+ 719 0242 00       	 .byte 0
+ 720 0243 0A       	 .uleb128 0xa
+ 721 0244 0B000000 	 .4byte .LASF16
+ 722 0248 05       	 .byte 0x5
+ 723 0249 D1       	 .byte 0xd1
+ 724 024a 17       	 .byte 0x17
+ 725 024b 4F020000 	 .4byte 0x24f
+ 726 024f 0B       	 .uleb128 0xb
+ 727 0250 04       	 .byte 0x4
+ 728 0251 07       	 .byte 0x7
+ 729 0252 A2010000 	 .4byte .LASF8
+ 730 0256 0C       	 .uleb128 0xc
+ 731 0257 04       	 .byte 0x4
+ARM GAS   			page 18
+
+
+ 732 0258 05       	 .byte 0x5
+ 733 0259 696E7400 	 .ascii "int\000"
+ 734 025d 0B       	 .uleb128 0xb
+ 735 025e 08       	 .byte 0x8
+ 736 025f 05       	 .byte 0x5
+ 737 0260 A8000000 	 .4byte .LASF9
+ 738 0264 0B       	 .uleb128 0xb
+ 739 0265 08       	 .byte 0x8
+ 740 0266 04       	 .byte 0x4
+ 741 0267 47020000 	 .4byte .LASF10
+ 742 026b 0D       	 .uleb128 0xd
+ 743 026c 13020000 	 .4byte .LASF87
+ 744 0270 0B       	 .uleb128 0xb
+ 745 0271 01       	 .byte 0x1
+ 746 0272 06       	 .byte 0x6
+ 747 0273 34000000 	 .4byte .LASF11
+ 748 0277 0B       	 .uleb128 0xb
+ 749 0278 01       	 .byte 0x1
+ 750 0279 08       	 .byte 0x8
+ 751 027a AE020000 	 .4byte .LASF12
+ 752 027e 0B       	 .uleb128 0xb
+ 753 027f 02       	 .byte 0x2
+ 754 0280 05       	 .byte 0x5
+ 755 0281 CC020000 	 .4byte .LASF13
+ 756 0285 0B       	 .uleb128 0xb
+ 757 0286 02       	 .byte 0x2
+ 758 0287 07       	 .byte 0x7
+ 759 0288 E3010000 	 .4byte .LASF14
+ 760 028c 0B       	 .uleb128 0xb
+ 761 028d 04       	 .byte 0x4
+ 762 028e 05       	 .byte 0x5
+ 763 028f 5C010000 	 .4byte .LASF15
+ 764 0293 0A       	 .uleb128 0xa
+ 765 0294 97010000 	 .4byte .LASF17
+ 766 0298 06       	 .byte 0x6
+ 767 0299 4F       	 .byte 0x4f
+ 768 029a 19       	 .byte 0x19
+ 769 029b 9F020000 	 .4byte 0x29f
+ 770 029f 0B       	 .uleb128 0xb
+ 771 02a0 04       	 .byte 0x4
+ 772 02a1 07       	 .byte 0x7
+ 773 02a2 BF010000 	 .4byte .LASF18
+ 774 02a6 0B       	 .uleb128 0xb
+ 775 02a7 08       	 .byte 0x8
+ 776 02a8 07       	 .byte 0x7
+ 777 02a9 5D000000 	 .4byte .LASF19
+ 778 02ad 0E       	 .uleb128 0xe
+ 779 02ae 04       	 .byte 0x4
+ 780 02af 0F       	 .uleb128 0xf
+ 781 02b0 04       	 .byte 0x4
+ 782 02b1 B5020000 	 .4byte 0x2b5
+ 783 02b5 10       	 .uleb128 0x10
+ 784 02b6 0F       	 .uleb128 0xf
+ 785 02b7 04       	 .byte 0x4
+ 786 02b8 BC020000 	 .4byte 0x2bc
+ 787 02bc 0B       	 .uleb128 0xb
+ 788 02bd 01       	 .byte 0x1
+ARM GAS   			page 19
+
+
+ 789 02be 08       	 .byte 0x8
+ 790 02bf 53040000 	 .4byte .LASF20
+ 791 02c3 11       	 .uleb128 0x11
+ 792 02c4 BC020000 	 .4byte 0x2bc
+ 793 02c8 0F       	 .uleb128 0xf
+ 794 02c9 04       	 .byte 0x4
+ 795 02ca C3020000 	 .4byte 0x2c3
+ 796 02ce 12       	 .uleb128 0x12
+ 797 02cf 08       	 .byte 0x8
+ 798 02d0 07       	 .byte 0x7
+ 799 02d1 24       	 .byte 0x24
+ 800 02d2 01       	 .byte 0x1
+ 801 02d3 DC010000 	 .4byte .LASF23
+ 802 02d7 F6020000 	 .4byte 0x2f6
+ 803 02db 13       	 .uleb128 0x13
+ 804 02dc 06000000 	 .4byte .LASF21
+ 805 02e0 07       	 .byte 0x7
+ 806 02e1 25       	 .byte 0x25
+ 807 02e2 07       	 .byte 0x7
+ 808 02e3 56020000 	 .4byte 0x256
+ 809 02e7 00       	 .byte 0
+ 810 02e8 14       	 .uleb128 0x14
+ 811 02e9 72656D00 	 .ascii "rem\000"
+ 812 02ed 07       	 .byte 0x7
+ 813 02ee 26       	 .byte 0x26
+ 814 02ef 07       	 .byte 0x7
+ 815 02f0 56020000 	 .4byte 0x256
+ 816 02f4 04       	 .byte 0x4
+ 817 02f5 00       	 .byte 0
+ 818 02f6 0A       	 .uleb128 0xa
+ 819 02f7 A2000000 	 .4byte .LASF22
+ 820 02fb 07       	 .byte 0x7
+ 821 02fc 27       	 .byte 0x27
+ 822 02fd 03       	 .byte 0x3
+ 823 02fe CE020000 	 .4byte 0x2ce
+ 824 0302 12       	 .uleb128 0x12
+ 825 0303 08       	 .byte 0x8
+ 826 0304 07       	 .byte 0x7
+ 827 0305 2A       	 .byte 0x2a
+ 828 0306 01       	 .byte 0x1
+ 829 0307 BC020000 	 .4byte .LASF24
+ 830 030b 2A030000 	 .4byte 0x32a
+ 831 030f 13       	 .uleb128 0x13
+ 832 0310 06000000 	 .4byte .LASF21
+ 833 0314 07       	 .byte 0x7
+ 834 0315 2B       	 .byte 0x2b
+ 835 0316 08       	 .byte 0x8
+ 836 0317 8C020000 	 .4byte 0x28c
+ 837 031b 00       	 .byte 0
+ 838 031c 14       	 .uleb128 0x14
+ 839 031d 72656D00 	 .ascii "rem\000"
+ 840 0321 07       	 .byte 0x7
+ 841 0322 2C       	 .byte 0x2c
+ 842 0323 08       	 .byte 0x8
+ 843 0324 8C020000 	 .4byte 0x28c
+ 844 0328 04       	 .byte 0x4
+ 845 0329 00       	 .byte 0
+ARM GAS   			page 20
+
+
+ 846 032a 0A       	 .uleb128 0xa
+ 847 032b 6C010000 	 .4byte .LASF25
+ 848 032f 07       	 .byte 0x7
+ 849 0330 2D       	 .byte 0x2d
+ 850 0331 03       	 .byte 0x3
+ 851 0332 02030000 	 .4byte 0x302
+ 852 0336 12       	 .uleb128 0x12
+ 853 0337 10       	 .byte 0x10
+ 854 0338 07       	 .byte 0x7
+ 855 0339 31       	 .byte 0x31
+ 856 033a 01       	 .byte 0x1
+ 857 033b 49000000 	 .4byte .LASF26
+ 858 033f 5E030000 	 .4byte 0x35e
+ 859 0343 13       	 .uleb128 0x13
+ 860 0344 06000000 	 .4byte .LASF21
+ 861 0348 07       	 .byte 0x7
+ 862 0349 32       	 .byte 0x32
+ 863 034a 11       	 .byte 0x11
+ 864 034b 5D020000 	 .4byte 0x25d
+ 865 034f 00       	 .byte 0
+ 866 0350 14       	 .uleb128 0x14
+ 867 0351 72656D00 	 .ascii "rem\000"
+ 868 0355 07       	 .byte 0x7
+ 869 0356 33       	 .byte 0x33
+ 870 0357 11       	 .byte 0x11
+ 871 0358 5D020000 	 .4byte 0x25d
+ 872 035c 08       	 .byte 0x8
+ 873 035d 00       	 .byte 0
+ 874 035e 0A       	 .uleb128 0xa
+ 875 035f C4020000 	 .4byte .LASF27
+ 876 0363 07       	 .byte 0x7
+ 877 0364 34       	 .byte 0x34
+ 878 0365 03       	 .byte 0x3
+ 879 0366 36030000 	 .4byte 0x336
+ 880 036a 0A       	 .uleb128 0xa
+ 881 036b 24050000 	 .4byte .LASF28
+ 882 036f 07       	 .byte 0x7
+ 883 0370 39       	 .byte 0x39
+ 884 0371 0F       	 .byte 0xf
+ 885 0372 76030000 	 .4byte 0x376
+ 886 0376 0F       	 .uleb128 0xf
+ 887 0377 04       	 .byte 0x4
+ 888 0378 7C030000 	 .4byte 0x37c
+ 889 037c 15       	 .uleb128 0x15
+ 890 037d 56020000 	 .4byte 0x256
+ 891 0381 90030000 	 .4byte 0x390
+ 892 0385 07       	 .uleb128 0x7
+ 893 0386 90030000 	 .4byte 0x390
+ 894 038a 07       	 .uleb128 0x7
+ 895 038b 90030000 	 .4byte 0x390
+ 896 038f 00       	 .byte 0
+ 897 0390 0F       	 .uleb128 0xf
+ 898 0391 04       	 .byte 0x4
+ 899 0392 96030000 	 .4byte 0x396
+ 900 0396 16       	 .uleb128 0x16
+ 901 0397 17       	 .uleb128 0x17
+ 902 0398 9B000000 	 .4byte .LASF29
+ARM GAS   			page 21
+
+
+ 903 039c 07       	 .byte 0x7
+ 904 039d 4C       	 .byte 0x4c
+ 905 039e 05       	 .byte 0x5
+ 906 039f 56020000 	 .4byte 0x256
+ 907 03a3 AD030000 	 .4byte 0x3ad
+ 908 03a7 07       	 .uleb128 0x7
+ 909 03a8 AF020000 	 .4byte 0x2af
+ 910 03ac 00       	 .byte 0
+ 911 03ad 17       	 .uleb128 0x17
+ 912 03ae 9F020000 	 .4byte .LASF30
+ 913 03b2 07       	 .byte 0x7
+ 914 03b3 4D       	 .byte 0x4d
+ 915 03b4 08       	 .byte 0x8
+ 916 03b5 C3030000 	 .4byte 0x3c3
+ 917 03b9 C3030000 	 .4byte 0x3c3
+ 918 03bd 07       	 .uleb128 0x7
+ 919 03be C8020000 	 .4byte 0x2c8
+ 920 03c2 00       	 .byte 0
+ 921 03c3 0B       	 .uleb128 0xb
+ 922 03c4 08       	 .byte 0x8
+ 923 03c5 04       	 .byte 0x4
+ 924 03c6 73010000 	 .4byte .LASF31
+ 925 03ca 17       	 .uleb128 0x17
+ 926 03cb A4020000 	 .4byte .LASF32
+ 927 03cf 07       	 .byte 0x7
+ 928 03d0 51       	 .byte 0x51
+ 929 03d1 05       	 .byte 0x5
+ 930 03d2 56020000 	 .4byte 0x256
+ 931 03d6 E0030000 	 .4byte 0x3e0
+ 932 03da 07       	 .uleb128 0x7
+ 933 03db C8020000 	 .4byte 0x2c8
+ 934 03df 00       	 .byte 0
+ 935 03e0 17       	 .uleb128 0x17
+ 936 03e1 A9020000 	 .4byte .LASF33
+ 937 03e5 07       	 .byte 0x7
+ 938 03e6 53       	 .byte 0x53
+ 939 03e7 06       	 .byte 0x6
+ 940 03e8 8C020000 	 .4byte 0x28c
+ 941 03ec F6030000 	 .4byte 0x3f6
+ 942 03f0 07       	 .uleb128 0x7
+ 943 03f1 C8020000 	 .4byte 0x2c8
+ 944 03f5 00       	 .byte 0
+ 945 03f6 17       	 .uleb128 0x17
+ 946 03f7 F6010000 	 .4byte .LASF34
+ 947 03fb 07       	 .byte 0x7
+ 948 03fc 55       	 .byte 0x55
+ 949 03fd 08       	 .byte 0x8
+ 950 03fe AD020000 	 .4byte 0x2ad
+ 951 0402 20040000 	 .4byte 0x420
+ 952 0406 07       	 .uleb128 0x7
+ 953 0407 90030000 	 .4byte 0x390
+ 954 040b 07       	 .uleb128 0x7
+ 955 040c 90030000 	 .4byte 0x390
+ 956 0410 07       	 .uleb128 0x7
+ 957 0411 43020000 	 .4byte 0x243
+ 958 0415 07       	 .uleb128 0x7
+ 959 0416 43020000 	 .4byte 0x243
+ARM GAS   			page 22
+
+
+ 960 041a 07       	 .uleb128 0x7
+ 961 041b 6A030000 	 .4byte 0x36a
+ 962 041f 00       	 .byte 0
+ 963 0420 18       	 .uleb128 0x18
+ 964 0421 64697600 	 .ascii "div\000"
+ 965 0425 07       	 .byte 0x7
+ 966 0426 5C       	 .byte 0x5c
+ 967 0427 07       	 .byte 0x7
+ 968 0428 F6020000 	 .4byte 0x2f6
+ 969 042c 3B040000 	 .4byte 0x43b
+ 970 0430 07       	 .uleb128 0x7
+ 971 0431 56020000 	 .4byte 0x256
+ 972 0435 07       	 .uleb128 0x7
+ 973 0436 56020000 	 .4byte 0x256
+ 974 043a 00       	 .byte 0
+ 975 043b 17       	 .uleb128 0x17
+ 976 043c 25020000 	 .4byte .LASF35
+ 977 0440 07       	 .byte 0x7
+ 978 0441 5F       	 .byte 0x5f
+ 979 0442 09       	 .byte 0x9
+ 980 0443 B6020000 	 .4byte 0x2b6
+ 981 0447 51040000 	 .4byte 0x451
+ 982 044b 07       	 .uleb128 0x7
+ 983 044c C8020000 	 .4byte 0x2c8
+ 984 0450 00       	 .byte 0
+ 985 0451 17       	 .uleb128 0x17
+ 986 0452 6D020000 	 .4byte .LASF36
+ 987 0456 07       	 .byte 0x7
+ 988 0457 6B       	 .byte 0x6b
+ 989 0458 08       	 .byte 0x8
+ 990 0459 2A030000 	 .4byte 0x32a
+ 991 045d 6C040000 	 .4byte 0x46c
+ 992 0461 07       	 .uleb128 0x7
+ 993 0462 8C020000 	 .4byte 0x28c
+ 994 0466 07       	 .uleb128 0x7
+ 995 0467 8C020000 	 .4byte 0x28c
+ 996 046b 00       	 .byte 0
+ 997 046c 17       	 .uleb128 0x17
+ 998 046d 48010000 	 .4byte .LASF37
+ 999 0471 07       	 .byte 0x7
+ 1000 0472 6D       	 .byte 0x6d
+ 1001 0473 05       	 .byte 0x5
+ 1002 0474 56020000 	 .4byte 0x256
+ 1003 0478 87040000 	 .4byte 0x487
+ 1004 047c 07       	 .uleb128 0x7
+ 1005 047d C8020000 	 .4byte 0x2c8
+ 1006 0481 07       	 .uleb128 0x7
+ 1007 0482 43020000 	 .4byte 0x243
+ 1008 0486 00       	 .byte 0
+ 1009 0487 17       	 .uleb128 0x17
+ 1010 0488 96020000 	 .4byte .LASF38
+ 1011 048c 07       	 .byte 0x7
+ 1012 048d 73       	 .byte 0x73
+ 1013 048e 08       	 .byte 0x8
+ 1014 048f 43020000 	 .4byte 0x243
+ 1015 0493 A7040000 	 .4byte 0x4a7
+ 1016 0497 07       	 .uleb128 0x7
+ARM GAS   			page 23
+
+
+ 1017 0498 A7040000 	 .4byte 0x4a7
+ 1018 049c 07       	 .uleb128 0x7
+ 1019 049d C8020000 	 .4byte 0x2c8
+ 1020 04a1 07       	 .uleb128 0x7
+ 1021 04a2 43020000 	 .4byte 0x243
+ 1022 04a6 00       	 .byte 0
+ 1023 04a7 0F       	 .uleb128 0xf
+ 1024 04a8 04       	 .byte 0x4
+ 1025 04a9 AD040000 	 .4byte 0x4ad
+ 1026 04ad 0B       	 .uleb128 0xb
+ 1027 04ae 04       	 .byte 0x4
+ 1028 04af 07       	 .byte 0x7
+ 1029 04b0 04020000 	 .4byte .LASF39
+ 1030 04b4 11       	 .uleb128 0x11
+ 1031 04b5 AD040000 	 .4byte 0x4ad
+ 1032 04b9 17       	 .uleb128 0x17
+ 1033 04ba 90010000 	 .4byte .LASF40
+ 1034 04be 07       	 .byte 0x7
+ 1035 04bf 6F       	 .byte 0x6f
+ 1036 04c0 05       	 .byte 0x5
+ 1037 04c1 56020000 	 .4byte 0x256
+ 1038 04c5 D9040000 	 .4byte 0x4d9
+ 1039 04c9 07       	 .uleb128 0x7
+ 1040 04ca A7040000 	 .4byte 0x4a7
+ 1041 04ce 07       	 .uleb128 0x7
+ 1042 04cf C8020000 	 .4byte 0x2c8
+ 1043 04d3 07       	 .uleb128 0x7
+ 1044 04d4 43020000 	 .4byte 0x243
+ 1045 04d8 00       	 .byte 0
+ 1046 04d9 19       	 .uleb128 0x19
+ 1047 04da 42010000 	 .4byte .LASF41
+ 1048 04de 07       	 .byte 0x7
+ 1049 04df 8F       	 .byte 0x8f
+ 1050 04e0 06       	 .byte 0x6
+ 1051 04e1 FA040000 	 .4byte 0x4fa
+ 1052 04e5 07       	 .uleb128 0x7
+ 1053 04e6 AD020000 	 .4byte 0x2ad
+ 1054 04ea 07       	 .uleb128 0x7
+ 1055 04eb 43020000 	 .4byte 0x243
+ 1056 04ef 07       	 .uleb128 0x7
+ 1057 04f0 43020000 	 .4byte 0x243
+ 1058 04f4 07       	 .uleb128 0x7
+ 1059 04f5 6A030000 	 .4byte 0x36a
+ 1060 04f9 00       	 .byte 0
+ 1061 04fa 1A       	 .uleb128 0x1a
+ 1062 04fb D7010000 	 .4byte .LASF88
+ 1063 04ff 07       	 .byte 0x7
+ 1064 0500 90       	 .byte 0x90
+ 1065 0501 05       	 .byte 0x5
+ 1066 0502 56020000 	 .4byte 0x256
+ 1067 0506 19       	 .uleb128 0x19
+ 1068 0507 D1010000 	 .4byte .LASF42
+ 1069 050b 07       	 .byte 0x7
+ 1070 050c 9F       	 .byte 0x9f
+ 1071 050d 06       	 .byte 0x6
+ 1072 050e 18050000 	 .4byte 0x518
+ 1073 0512 07       	 .uleb128 0x7
+ARM GAS   			page 24
+
+
+ 1074 0513 4F020000 	 .4byte 0x24f
+ 1075 0517 00       	 .byte 0
+ 1076 0518 17       	 .uleb128 0x17
+ 1077 0519 4E010000 	 .4byte .LASF43
+ 1078 051d 07       	 .byte 0x7
+ 1079 051e A0       	 .byte 0xa0
+ 1080 051f 08       	 .byte 0x8
+ 1081 0520 C3030000 	 .4byte 0x3c3
+ 1082 0524 33050000 	 .4byte 0x533
+ 1083 0528 07       	 .uleb128 0x7
+ 1084 0529 C8020000 	 .4byte 0x2c8
+ 1085 052d 07       	 .uleb128 0x7
+ 1086 052e 33050000 	 .4byte 0x533
+ 1087 0532 00       	 .byte 0
+ 1088 0533 0F       	 .uleb128 0xf
+ 1089 0534 04       	 .byte 0x4
+ 1090 0535 B6020000 	 .4byte 0x2b6
+ 1091 0539 17       	 .uleb128 0x17
+ 1092 053a 65010000 	 .4byte .LASF44
+ 1093 053e 07       	 .byte 0x7
+ 1094 053f AB       	 .byte 0xab
+ 1095 0540 06       	 .byte 0x6
+ 1096 0541 8C020000 	 .4byte 0x28c
+ 1097 0545 59050000 	 .4byte 0x559
+ 1098 0549 07       	 .uleb128 0x7
+ 1099 054a C8020000 	 .4byte 0x2c8
+ 1100 054e 07       	 .uleb128 0x7
+ 1101 054f 33050000 	 .4byte 0x533
+ 1102 0553 07       	 .uleb128 0x7
+ 1103 0554 56020000 	 .4byte 0x256
+ 1104 0558 00       	 .byte 0
+ 1105 0559 17       	 .uleb128 0x17
+ 1106 055a 05050000 	 .4byte .LASF45
+ 1107 055e 07       	 .byte 0x7
+ 1108 055f AD       	 .byte 0xad
+ 1109 0560 0F       	 .byte 0xf
+ 1110 0561 9F020000 	 .4byte 0x29f
+ 1111 0565 79050000 	 .4byte 0x579
+ 1112 0569 07       	 .uleb128 0x7
+ 1113 056a C8020000 	 .4byte 0x2c8
+ 1114 056e 07       	 .uleb128 0x7
+ 1115 056f 33050000 	 .4byte 0x533
+ 1116 0573 07       	 .uleb128 0x7
+ 1117 0574 56020000 	 .4byte 0x256
+ 1118 0578 00       	 .byte 0
+ 1119 0579 17       	 .uleb128 0x17
+ 1120 057a 0D050000 	 .4byte .LASF46
+ 1121 057e 07       	 .byte 0x7
+ 1122 057f BF       	 .byte 0xbf
+ 1123 0580 05       	 .byte 0x5
+ 1124 0581 56020000 	 .4byte 0x256
+ 1125 0585 8F050000 	 .4byte 0x58f
+ 1126 0589 07       	 .uleb128 0x7
+ 1127 058a C8020000 	 .4byte 0x2c8
+ 1128 058e 00       	 .byte 0
+ 1129 058f 17       	 .uleb128 0x17
+ 1130 0590 40000000 	 .4byte .LASF47
+ARM GAS   			page 25
+
+
+ 1131 0594 07       	 .byte 0x7
+ 1132 0595 75       	 .byte 0x75
+ 1133 0596 08       	 .byte 0x8
+ 1134 0597 43020000 	 .4byte 0x243
+ 1135 059b AF050000 	 .4byte 0x5af
+ 1136 059f 07       	 .uleb128 0x7
+ 1137 05a0 B6020000 	 .4byte 0x2b6
+ 1138 05a4 07       	 .uleb128 0x7
+ 1139 05a5 AF050000 	 .4byte 0x5af
+ 1140 05a9 07       	 .uleb128 0x7
+ 1141 05aa 43020000 	 .4byte 0x243
+ 1142 05ae 00       	 .byte 0
+ 1143 05af 0F       	 .uleb128 0xf
+ 1144 05b0 04       	 .byte 0x4
+ 1145 05b1 B4040000 	 .4byte 0x4b4
+ 1146 05b5 17       	 .uleb128 0x17
+ 1147 05b6 EC020000 	 .4byte .LASF48
+ 1148 05ba 07       	 .byte 0x7
+ 1149 05bb 71       	 .byte 0x71
+ 1150 05bc 05       	 .byte 0x5
+ 1151 05bd 56020000 	 .4byte 0x256
+ 1152 05c1 D0050000 	 .4byte 0x5d0
+ 1153 05c5 07       	 .uleb128 0x7
+ 1154 05c6 B6020000 	 .4byte 0x2b6
+ 1155 05ca 07       	 .uleb128 0x7
+ 1156 05cb AD040000 	 .4byte 0x4ad
+ 1157 05cf 00       	 .byte 0
+ 1158 05d0 1B       	 .uleb128 0x1b
+ 1159 05d1 FE010000 	 .4byte .LASF49
+ 1160 05d5 07       	 .byte 0x7
+ 1161 05d6 0C01     	 .2byte 0x10c
+ 1162 05d8 09       	 .byte 0x9
+ 1163 05d9 5E030000 	 .4byte 0x35e
+ 1164 05dd EC050000 	 .4byte 0x5ec
+ 1165 05e1 07       	 .uleb128 0x7
+ 1166 05e2 5D020000 	 .4byte 0x25d
+ 1167 05e6 07       	 .uleb128 0x7
+ 1168 05e7 5D020000 	 .4byte 0x25d
+ 1169 05eb 00       	 .byte 0
+ 1170 05ec 1B       	 .uleb128 0x1b
+ 1171 05ed 00000000 	 .4byte .LASF50
+ 1172 05f1 07       	 .byte 0x7
+ 1173 05f2 0701     	 .2byte 0x107
+ 1174 05f4 0B       	 .byte 0xb
+ 1175 05f5 5D020000 	 .4byte 0x25d
+ 1176 05f9 03060000 	 .4byte 0x603
+ 1177 05fd 07       	 .uleb128 0x7
+ 1178 05fe C8020000 	 .4byte 0x2c8
+ 1179 0602 00       	 .byte 0
+ 1180 0603 1B       	 .uleb128 0x1b
+ 1181 0604 DE020000 	 .4byte .LASF51
+ 1182 0608 07       	 .byte 0x7
+ 1183 0609 0D01     	 .2byte 0x10d
+ 1184 060b 0B       	 .byte 0xb
+ 1185 060c 5D020000 	 .4byte 0x25d
+ 1186 0610 24060000 	 .4byte 0x624
+ 1187 0614 07       	 .uleb128 0x7
+ARM GAS   			page 26
+
+
+ 1188 0615 C8020000 	 .4byte 0x2c8
+ 1189 0619 07       	 .uleb128 0x7
+ 1190 061a 33050000 	 .4byte 0x533
+ 1191 061e 07       	 .uleb128 0x7
+ 1192 061f 56020000 	 .4byte 0x256
+ 1193 0623 00       	 .byte 0
+ 1194 0624 1B       	 .uleb128 0x1b
+ 1195 0625 6A040000 	 .4byte .LASF52
+ 1196 0629 07       	 .byte 0x7
+ 1197 062a 1101     	 .2byte 0x111
+ 1198 062c 14       	 .byte 0x14
+ 1199 062d A6020000 	 .4byte 0x2a6
+ 1200 0631 45060000 	 .4byte 0x645
+ 1201 0635 07       	 .uleb128 0x7
+ 1202 0636 C8020000 	 .4byte 0x2c8
+ 1203 063a 07       	 .uleb128 0x7
+ 1204 063b 33050000 	 .4byte 0x533
+ 1205 063f 07       	 .uleb128 0x7
+ 1206 0640 56020000 	 .4byte 0x256
+ 1207 0644 00       	 .byte 0
+ 1208 0645 17       	 .uleb128 0x17
+ 1209 0646 55010000 	 .4byte .LASF53
+ 1210 064a 07       	 .byte 0x7
+ 1211 064b A3       	 .byte 0xa3
+ 1212 064c 07       	 .byte 0x7
+ 1213 064d 60060000 	 .4byte 0x660
+ 1214 0651 60060000 	 .4byte 0x660
+ 1215 0655 07       	 .uleb128 0x7
+ 1216 0656 C8020000 	 .4byte 0x2c8
+ 1217 065a 07       	 .uleb128 0x7
+ 1218 065b 33050000 	 .4byte 0x533
+ 1219 065f 00       	 .byte 0
+ 1220 0660 0B       	 .uleb128 0xb
+ 1221 0661 04       	 .byte 0x4
+ 1222 0662 04       	 .byte 0x4
+ 1223 0663 88020000 	 .4byte .LASF54
+ 1224 0667 1B       	 .uleb128 0x1b
+ 1225 0668 D6020000 	 .4byte .LASF55
+ 1226 066c 07       	 .byte 0x7
+ 1227 066d 4401     	 .2byte 0x144
+ 1228 066f 14       	 .byte 0x14
+ 1229 0670 64020000 	 .4byte 0x264
+ 1230 0674 83060000 	 .4byte 0x683
+ 1231 0678 07       	 .uleb128 0x7
+ 1232 0679 C8020000 	 .4byte 0x2c8
+ 1233 067d 07       	 .uleb128 0x7
+ 1234 067e 33050000 	 .4byte 0x533
+ 1235 0682 00       	 .byte 0
+ 1236 0683 05       	 .uleb128 0x5
+ 1237 0684 08       	 .byte 0x8
+ 1238 0685 27       	 .byte 0x27
+ 1239 0686 0C       	 .byte 0xc
+ 1240 0687 97030000 	 .4byte 0x397
+ 1241 068b 05       	 .uleb128 0x5
+ 1242 068c 08       	 .byte 0x8
+ 1243 068d 33       	 .byte 0x33
+ 1244 068e 0C       	 .byte 0xc
+ARM GAS   			page 27
+
+
+ 1245 068f F6020000 	 .4byte 0x2f6
+ 1246 0693 05       	 .uleb128 0x5
+ 1247 0694 08       	 .byte 0x8
+ 1248 0695 34       	 .byte 0x34
+ 1249 0696 0C       	 .byte 0xc
+ 1250 0697 2A030000 	 .4byte 0x32a
+ 1251 069b 05       	 .uleb128 0x5
+ 1252 069c 08       	 .byte 0x8
+ 1253 069d 36       	 .byte 0x36
+ 1254 069e 0C       	 .byte 0xc
+ 1255 069f 32010000 	 .4byte 0x132
+ 1256 06a3 05       	 .uleb128 0x5
+ 1257 06a4 08       	 .byte 0x8
+ 1258 06a5 36       	 .byte 0x36
+ 1259 06a6 0C       	 .byte 0xc
+ 1260 06a7 4C010000 	 .4byte 0x14c
+ 1261 06ab 05       	 .uleb128 0x5
+ 1262 06ac 08       	 .byte 0x8
+ 1263 06ad 36       	 .byte 0x36
+ 1264 06ae 0C       	 .byte 0xc
+ 1265 06af 66010000 	 .4byte 0x166
+ 1266 06b3 05       	 .uleb128 0x5
+ 1267 06b4 08       	 .byte 0x8
+ 1268 06b5 36       	 .byte 0x36
+ 1269 06b6 0C       	 .byte 0xc
+ 1270 06b7 80010000 	 .4byte 0x180
+ 1271 06bb 05       	 .uleb128 0x5
+ 1272 06bc 08       	 .byte 0x8
+ 1273 06bd 36       	 .byte 0x36
+ 1274 06be 0C       	 .byte 0xc
+ 1275 06bf 9A010000 	 .4byte 0x19a
+ 1276 06c3 05       	 .uleb128 0x5
+ 1277 06c4 08       	 .byte 0x8
+ 1278 06c5 37       	 .byte 0x37
+ 1279 06c6 0C       	 .byte 0xc
+ 1280 06c7 AD030000 	 .4byte 0x3ad
+ 1281 06cb 05       	 .uleb128 0x5
+ 1282 06cc 08       	 .byte 0x8
+ 1283 06cd 38       	 .byte 0x38
+ 1284 06ce 0C       	 .byte 0xc
+ 1285 06cf CA030000 	 .4byte 0x3ca
+ 1286 06d3 05       	 .uleb128 0x5
+ 1287 06d4 08       	 .byte 0x8
+ 1288 06d5 39       	 .byte 0x39
+ 1289 06d6 0C       	 .byte 0xc
+ 1290 06d7 E0030000 	 .4byte 0x3e0
+ 1291 06db 05       	 .uleb128 0x5
+ 1292 06dc 08       	 .byte 0x8
+ 1293 06dd 3A       	 .byte 0x3a
+ 1294 06de 0C       	 .byte 0xc
+ 1295 06df F6030000 	 .4byte 0x3f6
+ 1296 06e3 05       	 .uleb128 0x5
+ 1297 06e4 08       	 .byte 0x8
+ 1298 06e5 3C       	 .byte 0x3c
+ 1299 06e6 0C       	 .byte 0xc
+ 1300 06e7 27020000 	 .4byte 0x227
+ 1301 06eb 05       	 .uleb128 0x5
+ARM GAS   			page 28
+
+
+ 1302 06ec 08       	 .byte 0x8
+ 1303 06ed 3C       	 .byte 0x3c
+ 1304 06ee 0C       	 .byte 0xc
+ 1305 06ef B4010000 	 .4byte 0x1b4
+ 1306 06f3 05       	 .uleb128 0x5
+ 1307 06f4 08       	 .byte 0x8
+ 1308 06f5 3C       	 .byte 0x3c
+ 1309 06f6 0C       	 .byte 0xc
+ 1310 06f7 20040000 	 .4byte 0x420
+ 1311 06fb 05       	 .uleb128 0x5
+ 1312 06fc 08       	 .byte 0x8
+ 1313 06fd 3E       	 .byte 0x3e
+ 1314 06fe 0C       	 .byte 0xc
+ 1315 06ff 3B040000 	 .4byte 0x43b
+ 1316 0703 05       	 .uleb128 0x5
+ 1317 0704 08       	 .byte 0x8
+ 1318 0705 40       	 .byte 0x40
+ 1319 0706 0C       	 .byte 0xc
+ 1320 0707 51040000 	 .4byte 0x451
+ 1321 070b 05       	 .uleb128 0x5
+ 1322 070c 08       	 .byte 0x8
+ 1323 070d 43       	 .byte 0x43
+ 1324 070e 0C       	 .byte 0xc
+ 1325 070f 6C040000 	 .4byte 0x46c
+ 1326 0713 05       	 .uleb128 0x5
+ 1327 0714 08       	 .byte 0x8
+ 1328 0715 44       	 .byte 0x44
+ 1329 0716 0C       	 .byte 0xc
+ 1330 0717 87040000 	 .4byte 0x487
+ 1331 071b 05       	 .uleb128 0x5
+ 1332 071c 08       	 .byte 0x8
+ 1333 071d 45       	 .byte 0x45
+ 1334 071e 0C       	 .byte 0xc
+ 1335 071f B9040000 	 .4byte 0x4b9
+ 1336 0723 05       	 .uleb128 0x5
+ 1337 0724 08       	 .byte 0x8
+ 1338 0725 47       	 .byte 0x47
+ 1339 0726 0C       	 .byte 0xc
+ 1340 0727 D9040000 	 .4byte 0x4d9
+ 1341 072b 05       	 .uleb128 0x5
+ 1342 072c 08       	 .byte 0x8
+ 1343 072d 48       	 .byte 0x48
+ 1344 072e 0C       	 .byte 0xc
+ 1345 072f FA040000 	 .4byte 0x4fa
+ 1346 0733 05       	 .uleb128 0x5
+ 1347 0734 08       	 .byte 0x8
+ 1348 0735 4A       	 .byte 0x4a
+ 1349 0736 0C       	 .byte 0xc
+ 1350 0737 06050000 	 .4byte 0x506
+ 1351 073b 05       	 .uleb128 0x5
+ 1352 073c 08       	 .byte 0x8
+ 1353 073d 4B       	 .byte 0x4b
+ 1354 073e 0C       	 .byte 0xc
+ 1355 073f 18050000 	 .4byte 0x518
+ 1356 0743 05       	 .uleb128 0x5
+ 1357 0744 08       	 .byte 0x8
+ 1358 0745 4C       	 .byte 0x4c
+ARM GAS   			page 29
+
+
+ 1359 0746 0C       	 .byte 0xc
+ 1360 0747 39050000 	 .4byte 0x539
+ 1361 074b 05       	 .uleb128 0x5
+ 1362 074c 08       	 .byte 0x8
+ 1363 074d 4D       	 .byte 0x4d
+ 1364 074e 0C       	 .byte 0xc
+ 1365 074f 59050000 	 .4byte 0x559
+ 1366 0753 05       	 .uleb128 0x5
+ 1367 0754 08       	 .byte 0x8
+ 1368 0755 4E       	 .byte 0x4e
+ 1369 0756 0C       	 .byte 0xc
+ 1370 0757 79050000 	 .4byte 0x579
+ 1371 075b 05       	 .uleb128 0x5
+ 1372 075c 08       	 .byte 0x8
+ 1373 075d 50       	 .byte 0x50
+ 1374 075e 0C       	 .byte 0xc
+ 1375 075f 8F050000 	 .4byte 0x58f
+ 1376 0763 05       	 .uleb128 0x5
+ 1377 0764 08       	 .byte 0x8
+ 1378 0765 51       	 .byte 0x51
+ 1379 0766 0C       	 .byte 0xc
+ 1380 0767 B5050000 	 .4byte 0x5b5
+ 1381 076b 0A       	 .uleb128 0xa
+ 1382 076c 30030000 	 .4byte .LASF56
+ 1383 0770 09       	 .byte 0x9
+ 1384 0771 30       	 .byte 0x30
+ 1385 0772 14       	 .byte 0x14
+ 1386 0773 93020000 	 .4byte 0x293
+ 1387 0777 0A       	 .uleb128 0xa
+ 1388 0778 3D050000 	 .4byte .LASF57
+ 1389 077c 0A       	 .byte 0xa
+ 1390 077d 63       	 .byte 0x63
+ 1391 077e 17       	 .byte 0x17
+ 1392 077f 9F020000 	 .4byte 0x29f
+ 1393 0783 0A       	 .uleb128 0xa
+ 1394 0784 62020000 	 .4byte .LASF58
+ 1395 0788 0A       	 .byte 0xa
+ 1396 0789 69       	 .byte 0x69
+ 1397 078a 13       	 .byte 0x13
+ 1398 078b 6B070000 	 .4byte 0x76b
+ 1399 078f 11       	 .uleb128 0x11
+ 1400 0790 83070000 	 .4byte 0x783
+ 1401 0794 1C       	 .uleb128 0x1c
+ 1402 0795 32050000 	 .4byte .LASF65
+ 1403 0799 14       	 .byte 0x14
+ 1404 079a 0B       	 .byte 0xb
+ 1405 079b B5       	 .byte 0xb5
+ 1406 079c 08       	 .byte 0x8
+ 1407 079d E3070000 	 .4byte 0x7e3
+ 1408 07a1 13       	 .uleb128 0x13
+ 1409 07a2 5F040000 	 .4byte .LASF59
+ 1410 07a6 0B       	 .byte 0xb
+ 1411 07a7 B8       	 .byte 0xb8
+ 1412 07a8 21       	 .byte 0x21
+ 1413 07a9 83070000 	 .4byte 0x783
+ 1414 07ad 00       	 .byte 0
+ 1415 07ae 13       	 .uleb128 0x13
+ARM GAS   			page 30
+
+
+ 1416 07af 40020000 	 .4byte .LASF60
+ 1417 07b3 0B       	 .byte 0xb
+ 1418 07b4 B9       	 .byte 0xb9
+ 1419 07b5 2A       	 .byte 0x2a
+ 1420 07b6 E3070000 	 .4byte 0x7e3
+ 1421 07ba 04       	 .byte 0x4
+ 1422 07bb 13       	 .uleb128 0x13
+ 1423 07bc 7D020000 	 .4byte .LASF61
+ 1424 07c0 0B       	 .byte 0xb
+ 1425 07c1 BA       	 .byte 0xba
+ 1426 07c2 2A       	 .byte 0x2a
+ 1427 07c3 E3070000 	 .4byte 0x7e3
+ 1428 07c7 08       	 .byte 0x8
+ 1429 07c8 13       	 .uleb128 0x13
+ 1430 07c9 FD040000 	 .4byte .LASF62
+ 1431 07cd 0B       	 .byte 0xb
+ 1432 07ce BB       	 .byte 0xbb
+ 1433 07cf 09       	 .byte 0x9
+ 1434 07d0 AD020000 	 .4byte 0x2ad
+ 1435 07d4 0C       	 .byte 0xc
+ 1436 07d5 13       	 .uleb128 0x13
+ 1437 07d6 92040000 	 .4byte .LASF63
+ 1438 07da 0B       	 .byte 0xb
+ 1439 07db BC       	 .byte 0xbc
+ 1440 07dc 1D       	 .byte 0x1d
+ 1441 07dd AD020000 	 .4byte 0x2ad
+ 1442 07e1 10       	 .byte 0x10
+ 1443 07e2 00       	 .byte 0
+ 1444 07e3 0F       	 .uleb128 0xf
+ 1445 07e4 04       	 .byte 0x4
+ 1446 07e5 94070000 	 .4byte 0x794
+ 1447 07e9 0A       	 .uleb128 0xa
+ 1448 07ea 72020000 	 .4byte .LASF64
+ 1449 07ee 0B       	 .byte 0xb
+ 1450 07ef BF       	 .byte 0xbf
+ 1451 07f0 1B       	 .byte 0x1b
+ 1452 07f1 94070000 	 .4byte 0x794
+ 1453 07f5 1C       	 .uleb128 0x1c
+ 1454 07f6 8B000000 	 .4byte .LASF66
+ 1455 07fa 0C       	 .byte 0xc
+ 1456 07fb 0B       	 .byte 0xb
+ 1457 07fc C1       	 .byte 0xc1
+ 1458 07fd 08       	 .byte 0x8
+ 1459 07fe 2A080000 	 .4byte 0x82a
+ 1460 0802 13       	 .uleb128 0x13
+ 1461 0803 5F040000 	 .4byte .LASF59
+ 1462 0807 0B       	 .byte 0xb
+ 1463 0808 C4       	 .byte 0xc4
+ 1464 0809 21       	 .byte 0x21
+ 1465 080a 83070000 	 .4byte 0x783
+ 1466 080e 00       	 .byte 0
+ 1467 080f 13       	 .uleb128 0x13
+ 1468 0810 40020000 	 .4byte .LASF60
+ 1469 0814 0B       	 .byte 0xb
+ 1470 0815 C5       	 .byte 0xc5
+ 1471 0816 2A       	 .byte 0x2a
+ 1472 0817 E3070000 	 .4byte 0x7e3
+ARM GAS   			page 31
+
+
+ 1473 081b 04       	 .byte 0x4
+ 1474 081c 13       	 .uleb128 0x13
+ 1475 081d 7D020000 	 .4byte .LASF61
+ 1476 0821 0B       	 .byte 0xb
+ 1477 0822 C6       	 .byte 0xc6
+ 1478 0823 2A       	 .byte 0x2a
+ 1479 0824 E3070000 	 .4byte 0x7e3
+ 1480 0828 08       	 .byte 0x8
+ 1481 0829 00       	 .byte 0
+ 1482 082a 0A       	 .uleb128 0xa
+ 1483 082b 12000000 	 .4byte .LASF67
+ 1484 082f 0B       	 .byte 0xb
+ 1485 0830 C8       	 .byte 0xc8
+ 1486 0831 20       	 .byte 0x20
+ 1487 0832 F5070000 	 .4byte 0x7f5
+ 1488 0836 1C       	 .uleb128 0x1c
+ 1489 0837 E6020000 	 .4byte .LASF68
+ 1490 083b 14       	 .byte 0x14
+ 1491 083c 0B       	 .byte 0xb
+ 1492 083d CD       	 .byte 0xcd
+ 1493 083e 10       	 .byte 0x10
+ 1494 083f 6B080000 	 .4byte 0x86b
+ 1495 0843 13       	 .uleb128 0x13
+ 1496 0844 AF010000 	 .4byte .LASF69
+ 1497 0848 0B       	 .byte 0xb
+ 1498 0849 D0       	 .byte 0xd0
+ 1499 084a 22       	 .byte 0x22
+ 1500 084b 77070000 	 .4byte 0x777
+ 1501 084f 00       	 .byte 0
+ 1502 0850 13       	 .uleb128 0x13
+ 1503 0851 8E020000 	 .4byte .LASF70
+ 1504 0855 0B       	 .byte 0xb
+ 1505 0856 D1       	 .byte 0xd1
+ 1506 0857 23       	 .byte 0x23
+ 1507 0858 6B080000 	 .4byte 0x86b
+ 1508 085c 04       	 .byte 0x4
+ 1509 085d 13       	 .uleb128 0x13
+ 1510 085e 74000000 	 .4byte .LASF71
+ 1511 0862 0B       	 .byte 0xb
+ 1512 0863 D2       	 .byte 0xd2
+ 1513 0864 11       	 .byte 0x11
+ 1514 0865 2A080000 	 .4byte 0x82a
+ 1515 0869 08       	 .byte 0x8
+ 1516 086a 00       	 .byte 0
+ 1517 086b 0F       	 .uleb128 0xf
+ 1518 086c 04       	 .byte 0x4
+ 1519 086d E9070000 	 .4byte 0x7e9
+ 1520 0871 11       	 .uleb128 0x11
+ 1521 0872 6B080000 	 .4byte 0x86b
+ 1522 0876 0A       	 .uleb128 0xa
+ 1523 0877 0C020000 	 .4byte .LASF72
+ 1524 087b 0B       	 .byte 0xb
+ 1525 087c D4       	 .byte 0xd4
+ 1526 087d 03       	 .byte 0x3
+ 1527 087e 36080000 	 .4byte 0x836
+ 1528 0882 1D       	 .uleb128 0x1d
+ 1529 0883 73040000 	 .4byte .LASF89
+ARM GAS   			page 32
+
+
+ 1530 0887 01       	 .byte 0x1
+ 1531 0888 D4       	 .byte 0xd4
+ 1532 0889 0D       	 .byte 0xd
+ 1533 088a 77070000 	 .4byte 0x777
+ 1534 088e 00000000 	 .4byte .LFB15
+ 1535 0892 54000000 	 .4byte .LFE15-.LFB15
+ 1536 0896 01       	 .uleb128 0x1
+ 1537 0897 9C       	 .byte 0x9c
+ 1538 0898 BB080000 	 .4byte 0x8bb
+ 1539 089c 1E       	 .uleb128 0x1e
+ 1540 089d 53020000 	 .4byte .LASF73
+ 1541 08a1 01       	 .byte 0x1
+ 1542 08a2 D4       	 .byte 0xd4
+ 1543 08a3 2E       	 .byte 0x2e
+ 1544 08a4 71080000 	 .4byte 0x871
+ 1545 08a8 02       	 .uleb128 0x2
+ 1546 08a9 91       	 .byte 0x91
+ 1547 08aa 6C       	 .sleb128 -20
+ 1548 08ab 1F       	 .uleb128 0x1f
+ 1549 08ac 58040000 	 .4byte .LASF74
+ 1550 08b0 01       	 .byte 0x1
+ 1551 08b1 D8       	 .byte 0xd8
+ 1552 08b2 10       	 .byte 0x10
+ 1553 08b3 C1080000 	 .4byte 0x8c1
+ 1554 08b7 02       	 .uleb128 0x2
+ 1555 08b8 91       	 .byte 0x91
+ 1556 08b9 74       	 .sleb128 -12
+ 1557 08ba 00       	 .byte 0
+ 1558 08bb 0F       	 .uleb128 0xf
+ 1559 08bc 04       	 .byte 0x4
+ 1560 08bd 76080000 	 .4byte 0x876
+ 1561 08c1 11       	 .uleb128 0x11
+ 1562 08c2 BB080000 	 .4byte 0x8bb
+ 1563 08c6 20       	 .uleb128 0x20
+ 1564 08c7 39030000 	 .4byte .LASF78
+ 1565 08cb 01       	 .byte 0x1
+ 1566 08cc 91       	 .byte 0x91
+ 1567 08cd 06       	 .byte 0x6
+ 1568 08ce 00000000 	 .4byte .LFB14
+ 1569 08d2 72000000 	 .4byte .LFE14-.LFB14
+ 1570 08d6 01       	 .uleb128 0x1
+ 1571 08d7 9C       	 .byte 0x9c
+ 1572 08d8 19090000 	 .4byte 0x919
+ 1573 08dc 1E       	 .uleb128 0x1e
+ 1574 08dd 58040000 	 .4byte .LASF74
+ 1575 08e1 01       	 .byte 0x1
+ 1576 08e2 91       	 .byte 0x91
+ 1577 08e3 22       	 .byte 0x22
+ 1578 08e4 C1080000 	 .4byte 0x8c1
+ 1579 08e8 02       	 .uleb128 0x2
+ 1580 08e9 91       	 .byte 0x91
+ 1581 08ea 6C       	 .sleb128 -20
+ 1582 08eb 1E       	 .uleb128 0x1e
+ 1583 08ec 7D000000 	 .4byte .LASF75
+ 1584 08f0 01       	 .byte 0x1
+ 1585 08f1 91       	 .byte 0x91
+ 1586 08f2 3D       	 .byte 0x3d
+ARM GAS   			page 33
+
+
+ 1587 08f3 71080000 	 .4byte 0x871
+ 1588 08f7 02       	 .uleb128 0x2
+ 1589 08f8 91       	 .byte 0x91
+ 1590 08f9 68       	 .sleb128 -24
+ 1591 08fa 1F       	 .uleb128 0x1f
+ 1592 08fb 52000000 	 .4byte .LASF76
+ 1593 08ff 01       	 .byte 0x1
+ 1594 0900 93       	 .byte 0x93
+ 1595 0901 0D       	 .byte 0xd
+ 1596 0902 6B080000 	 .4byte 0x86b
+ 1597 0906 02       	 .uleb128 0x2
+ 1598 0907 91       	 .byte 0x91
+ 1599 0908 74       	 .sleb128 -12
+ 1600 0909 1F       	 .uleb128 0x1f
+ 1601 090a 80040000 	 .4byte .LASF77
+ 1602 090e 01       	 .byte 0x1
+ 1603 090f 94       	 .byte 0x94
+ 1604 0910 12       	 .byte 0x12
+ 1605 0911 8F070000 	 .4byte 0x78f
+ 1606 0915 02       	 .uleb128 0x2
+ 1607 0916 91       	 .byte 0x91
+ 1608 0917 70       	 .sleb128 -16
+ 1609 0918 00       	 .byte 0
+ 1610 0919 20       	 .uleb128 0x20
+ 1611 091a 81010000 	 .4byte .LASF79
+ 1612 091e 01       	 .byte 0x1
+ 1613 091f 74       	 .byte 0x74
+ 1614 0920 06       	 .byte 0x6
+ 1615 0921 00000000 	 .4byte .LFB13
+ 1616 0925 48000000 	 .4byte .LFE13-.LFB13
+ 1617 0929 01       	 .uleb128 0x1
+ 1618 092a 9C       	 .byte 0x9c
+ 1619 092b 5D090000 	 .4byte 0x95d
+ 1620 092f 1E       	 .uleb128 0x1e
+ 1621 0930 58040000 	 .4byte .LASF74
+ 1622 0934 01       	 .byte 0x1
+ 1623 0935 74       	 .byte 0x74
+ 1624 0936 25       	 .byte 0x25
+ 1625 0937 C1080000 	 .4byte 0x8c1
+ 1626 093b 02       	 .uleb128 0x2
+ 1627 093c 91       	 .byte 0x91
+ 1628 093d 6C       	 .sleb128 -20
+ 1629 093e 1E       	 .uleb128 0x1e
+ 1630 093f 7D000000 	 .4byte .LASF75
+ 1631 0943 01       	 .byte 0x1
+ 1632 0944 74       	 .byte 0x74
+ 1633 0945 40       	 .byte 0x40
+ 1634 0946 71080000 	 .4byte 0x871
+ 1635 094a 02       	 .uleb128 0x2
+ 1636 094b 91       	 .byte 0x91
+ 1637 094c 68       	 .sleb128 -24
+ 1638 094d 1F       	 .uleb128 0x1f
+ 1639 094e 8E020000 	 .4byte .LASF70
+ 1640 0952 01       	 .byte 0x1
+ 1641 0953 76       	 .byte 0x76
+ 1642 0954 14       	 .byte 0x14
+ 1643 0955 71080000 	 .4byte 0x871
+ARM GAS   			page 34
+
+
+ 1644 0959 02       	 .uleb128 0x2
+ 1645 095a 91       	 .byte 0x91
+ 1646 095b 74       	 .sleb128 -12
+ 1647 095c 00       	 .byte 0
+ 1648 095d 20       	 .uleb128 0x20
+ 1649 095e 2C020000 	 .4byte .LASF80
+ 1650 0962 01       	 .byte 0x1
+ 1651 0963 68       	 .byte 0x68
+ 1652 0964 06       	 .byte 0x6
+ 1653 0965 00000000 	 .4byte .LFB12
+ 1654 0969 1A000000 	 .4byte .LFE12-.LFB12
+ 1655 096d 01       	 .uleb128 0x1
+ 1656 096e 9C       	 .byte 0x9c
+ 1657 096f 83090000 	 .4byte 0x983
+ 1658 0973 1E       	 .uleb128 0x1e
+ 1659 0974 7A010000 	 .4byte .LASF81
+ 1660 0978 01       	 .byte 0x1
+ 1661 0979 68       	 .byte 0x68
+ 1662 097a 2E       	 .byte 0x2e
+ 1663 097b 71080000 	 .4byte 0x871
+ 1664 097f 02       	 .uleb128 0x2
+ 1665 0980 91       	 .byte 0x91
+ 1666 0981 74       	 .sleb128 -12
+ 1667 0982 00       	 .byte 0
+ 1668 0983 21       	 .uleb128 0x21
+ 1669 0984 14050000 	 .4byte .LASF82
+ 1670 0988 01       	 .byte 0x1
+ 1671 0989 4F       	 .byte 0x4f
+ 1672 098a 06       	 .byte 0x6
+ 1673 098b 00000000 	 .4byte .LFB11
+ 1674 098f 40000000 	 .4byte .LFE11-.LFB11
+ 1675 0993 01       	 .uleb128 0x1
+ 1676 0994 9C       	 .byte 0x9c
+ 1677 0995 1E       	 .uleb128 0x1e
+ 1678 0996 58040000 	 .4byte .LASF74
+ 1679 099a 01       	 .byte 0x1
+ 1680 099b 4F       	 .byte 0x4f
+ 1681 099c 26       	 .byte 0x26
+ 1682 099d C1080000 	 .4byte 0x8c1
+ 1683 09a1 02       	 .uleb128 0x2
+ 1684 09a2 91       	 .byte 0x91
+ 1685 09a3 74       	 .sleb128 -12
+ 1686 09a4 00       	 .byte 0
+ 1687 09a5 00       	 .byte 0
+ 1688              	 .section .debug_abbrev,"",%progbits
+ 1689              	.Ldebug_abbrev0:
+ 1690 0000 01       	 .uleb128 0x1
+ 1691 0001 11       	 .uleb128 0x11
+ 1692 0002 01       	 .byte 0x1
+ 1693 0003 25       	 .uleb128 0x25
+ 1694 0004 0E       	 .uleb128 0xe
+ 1695 0005 13       	 .uleb128 0x13
+ 1696 0006 0B       	 .uleb128 0xb
+ 1697 0007 03       	 .uleb128 0x3
+ 1698 0008 0E       	 .uleb128 0xe
+ 1699 0009 1B       	 .uleb128 0x1b
+ 1700 000a 0E       	 .uleb128 0xe
+ARM GAS   			page 35
+
+
+ 1701 000b 55       	 .uleb128 0x55
+ 1702 000c 17       	 .uleb128 0x17
+ 1703 000d 11       	 .uleb128 0x11
+ 1704 000e 01       	 .uleb128 0x1
+ 1705 000f 10       	 .uleb128 0x10
+ 1706 0010 17       	 .uleb128 0x17
+ 1707 0011 00       	 .byte 0
+ 1708 0012 00       	 .byte 0
+ 1709 0013 02       	 .uleb128 0x2
+ 1710 0014 39       	 .uleb128 0x39
+ 1711 0015 01       	 .byte 0x1
+ 1712 0016 03       	 .uleb128 0x3
+ 1713 0017 08       	 .uleb128 0x8
+ 1714 0018 3A       	 .uleb128 0x3a
+ 1715 0019 0B       	 .uleb128 0xb
+ 1716 001a 3B       	 .uleb128 0x3b
+ 1717 001b 0B       	 .uleb128 0xb
+ 1718 001c 01       	 .uleb128 0x1
+ 1719 001d 13       	 .uleb128 0x13
+ 1720 001e 00       	 .byte 0
+ 1721 001f 00       	 .byte 0
+ 1722 0020 03       	 .uleb128 0x3
+ 1723 0021 39       	 .uleb128 0x39
+ 1724 0022 00       	 .byte 0
+ 1725 0023 03       	 .uleb128 0x3
+ 1726 0024 0E       	 .uleb128 0xe
+ 1727 0025 3A       	 .uleb128 0x3a
+ 1728 0026 0B       	 .uleb128 0xb
+ 1729 0027 3B       	 .uleb128 0x3b
+ 1730 0028 05       	 .uleb128 0x5
+ 1731 0029 39       	 .uleb128 0x39
+ 1732 002a 0B       	 .uleb128 0xb
+ 1733 002b 8901     	 .uleb128 0x89
+ 1734 002d 19       	 .uleb128 0x19
+ 1735 002e 00       	 .byte 0
+ 1736 002f 00       	 .byte 0
+ 1737 0030 04       	 .uleb128 0x4
+ 1738 0031 3A       	 .uleb128 0x3a
+ 1739 0032 00       	 .byte 0
+ 1740 0033 3A       	 .uleb128 0x3a
+ 1741 0034 0B       	 .uleb128 0xb
+ 1742 0035 3B       	 .uleb128 0x3b
+ 1743 0036 05       	 .uleb128 0x5
+ 1744 0037 39       	 .uleb128 0x39
+ 1745 0038 0B       	 .uleb128 0xb
+ 1746 0039 18       	 .uleb128 0x18
+ 1747 003a 13       	 .uleb128 0x13
+ 1748 003b 00       	 .byte 0
+ 1749 003c 00       	 .byte 0
+ 1750 003d 05       	 .uleb128 0x5
+ 1751 003e 08       	 .uleb128 0x8
+ 1752 003f 00       	 .byte 0
+ 1753 0040 3A       	 .uleb128 0x3a
+ 1754 0041 0B       	 .uleb128 0xb
+ 1755 0042 3B       	 .uleb128 0x3b
+ 1756 0043 0B       	 .uleb128 0xb
+ 1757 0044 39       	 .uleb128 0x39
+ARM GAS   			page 36
+
+
+ 1758 0045 0B       	 .uleb128 0xb
+ 1759 0046 18       	 .uleb128 0x18
+ 1760 0047 13       	 .uleb128 0x13
+ 1761 0048 00       	 .byte 0
+ 1762 0049 00       	 .byte 0
+ 1763 004a 06       	 .uleb128 0x6
+ 1764 004b 2E       	 .uleb128 0x2e
+ 1765 004c 01       	 .byte 0x1
+ 1766 004d 3F       	 .uleb128 0x3f
+ 1767 004e 19       	 .uleb128 0x19
+ 1768 004f 03       	 .uleb128 0x3
+ 1769 0050 08       	 .uleb128 0x8
+ 1770 0051 3A       	 .uleb128 0x3a
+ 1771 0052 0B       	 .uleb128 0xb
+ 1772 0053 3B       	 .uleb128 0x3b
+ 1773 0054 0B       	 .uleb128 0xb
+ 1774 0055 39       	 .uleb128 0x39
+ 1775 0056 0B       	 .uleb128 0xb
+ 1776 0057 6E       	 .uleb128 0x6e
+ 1777 0058 0E       	 .uleb128 0xe
+ 1778 0059 49       	 .uleb128 0x49
+ 1779 005a 13       	 .uleb128 0x13
+ 1780 005b 3C       	 .uleb128 0x3c
+ 1781 005c 19       	 .uleb128 0x19
+ 1782 005d 01       	 .uleb128 0x1
+ 1783 005e 13       	 .uleb128 0x13
+ 1784 005f 00       	 .byte 0
+ 1785 0060 00       	 .byte 0
+ 1786 0061 07       	 .uleb128 0x7
+ 1787 0062 05       	 .uleb128 0x5
+ 1788 0063 00       	 .byte 0
+ 1789 0064 49       	 .uleb128 0x49
+ 1790 0065 13       	 .uleb128 0x13
+ 1791 0066 00       	 .byte 0
+ 1792 0067 00       	 .byte 0
+ 1793 0068 08       	 .uleb128 0x8
+ 1794 0069 2E       	 .uleb128 0x2e
+ 1795 006a 01       	 .byte 0x1
+ 1796 006b 3F       	 .uleb128 0x3f
+ 1797 006c 19       	 .uleb128 0x19
+ 1798 006d 03       	 .uleb128 0x3
+ 1799 006e 08       	 .uleb128 0x8
+ 1800 006f 3A       	 .uleb128 0x3a
+ 1801 0070 0B       	 .uleb128 0xb
+ 1802 0071 3B       	 .uleb128 0x3b
+ 1803 0072 0B       	 .uleb128 0xb
+ 1804 0073 39       	 .uleb128 0x39
+ 1805 0074 0B       	 .uleb128 0xb
+ 1806 0075 6E       	 .uleb128 0x6e
+ 1807 0076 0E       	 .uleb128 0xe
+ 1808 0077 49       	 .uleb128 0x49
+ 1809 0078 13       	 .uleb128 0x13
+ 1810 0079 3C       	 .uleb128 0x3c
+ 1811 007a 19       	 .uleb128 0x19
+ 1812 007b 00       	 .byte 0
+ 1813 007c 00       	 .byte 0
+ 1814 007d 09       	 .uleb128 0x9
+ARM GAS   			page 37
+
+
+ 1815 007e 39       	 .uleb128 0x39
+ 1816 007f 01       	 .byte 0x1
+ 1817 0080 03       	 .uleb128 0x3
+ 1818 0081 0E       	 .uleb128 0xe
+ 1819 0082 3A       	 .uleb128 0x3a
+ 1820 0083 0B       	 .uleb128 0xb
+ 1821 0084 3B       	 .uleb128 0x3b
+ 1822 0085 05       	 .uleb128 0x5
+ 1823 0086 39       	 .uleb128 0x39
+ 1824 0087 0B       	 .uleb128 0xb
+ 1825 0088 01       	 .uleb128 0x1
+ 1826 0089 13       	 .uleb128 0x13
+ 1827 008a 00       	 .byte 0
+ 1828 008b 00       	 .byte 0
+ 1829 008c 0A       	 .uleb128 0xa
+ 1830 008d 16       	 .uleb128 0x16
+ 1831 008e 00       	 .byte 0
+ 1832 008f 03       	 .uleb128 0x3
+ 1833 0090 0E       	 .uleb128 0xe
+ 1834 0091 3A       	 .uleb128 0x3a
+ 1835 0092 0B       	 .uleb128 0xb
+ 1836 0093 3B       	 .uleb128 0x3b
+ 1837 0094 0B       	 .uleb128 0xb
+ 1838 0095 39       	 .uleb128 0x39
+ 1839 0096 0B       	 .uleb128 0xb
+ 1840 0097 49       	 .uleb128 0x49
+ 1841 0098 13       	 .uleb128 0x13
+ 1842 0099 00       	 .byte 0
+ 1843 009a 00       	 .byte 0
+ 1844 009b 0B       	 .uleb128 0xb
+ 1845 009c 24       	 .uleb128 0x24
+ 1846 009d 00       	 .byte 0
+ 1847 009e 0B       	 .uleb128 0xb
+ 1848 009f 0B       	 .uleb128 0xb
+ 1849 00a0 3E       	 .uleb128 0x3e
+ 1850 00a1 0B       	 .uleb128 0xb
+ 1851 00a2 03       	 .uleb128 0x3
+ 1852 00a3 0E       	 .uleb128 0xe
+ 1853 00a4 00       	 .byte 0
+ 1854 00a5 00       	 .byte 0
+ 1855 00a6 0C       	 .uleb128 0xc
+ 1856 00a7 24       	 .uleb128 0x24
+ 1857 00a8 00       	 .byte 0
+ 1858 00a9 0B       	 .uleb128 0xb
+ 1859 00aa 0B       	 .uleb128 0xb
+ 1860 00ab 3E       	 .uleb128 0x3e
+ 1861 00ac 0B       	 .uleb128 0xb
+ 1862 00ad 03       	 .uleb128 0x3
+ 1863 00ae 08       	 .uleb128 0x8
+ 1864 00af 00       	 .byte 0
+ 1865 00b0 00       	 .byte 0
+ 1866 00b1 0D       	 .uleb128 0xd
+ 1867 00b2 3B       	 .uleb128 0x3b
+ 1868 00b3 00       	 .byte 0
+ 1869 00b4 03       	 .uleb128 0x3
+ 1870 00b5 0E       	 .uleb128 0xe
+ 1871 00b6 00       	 .byte 0
+ARM GAS   			page 38
+
+
+ 1872 00b7 00       	 .byte 0
+ 1873 00b8 0E       	 .uleb128 0xe
+ 1874 00b9 0F       	 .uleb128 0xf
+ 1875 00ba 00       	 .byte 0
+ 1876 00bb 0B       	 .uleb128 0xb
+ 1877 00bc 0B       	 .uleb128 0xb
+ 1878 00bd 00       	 .byte 0
+ 1879 00be 00       	 .byte 0
+ 1880 00bf 0F       	 .uleb128 0xf
+ 1881 00c0 0F       	 .uleb128 0xf
+ 1882 00c1 00       	 .byte 0
+ 1883 00c2 0B       	 .uleb128 0xb
+ 1884 00c3 0B       	 .uleb128 0xb
+ 1885 00c4 49       	 .uleb128 0x49
+ 1886 00c5 13       	 .uleb128 0x13
+ 1887 00c6 00       	 .byte 0
+ 1888 00c7 00       	 .byte 0
+ 1889 00c8 10       	 .uleb128 0x10
+ 1890 00c9 15       	 .uleb128 0x15
+ 1891 00ca 00       	 .byte 0
+ 1892 00cb 00       	 .byte 0
+ 1893 00cc 00       	 .byte 0
+ 1894 00cd 11       	 .uleb128 0x11
+ 1895 00ce 26       	 .uleb128 0x26
+ 1896 00cf 00       	 .byte 0
+ 1897 00d0 49       	 .uleb128 0x49
+ 1898 00d1 13       	 .uleb128 0x13
+ 1899 00d2 00       	 .byte 0
+ 1900 00d3 00       	 .byte 0
+ 1901 00d4 12       	 .uleb128 0x12
+ 1902 00d5 13       	 .uleb128 0x13
+ 1903 00d6 01       	 .byte 0x1
+ 1904 00d7 0B       	 .uleb128 0xb
+ 1905 00d8 0B       	 .uleb128 0xb
+ 1906 00d9 3A       	 .uleb128 0x3a
+ 1907 00da 0B       	 .uleb128 0xb
+ 1908 00db 3B       	 .uleb128 0x3b
+ 1909 00dc 0B       	 .uleb128 0xb
+ 1910 00dd 39       	 .uleb128 0x39
+ 1911 00de 0B       	 .uleb128 0xb
+ 1912 00df 6E       	 .uleb128 0x6e
+ 1913 00e0 0E       	 .uleb128 0xe
+ 1914 00e1 01       	 .uleb128 0x1
+ 1915 00e2 13       	 .uleb128 0x13
+ 1916 00e3 00       	 .byte 0
+ 1917 00e4 00       	 .byte 0
+ 1918 00e5 13       	 .uleb128 0x13
+ 1919 00e6 0D       	 .uleb128 0xd
+ 1920 00e7 00       	 .byte 0
+ 1921 00e8 03       	 .uleb128 0x3
+ 1922 00e9 0E       	 .uleb128 0xe
+ 1923 00ea 3A       	 .uleb128 0x3a
+ 1924 00eb 0B       	 .uleb128 0xb
+ 1925 00ec 3B       	 .uleb128 0x3b
+ 1926 00ed 0B       	 .uleb128 0xb
+ 1927 00ee 39       	 .uleb128 0x39
+ 1928 00ef 0B       	 .uleb128 0xb
+ARM GAS   			page 39
+
+
+ 1929 00f0 49       	 .uleb128 0x49
+ 1930 00f1 13       	 .uleb128 0x13
+ 1931 00f2 38       	 .uleb128 0x38
+ 1932 00f3 0B       	 .uleb128 0xb
+ 1933 00f4 00       	 .byte 0
+ 1934 00f5 00       	 .byte 0
+ 1935 00f6 14       	 .uleb128 0x14
+ 1936 00f7 0D       	 .uleb128 0xd
+ 1937 00f8 00       	 .byte 0
+ 1938 00f9 03       	 .uleb128 0x3
+ 1939 00fa 08       	 .uleb128 0x8
+ 1940 00fb 3A       	 .uleb128 0x3a
+ 1941 00fc 0B       	 .uleb128 0xb
+ 1942 00fd 3B       	 .uleb128 0x3b
+ 1943 00fe 0B       	 .uleb128 0xb
+ 1944 00ff 39       	 .uleb128 0x39
+ 1945 0100 0B       	 .uleb128 0xb
+ 1946 0101 49       	 .uleb128 0x49
+ 1947 0102 13       	 .uleb128 0x13
+ 1948 0103 38       	 .uleb128 0x38
+ 1949 0104 0B       	 .uleb128 0xb
+ 1950 0105 00       	 .byte 0
+ 1951 0106 00       	 .byte 0
+ 1952 0107 15       	 .uleb128 0x15
+ 1953 0108 15       	 .uleb128 0x15
+ 1954 0109 01       	 .byte 0x1
+ 1955 010a 49       	 .uleb128 0x49
+ 1956 010b 13       	 .uleb128 0x13
+ 1957 010c 01       	 .uleb128 0x1
+ 1958 010d 13       	 .uleb128 0x13
+ 1959 010e 00       	 .byte 0
+ 1960 010f 00       	 .byte 0
+ 1961 0110 16       	 .uleb128 0x16
+ 1962 0111 26       	 .uleb128 0x26
+ 1963 0112 00       	 .byte 0
+ 1964 0113 00       	 .byte 0
+ 1965 0114 00       	 .byte 0
+ 1966 0115 17       	 .uleb128 0x17
+ 1967 0116 2E       	 .uleb128 0x2e
+ 1968 0117 01       	 .byte 0x1
+ 1969 0118 3F       	 .uleb128 0x3f
+ 1970 0119 19       	 .uleb128 0x19
+ 1971 011a 03       	 .uleb128 0x3
+ 1972 011b 0E       	 .uleb128 0xe
+ 1973 011c 3A       	 .uleb128 0x3a
+ 1974 011d 0B       	 .uleb128 0xb
+ 1975 011e 3B       	 .uleb128 0x3b
+ 1976 011f 0B       	 .uleb128 0xb
+ 1977 0120 39       	 .uleb128 0x39
+ 1978 0121 0B       	 .uleb128 0xb
+ 1979 0122 49       	 .uleb128 0x49
+ 1980 0123 13       	 .uleb128 0x13
+ 1981 0124 3C       	 .uleb128 0x3c
+ 1982 0125 19       	 .uleb128 0x19
+ 1983 0126 01       	 .uleb128 0x1
+ 1984 0127 13       	 .uleb128 0x13
+ 1985 0128 00       	 .byte 0
+ARM GAS   			page 40
+
+
+ 1986 0129 00       	 .byte 0
+ 1987 012a 18       	 .uleb128 0x18
+ 1988 012b 2E       	 .uleb128 0x2e
+ 1989 012c 01       	 .byte 0x1
+ 1990 012d 3F       	 .uleb128 0x3f
+ 1991 012e 19       	 .uleb128 0x19
+ 1992 012f 03       	 .uleb128 0x3
+ 1993 0130 08       	 .uleb128 0x8
+ 1994 0131 3A       	 .uleb128 0x3a
+ 1995 0132 0B       	 .uleb128 0xb
+ 1996 0133 3B       	 .uleb128 0x3b
+ 1997 0134 0B       	 .uleb128 0xb
+ 1998 0135 39       	 .uleb128 0x39
+ 1999 0136 0B       	 .uleb128 0xb
+ 2000 0137 49       	 .uleb128 0x49
+ 2001 0138 13       	 .uleb128 0x13
+ 2002 0139 3C       	 .uleb128 0x3c
+ 2003 013a 19       	 .uleb128 0x19
+ 2004 013b 01       	 .uleb128 0x1
+ 2005 013c 13       	 .uleb128 0x13
+ 2006 013d 00       	 .byte 0
+ 2007 013e 00       	 .byte 0
+ 2008 013f 19       	 .uleb128 0x19
+ 2009 0140 2E       	 .uleb128 0x2e
+ 2010 0141 01       	 .byte 0x1
+ 2011 0142 3F       	 .uleb128 0x3f
+ 2012 0143 19       	 .uleb128 0x19
+ 2013 0144 03       	 .uleb128 0x3
+ 2014 0145 0E       	 .uleb128 0xe
+ 2015 0146 3A       	 .uleb128 0x3a
+ 2016 0147 0B       	 .uleb128 0xb
+ 2017 0148 3B       	 .uleb128 0x3b
+ 2018 0149 0B       	 .uleb128 0xb
+ 2019 014a 39       	 .uleb128 0x39
+ 2020 014b 0B       	 .uleb128 0xb
+ 2021 014c 3C       	 .uleb128 0x3c
+ 2022 014d 19       	 .uleb128 0x19
+ 2023 014e 01       	 .uleb128 0x1
+ 2024 014f 13       	 .uleb128 0x13
+ 2025 0150 00       	 .byte 0
+ 2026 0151 00       	 .byte 0
+ 2027 0152 1A       	 .uleb128 0x1a
+ 2028 0153 2E       	 .uleb128 0x2e
+ 2029 0154 00       	 .byte 0
+ 2030 0155 3F       	 .uleb128 0x3f
+ 2031 0156 19       	 .uleb128 0x19
+ 2032 0157 03       	 .uleb128 0x3
+ 2033 0158 0E       	 .uleb128 0xe
+ 2034 0159 3A       	 .uleb128 0x3a
+ 2035 015a 0B       	 .uleb128 0xb
+ 2036 015b 3B       	 .uleb128 0x3b
+ 2037 015c 0B       	 .uleb128 0xb
+ 2038 015d 39       	 .uleb128 0x39
+ 2039 015e 0B       	 .uleb128 0xb
+ 2040 015f 49       	 .uleb128 0x49
+ 2041 0160 13       	 .uleb128 0x13
+ 2042 0161 3C       	 .uleb128 0x3c
+ARM GAS   			page 41
+
+
+ 2043 0162 19       	 .uleb128 0x19
+ 2044 0163 00       	 .byte 0
+ 2045 0164 00       	 .byte 0
+ 2046 0165 1B       	 .uleb128 0x1b
+ 2047 0166 2E       	 .uleb128 0x2e
+ 2048 0167 01       	 .byte 0x1
+ 2049 0168 3F       	 .uleb128 0x3f
+ 2050 0169 19       	 .uleb128 0x19
+ 2051 016a 03       	 .uleb128 0x3
+ 2052 016b 0E       	 .uleb128 0xe
+ 2053 016c 3A       	 .uleb128 0x3a
+ 2054 016d 0B       	 .uleb128 0xb
+ 2055 016e 3B       	 .uleb128 0x3b
+ 2056 016f 05       	 .uleb128 0x5
+ 2057 0170 39       	 .uleb128 0x39
+ 2058 0171 0B       	 .uleb128 0xb
+ 2059 0172 49       	 .uleb128 0x49
+ 2060 0173 13       	 .uleb128 0x13
+ 2061 0174 3C       	 .uleb128 0x3c
+ 2062 0175 19       	 .uleb128 0x19
+ 2063 0176 01       	 .uleb128 0x1
+ 2064 0177 13       	 .uleb128 0x13
+ 2065 0178 00       	 .byte 0
+ 2066 0179 00       	 .byte 0
+ 2067 017a 1C       	 .uleb128 0x1c
+ 2068 017b 13       	 .uleb128 0x13
+ 2069 017c 01       	 .byte 0x1
+ 2070 017d 03       	 .uleb128 0x3
+ 2071 017e 0E       	 .uleb128 0xe
+ 2072 017f 0B       	 .uleb128 0xb
+ 2073 0180 0B       	 .uleb128 0xb
+ 2074 0181 3A       	 .uleb128 0x3a
+ 2075 0182 0B       	 .uleb128 0xb
+ 2076 0183 3B       	 .uleb128 0x3b
+ 2077 0184 0B       	 .uleb128 0xb
+ 2078 0185 39       	 .uleb128 0x39
+ 2079 0186 0B       	 .uleb128 0xb
+ 2080 0187 01       	 .uleb128 0x1
+ 2081 0188 13       	 .uleb128 0x13
+ 2082 0189 00       	 .byte 0
+ 2083 018a 00       	 .byte 0
+ 2084 018b 1D       	 .uleb128 0x1d
+ 2085 018c 2E       	 .uleb128 0x2e
+ 2086 018d 01       	 .byte 0x1
+ 2087 018e 3F       	 .uleb128 0x3f
+ 2088 018f 19       	 .uleb128 0x19
+ 2089 0190 03       	 .uleb128 0x3
+ 2090 0191 0E       	 .uleb128 0xe
+ 2091 0192 3A       	 .uleb128 0x3a
+ 2092 0193 0B       	 .uleb128 0xb
+ 2093 0194 3B       	 .uleb128 0x3b
+ 2094 0195 0B       	 .uleb128 0xb
+ 2095 0196 39       	 .uleb128 0x39
+ 2096 0197 0B       	 .uleb128 0xb
+ 2097 0198 49       	 .uleb128 0x49
+ 2098 0199 13       	 .uleb128 0x13
+ 2099 019a 11       	 .uleb128 0x11
+ARM GAS   			page 42
+
+
+ 2100 019b 01       	 .uleb128 0x1
+ 2101 019c 12       	 .uleb128 0x12
+ 2102 019d 06       	 .uleb128 0x6
+ 2103 019e 40       	 .uleb128 0x40
+ 2104 019f 18       	 .uleb128 0x18
+ 2105 01a0 9742     	 .uleb128 0x2117
+ 2106 01a2 19       	 .uleb128 0x19
+ 2107 01a3 01       	 .uleb128 0x1
+ 2108 01a4 13       	 .uleb128 0x13
+ 2109 01a5 00       	 .byte 0
+ 2110 01a6 00       	 .byte 0
+ 2111 01a7 1E       	 .uleb128 0x1e
+ 2112 01a8 05       	 .uleb128 0x5
+ 2113 01a9 00       	 .byte 0
+ 2114 01aa 03       	 .uleb128 0x3
+ 2115 01ab 0E       	 .uleb128 0xe
+ 2116 01ac 3A       	 .uleb128 0x3a
+ 2117 01ad 0B       	 .uleb128 0xb
+ 2118 01ae 3B       	 .uleb128 0x3b
+ 2119 01af 0B       	 .uleb128 0xb
+ 2120 01b0 39       	 .uleb128 0x39
+ 2121 01b1 0B       	 .uleb128 0xb
+ 2122 01b2 49       	 .uleb128 0x49
+ 2123 01b3 13       	 .uleb128 0x13
+ 2124 01b4 02       	 .uleb128 0x2
+ 2125 01b5 18       	 .uleb128 0x18
+ 2126 01b6 00       	 .byte 0
+ 2127 01b7 00       	 .byte 0
+ 2128 01b8 1F       	 .uleb128 0x1f
+ 2129 01b9 34       	 .uleb128 0x34
+ 2130 01ba 00       	 .byte 0
+ 2131 01bb 03       	 .uleb128 0x3
+ 2132 01bc 0E       	 .uleb128 0xe
+ 2133 01bd 3A       	 .uleb128 0x3a
+ 2134 01be 0B       	 .uleb128 0xb
+ 2135 01bf 3B       	 .uleb128 0x3b
+ 2136 01c0 0B       	 .uleb128 0xb
+ 2137 01c1 39       	 .uleb128 0x39
+ 2138 01c2 0B       	 .uleb128 0xb
+ 2139 01c3 49       	 .uleb128 0x49
+ 2140 01c4 13       	 .uleb128 0x13
+ 2141 01c5 02       	 .uleb128 0x2
+ 2142 01c6 18       	 .uleb128 0x18
+ 2143 01c7 00       	 .byte 0
+ 2144 01c8 00       	 .byte 0
+ 2145 01c9 20       	 .uleb128 0x20
+ 2146 01ca 2E       	 .uleb128 0x2e
+ 2147 01cb 01       	 .byte 0x1
+ 2148 01cc 3F       	 .uleb128 0x3f
+ 2149 01cd 19       	 .uleb128 0x19
+ 2150 01ce 03       	 .uleb128 0x3
+ 2151 01cf 0E       	 .uleb128 0xe
+ 2152 01d0 3A       	 .uleb128 0x3a
+ 2153 01d1 0B       	 .uleb128 0xb
+ 2154 01d2 3B       	 .uleb128 0x3b
+ 2155 01d3 0B       	 .uleb128 0xb
+ 2156 01d4 39       	 .uleb128 0x39
+ARM GAS   			page 43
+
+
+ 2157 01d5 0B       	 .uleb128 0xb
+ 2158 01d6 11       	 .uleb128 0x11
+ 2159 01d7 01       	 .uleb128 0x1
+ 2160 01d8 12       	 .uleb128 0x12
+ 2161 01d9 06       	 .uleb128 0x6
+ 2162 01da 40       	 .uleb128 0x40
+ 2163 01db 18       	 .uleb128 0x18
+ 2164 01dc 9742     	 .uleb128 0x2117
+ 2165 01de 19       	 .uleb128 0x19
+ 2166 01df 01       	 .uleb128 0x1
+ 2167 01e0 13       	 .uleb128 0x13
+ 2168 01e1 00       	 .byte 0
+ 2169 01e2 00       	 .byte 0
+ 2170 01e3 21       	 .uleb128 0x21
+ 2171 01e4 2E       	 .uleb128 0x2e
+ 2172 01e5 01       	 .byte 0x1
+ 2173 01e6 3F       	 .uleb128 0x3f
+ 2174 01e7 19       	 .uleb128 0x19
+ 2175 01e8 03       	 .uleb128 0x3
+ 2176 01e9 0E       	 .uleb128 0xe
+ 2177 01ea 3A       	 .uleb128 0x3a
+ 2178 01eb 0B       	 .uleb128 0xb
+ 2179 01ec 3B       	 .uleb128 0x3b
+ 2180 01ed 0B       	 .uleb128 0xb
+ 2181 01ee 39       	 .uleb128 0x39
+ 2182 01ef 0B       	 .uleb128 0xb
+ 2183 01f0 11       	 .uleb128 0x11
+ 2184 01f1 01       	 .uleb128 0x1
+ 2185 01f2 12       	 .uleb128 0x12
+ 2186 01f3 06       	 .uleb128 0x6
+ 2187 01f4 40       	 .uleb128 0x40
+ 2188 01f5 18       	 .uleb128 0x18
+ 2189 01f6 9742     	 .uleb128 0x2117
+ 2190 01f8 19       	 .uleb128 0x19
+ 2191 01f9 00       	 .byte 0
+ 2192 01fa 00       	 .byte 0
+ 2193 01fb 00       	 .byte 0
+ 2194              	 .section .debug_aranges,"",%progbits
+ 2195 0000 3C000000 	 .4byte 0x3c
+ 2196 0004 0200     	 .2byte 0x2
+ 2197 0006 00000000 	 .4byte .Ldebug_info0
+ 2198 000a 04       	 .byte 0x4
+ 2199 000b 00       	 .byte 0
+ 2200 000c 0000     	 .2byte 0
+ 2201 000e 0000     	 .2byte 0
+ 2202 0010 00000000 	 .4byte .LFB11
+ 2203 0014 40000000 	 .4byte .LFE11-.LFB11
+ 2204 0018 00000000 	 .4byte .LFB12
+ 2205 001c 1A000000 	 .4byte .LFE12-.LFB12
+ 2206 0020 00000000 	 .4byte .LFB13
+ 2207 0024 48000000 	 .4byte .LFE13-.LFB13
+ 2208 0028 00000000 	 .4byte .LFB14
+ 2209 002c 72000000 	 .4byte .LFE14-.LFB14
+ 2210 0030 00000000 	 .4byte .LFB15
+ 2211 0034 54000000 	 .4byte .LFE15-.LFB15
+ 2212 0038 00000000 	 .4byte 0
+ 2213 003c 00000000 	 .4byte 0
+ARM GAS   			page 44
+
+
+ 2214              	 .section .debug_ranges,"",%progbits
+ 2215              	.Ldebug_ranges0:
+ 2216 0000 00000000 	 .4byte .LFB11
+ 2217 0004 40000000 	 .4byte .LFE11
+ 2218 0008 00000000 	 .4byte .LFB12
+ 2219 000c 1A000000 	 .4byte .LFE12
+ 2220 0010 00000000 	 .4byte .LFB13
+ 2221 0014 48000000 	 .4byte .LFE13
+ 2222 0018 00000000 	 .4byte .LFB14
+ 2223 001c 72000000 	 .4byte .LFE14
+ 2224 0020 00000000 	 .4byte .LFB15
+ 2225 0024 54000000 	 .4byte .LFE15
+ 2226 0028 00000000 	 .4byte 0
+ 2227 002c 00000000 	 .4byte 0
+ 2228              	 .section .debug_line,"",%progbits
+ 2229              	.Ldebug_line0:
+ 2230 0000 41050000 	 .section .debug_str,"MS",%progbits,1
+ 2230      03001C04 
+ 2230      00000201 
+ 2230      FB0E0D00 
+ 2230      01010101 
+ 2231              	.LASF50:
+ 2232 0000 61746F6C 	 .ascii "atoll\000"
+ 2232      6C00
+ 2233              	.LASF21:
+ 2234 0006 71756F74 	 .ascii "quot\000"
+ 2234      00
+ 2235              	.LASF16:
+ 2236 000b 73697A65 	 .ascii "size_t\000"
+ 2236      5F7400
+ 2237              	.LASF67:
+ 2238 0012 4D696E69 	 .ascii "MiniListItem_t\000"
+ 2238      4C697374 
+ 2238      4974656D 
+ 2238      5F7400
+ 2239              	.LASF5:
+ 2240 0021 5F5F6378 	 .ascii "__cxx11\000"
+ 2240      78313100 
+ 2241              	.LASF6:
+ 2242 0029 5F5A5374 	 .ascii "_ZSt3divll\000"
+ 2242      33646976 
+ 2242      6C6C00
+ 2243              	.LASF11:
+ 2244 0034 7369676E 	 .ascii "signed char\000"
+ 2244      65642063 
+ 2244      68617200 
+ 2245              	.LASF47:
+ 2246 0040 77637374 	 .ascii "wcstombs\000"
+ 2246      6F6D6273 
+ 2246      00
+ 2247              	.LASF26:
+ 2248 0049 376C6C64 	 .ascii "7lldiv_t\000"
+ 2248      69765F74 
+ 2248      00
+ 2249              	.LASF76:
+ 2250 0052 70784974 	 .ascii "pxIterator\000"
+ 2250      65726174 
+ARM GAS   			page 45
+
+
+ 2250      6F7200
+ 2251              	.LASF19:
+ 2252 005d 6C6F6E67 	 .ascii "long long unsigned int\000"
+ 2252      206C6F6E 
+ 2252      6720756E 
+ 2252      7369676E 
+ 2252      65642069 
+ 2253              	.LASF71:
+ 2254 0074 784C6973 	 .ascii "xListEnd\000"
+ 2254      74456E64 
+ 2254      00
+ 2255              	.LASF75:
+ 2256 007d 70784E65 	 .ascii "pxNewListItem\000"
+ 2256      774C6973 
+ 2256      74497465 
+ 2256      6D00
+ 2257              	.LASF66:
+ 2258 008b 784D494E 	 .ascii "xMINI_LIST_ITEM\000"
+ 2258      495F4C49 
+ 2258      53545F49 
+ 2258      54454D00 
+ 2259              	.LASF29:
+ 2260 009b 61746578 	 .ascii "atexit\000"
+ 2260      697400
+ 2261              	.LASF22:
+ 2262 00a2 6469765F 	 .ascii "div_t\000"
+ 2262      7400
+ 2263              	.LASF9:
+ 2264 00a8 6C6F6E67 	 .ascii "long long int\000"
+ 2264      206C6F6E 
+ 2264      6720696E 
+ 2264      7400
+ 2265              	.LASF84:
+ 2266 00b6 433A5C55 	 .ascii "C:\\Users\\niels\\Documents\\Elektrotechniek\\Jaar "
+ 2266      73657273 
+ 2266      5C6E6965 
+ 2266      6C735C44 
+ 2266      6F63756D 
+ 2267 00e4 325C4543 	 .ascii "2\\ECS\\ECSL\\software\\STM32\\STM32Basis\\HAL\\gem"
+ 2267      535C4543 
+ 2267      534C5C73 
+ 2267      6F667477 
+ 2267      6172655C 
+ 2268 0110 65656E73 	 .ascii "eenschappelijk\\Third_Party\\FreeRTOS\\Source\\list"
+ 2268      63686170 
+ 2268      70656C69 
+ 2268      6A6B5C54 
+ 2268      68697264 
+ 2269 013f 2E6300   	 .ascii ".c\000"
+ 2270              	.LASF41:
+ 2271 0142 71736F72 	 .ascii "qsort\000"
+ 2271      7400
+ 2272              	.LASF37:
+ 2273 0148 6D626C65 	 .ascii "mblen\000"
+ 2273      6E00
+ 2274              	.LASF43:
+ 2275 014e 73747274 	 .ascii "strtod\000"
+ARM GAS   			page 46
+
+
+ 2275      6F6400
+ 2276              	.LASF53:
+ 2277 0155 73747274 	 .ascii "strtof\000"
+ 2277      6F6600
+ 2278              	.LASF15:
+ 2279 015c 6C6F6E67 	 .ascii "long int\000"
+ 2279      20696E74 
+ 2279      00
+ 2280              	.LASF44:
+ 2281 0165 73747274 	 .ascii "strtol\000"
+ 2281      6F6C00
+ 2282              	.LASF25:
+ 2283 016c 6C646976 	 .ascii "ldiv_t\000"
+ 2283      5F7400
+ 2284              	.LASF31:
+ 2285 0173 646F7562 	 .ascii "double\000"
+ 2285      6C6500
+ 2286              	.LASF81:
+ 2287 017a 70784974 	 .ascii "pxItem\000"
+ 2287      656D00
+ 2288              	.LASF79:
+ 2289 0181 764C6973 	 .ascii "vListInsertEnd\000"
+ 2289      74496E73 
+ 2289      65727445 
+ 2289      6E6400
+ 2290              	.LASF40:
+ 2291 0190 6D62746F 	 .ascii "mbtowc\000"
+ 2291      776300
+ 2292              	.LASF17:
+ 2293 0197 5F5F7569 	 .ascii "__uint32_t\000"
+ 2293      6E743332 
+ 2293      5F7400
+ 2294              	.LASF8:
+ 2295 01a2 756E7369 	 .ascii "unsigned int\000"
+ 2295      676E6564 
+ 2295      20696E74 
+ 2295      00
+ 2296              	.LASF69:
+ 2297 01af 75784E75 	 .ascii "uxNumberOfItems\000"
+ 2297      6D626572 
+ 2297      4F664974 
+ 2297      656D7300 
+ 2298              	.LASF18:
+ 2299 01bf 6C6F6E67 	 .ascii "long unsigned int\000"
+ 2299      20756E73 
+ 2299      69676E65 
+ 2299      6420696E 
+ 2299      7400
+ 2300              	.LASF42:
+ 2301 01d1 7372616E 	 .ascii "srand\000"
+ 2301      6400
+ 2302              	.LASF88:
+ 2303 01d7 72616E64 	 .ascii "rand\000"
+ 2303      00
+ 2304              	.LASF23:
+ 2305 01dc 35646976 	 .ascii "5div_t\000"
+ 2305      5F7400
+ARM GAS   			page 47
+
+
+ 2306              	.LASF14:
+ 2307 01e3 73686F72 	 .ascii "short unsigned int\000"
+ 2307      7420756E 
+ 2307      7369676E 
+ 2307      65642069 
+ 2307      6E7400
+ 2308              	.LASF34:
+ 2309 01f6 62736561 	 .ascii "bsearch\000"
+ 2309      72636800 
+ 2310              	.LASF49:
+ 2311 01fe 6C6C6469 	 .ascii "lldiv\000"
+ 2311      7600
+ 2312              	.LASF39:
+ 2313 0204 77636861 	 .ascii "wchar_t\000"
+ 2313      725F7400 
+ 2314              	.LASF72:
+ 2315 020c 4C697374 	 .ascii "List_t\000"
+ 2315      5F7400
+ 2316              	.LASF87:
+ 2317 0213 6465636C 	 .ascii "decltype(nullptr)\000"
+ 2317      74797065 
+ 2317      286E756C 
+ 2317      6C707472 
+ 2317      2900
+ 2318              	.LASF35:
+ 2319 0225 67657465 	 .ascii "getenv\000"
+ 2319      6E7600
+ 2320              	.LASF80:
+ 2321 022c 764C6973 	 .ascii "vListInitialiseItem\000"
+ 2321      74496E69 
+ 2321      7469616C 
+ 2321      69736549 
+ 2321      74656D00 
+ 2322              	.LASF60:
+ 2323 0240 70784E65 	 .ascii "pxNext\000"
+ 2323      787400
+ 2324              	.LASF10:
+ 2325 0247 6C6F6E67 	 .ascii "long double\000"
+ 2325      20646F75 
+ 2325      626C6500 
+ 2326              	.LASF73:
+ 2327 0253 70784974 	 .ascii "pxItemToRemove\000"
+ 2327      656D546F 
+ 2327      52656D6F 
+ 2327      766500
+ 2328              	.LASF58:
+ 2329 0262 5469636B 	 .ascii "TickType_t\000"
+ 2329      54797065 
+ 2329      5F7400
+ 2330              	.LASF36:
+ 2331 026d 6C646976 	 .ascii "ldiv\000"
+ 2331      00
+ 2332              	.LASF64:
+ 2333 0272 4C697374 	 .ascii "ListItem_t\000"
+ 2333      4974656D 
+ 2333      5F7400
+ 2334              	.LASF61:
+ARM GAS   			page 48
+
+
+ 2335 027d 70785072 	 .ascii "pxPrevious\000"
+ 2335      6576696F 
+ 2335      757300
+ 2336              	.LASF54:
+ 2337 0288 666C6F61 	 .ascii "float\000"
+ 2337      7400
+ 2338              	.LASF70:
+ 2339 028e 7078496E 	 .ascii "pxIndex\000"
+ 2339      64657800 
+ 2340              	.LASF38:
+ 2341 0296 6D627374 	 .ascii "mbstowcs\000"
+ 2341      6F776373 
+ 2341      00
+ 2342              	.LASF30:
+ 2343 029f 61746F66 	 .ascii "atof\000"
+ 2343      00
+ 2344              	.LASF32:
+ 2345 02a4 61746F69 	 .ascii "atoi\000"
+ 2345      00
+ 2346              	.LASF33:
+ 2347 02a9 61746F6C 	 .ascii "atol\000"
+ 2347      00
+ 2348              	.LASF12:
+ 2349 02ae 756E7369 	 .ascii "unsigned char\000"
+ 2349      676E6564 
+ 2349      20636861 
+ 2349      7200
+ 2350              	.LASF24:
+ 2351 02bc 366C6469 	 .ascii "6ldiv_t\000"
+ 2351      765F7400 
+ 2352              	.LASF27:
+ 2353 02c4 6C6C6469 	 .ascii "lldiv_t\000"
+ 2353      765F7400 
+ 2354              	.LASF13:
+ 2355 02cc 73686F72 	 .ascii "short int\000"
+ 2355      7420696E 
+ 2355      7400
+ 2356              	.LASF55:
+ 2357 02d6 73747274 	 .ascii "strtold\000"
+ 2357      6F6C6400 
+ 2358              	.LASF51:
+ 2359 02de 73747274 	 .ascii "strtoll\000"
+ 2359      6F6C6C00 
+ 2360              	.LASF68:
+ 2361 02e6 784C4953 	 .ascii "xLIST\000"
+ 2361      5400
+ 2362              	.LASF48:
+ 2363 02ec 7763746F 	 .ascii "wctomb\000"
+ 2363      6D6200
+ 2364              	.LASF2:
+ 2365 02f3 5F5A5374 	 .ascii "_ZSt3absd\000"
+ 2365      33616273 
+ 2365      6400
+ 2366              	.LASF0:
+ 2367 02fd 5F5A5374 	 .ascii "_ZSt3abse\000"
+ 2367      33616273 
+ 2367      6500
+ARM GAS   			page 49
+
+
+ 2368              	.LASF1:
+ 2369 0307 5F5A5374 	 .ascii "_ZSt3absf\000"
+ 2369      33616273 
+ 2369      6600
+ 2370              	.LASF7:
+ 2371 0311 5F5A4E39 	 .ascii "_ZN9__gnu_cxx3divExx\000"
+ 2371      5F5F676E 
+ 2371      755F6378 
+ 2371      78336469 
+ 2371      76457878 
+ 2372              	.LASF4:
+ 2373 0326 5F5A5374 	 .ascii "_ZSt3absl\000"
+ 2373      33616273 
+ 2373      6C00
+ 2374              	.LASF56:
+ 2375 0330 75696E74 	 .ascii "uint32_t\000"
+ 2375      33325F74 
+ 2375      00
+ 2376              	.LASF78:
+ 2377 0339 764C6973 	 .ascii "vListInsert\000"
+ 2377      74496E73 
+ 2377      65727400 
+ 2378              	.LASF3:
+ 2379 0345 5F5A5374 	 .ascii "_ZSt3absx\000"
+ 2379      33616273 
+ 2379      7800
+ 2380              	.LASF83:
+ 2381 034f 474E5520 	 .ascii "GNU C++14 10.3.1 20210824 (release) -mcpu=cortex-m4"
+ 2381      432B2B31 
+ 2381      34203130 
+ 2381      2E332E31 
+ 2381      20323032 
+ 2382 0382 202D6D66 	 .ascii " -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfix-cortex-m3"
+ 2382      6C6F6174 
+ 2382      2D616269 
+ 2382      3D686172 
+ 2382      64202D6D 
+ 2383 03b5 2D6C6472 	 .ascii "-ldrd -mthumb -mno-unaligned-access -mapcs-frame -m"
+ 2383      64202D6D 
+ 2383      7468756D 
+ 2383      62202D6D 
+ 2383      6E6F2D75 
+ 2384 03e8 61726368 	 .ascii "arch=armv7e-m+fp -g -g -O0 -fsingle-precision-const"
+ 2384      3D61726D 
+ 2384      7637652D 
+ 2384      6D2B6670 
+ 2384      202D6720 
+ 2385 041b 616E7420 	 .ascii "ant -funsigned-char -ffunction-sections -fdata-sect"
+ 2385      2D66756E 
+ 2385      7369676E 
+ 2385      65642D63 
+ 2385      68617220 
+ 2386 044e 696F6E73 	 .ascii "ions\000"
+ 2386      00
+ 2387              	.LASF20:
+ 2388 0453 63686172 	 .ascii "char\000"
+ 2388      00
+ARM GAS   			page 50
+
+
+ 2389              	.LASF74:
+ 2390 0458 70784C69 	 .ascii "pxList\000"
+ 2390      737400
+ 2391              	.LASF59:
+ 2392 045f 78497465 	 .ascii "xItemValue\000"
+ 2392      6D56616C 
+ 2392      756500
+ 2393              	.LASF52:
+ 2394 046a 73747274 	 .ascii "strtoull\000"
+ 2394      6F756C6C 
+ 2394      00
+ 2395              	.LASF89:
+ 2396 0473 75784C69 	 .ascii "uxListRemove\000"
+ 2396      73745265 
+ 2396      6D6F7665 
+ 2396      00
+ 2397              	.LASF77:
+ 2398 0480 7856616C 	 .ascii "xValueOfInsertion\000"
+ 2398      75654F66 
+ 2398      496E7365 
+ 2398      7274696F 
+ 2398      6E00
+ 2399              	.LASF63:
+ 2400 0492 7076436F 	 .ascii "pvContainer\000"
+ 2400      6E746169 
+ 2400      6E657200 
+ 2401              	.LASF85:
+ 2402 049e 433A5C55 	 .ascii "C:\\Users\\niels\\DOCUME~1\\ELEKTR~1\\JAAR2~1\\ECS\\"
+ 2402      73657273 
+ 2402      5C6E6965 
+ 2402      6C735C44 
+ 2402      4F43554D 
+ 2403 04cb 4543534C 	 .ascii "ECSL\\software\\STM32\\PRACTI~1\\CLion\\Debug\\Free"
+ 2403      5C736F66 
+ 2403      74776172 
+ 2403      655C5354 
+ 2403      4D33325C 
+ 2404 04f8 52544F53 	 .ascii "RTOS\000"
+ 2404      00
+ 2405              	.LASF62:
+ 2406 04fd 70764F77 	 .ascii "pvOwner\000"
+ 2406      6E657200 
+ 2407              	.LASF45:
+ 2408 0505 73747274 	 .ascii "strtoul\000"
+ 2408      6F756C00 
+ 2409              	.LASF46:
+ 2410 050d 73797374 	 .ascii "system\000"
+ 2410      656D00
+ 2411              	.LASF82:
+ 2412 0514 764C6973 	 .ascii "vListInitialise\000"
+ 2412      74496E69 
+ 2412      7469616C 
+ 2412      69736500 
+ 2413              	.LASF28:
+ 2414 0524 5F5F636F 	 .ascii "__compar_fn_t\000"
+ 2414      6D706172 
+ 2414      5F666E5F 
+ARM GAS   			page 51
+
+
+ 2414      7400
+ 2415              	.LASF65:
+ 2416 0532 784C4953 	 .ascii "xLIST_ITEM\000"
+ 2416      545F4954 
+ 2416      454D00
+ 2417              	.LASF57:
+ 2418 053d 55426173 	 .ascii "UBaseType_t\000"
+ 2418      65547970 
+ 2418      655F7400 
+ 2419              	.LASF86:
+ 2420 0549 5F5F676E 	 .ascii "__gnu_cxx\000"
+ 2420      755F6378 
+ 2420      7800
+ 2421              	 .ident "GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"

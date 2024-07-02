@@ -1,0 +1,2 @@
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\ARM-NO~2.EXE qc libSegger_RTT.a CMakeFiles/Segger_RTT.dir/RTT/SEGGER_RTT.c.obj CMakeFiles/Segger_RTT.dir/RTT/SEGGER_RTT_printf.c.obj CMakeFiles/Segger_RTT.dir/Syscalls/SEGGER_RTT_Syscalls_GCC.c.obj CMakeFiles/Segger_RTT.dir/Syscalls/SEGGER_RTT_Syscalls_IAR.c.obj CMakeFiles/Segger_RTT.dir/Syscalls/SEGGER_RTT_Syscalls_KEIL.c.obj CMakeFiles/Segger_RTT.dir/Syscalls/SEGGER_RTT_Syscalls_SES.c.obj
+C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR17F9~1.EXE libSegger_RTT.a

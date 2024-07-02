@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/diskio.h
+integer.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/integer.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ff.c
+ff.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ff.h
+diskio.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/diskio.h
+stdarg.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ff.h
+integer.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/integer.h
+ffconf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ffconf.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ffconf.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ffsystem.c
+ff.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ff.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ffunicode.c
+ff.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/ff.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Third_Party/FatFs_vR0.13a/integer.h
+windows.h
+-
+tchar.h
+-
+

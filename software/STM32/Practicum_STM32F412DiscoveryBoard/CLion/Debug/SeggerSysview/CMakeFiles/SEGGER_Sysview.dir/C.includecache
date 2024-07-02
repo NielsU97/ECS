@@ -1,0 +1,60 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/HAL/gemeenschappelijk/Libraries/Middlewares/ST/STemWin/inc/Global.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT.h
+SEGGER_RTT_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_Conf.h
+stdlib.h
+-
+stdarg.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_RTT/RTT/SEGGER_RTT_Conf.h
+intrinsics.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER.h
+stdarg.h
+-
+Global.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/Global.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW.c
+SEGGER_SYSVIEW_Int.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_Int.h
+SEGGER_RTT.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_RTT.h
+string.h
+-
+stdlib.h
+-
+stdarg.h
+-
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW.h
+SEGGER.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_ConfDefaults.h
+SEGGER_SYSVIEW_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_Conf.h
+SEGGER_RTT_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_RTT_Conf.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_Int.h
+SEGGER_SYSVIEW.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW.h
+SEGGER_SYSVIEW_Conf.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_Conf.h
+SEGGER_SYSVIEW_ConfDefaults.h
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/Segger_Sysview/SEGGER_SYSVIEW_ConfDefaults.h
+
+C:/Users/niels/Documents/Elektrotechniek/Jaar 2/ECS/ECSL/software/STM32/STM32Basis/Segger/config/SEGGER_SYSVIEW_Conf.h
+
